@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="noor-build" content="20261115150711">
+<meta name="noor-build" content="20261115205345">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0d1714">
@@ -217,6 +217,14 @@ body.ur .inst{line-height:2.1}
 .inst button{border:0;border-radius:999px;font:inherit;font-weight:800;cursor:pointer}
 #instBtn{background:var(--gold);color:#1a1408;padding:7px 14px}
 #instX{background:transparent;color:#f1e3c2aa;padding:4px 8px;font-size:15px}
+
+.okh{font-weight:800;color:#8fd6a8;margin:4px 0 2px;font-size:13.5px}
+.weakbox{margin-top:14px;border:1.5px dashed #e07a5f;background:#e07a5f12;border-radius:12px;padding:10px 12px 4px}
+.weakbox .wh{color:#f2a48f;font-weight:800;margin-bottom:6px;font-size:13.5px}
+.weakbox ul{margin:0;padding-inline-start:18px}
+.weakbox li{color:#cdbfba;margin-bottom:8px}
+.wtag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.3px;padding:1px 7px;border-radius:999px;margin-inline-end:6px;vertical-align:1px;background:#e07a5f2e;color:#f2a48f;border:1px solid #e07a5f66}
+.wtag.fab{background:#d6453033;color:#ff8f80;border-color:#d6453088}
 
 </style>
 <link rel="manifest" href="manifest.webmanifest">
@@ -1108,6 +1116,73 @@ KNOW.push(
 DAILY.push(
  {id:"d_four",  item:"four_refuge", act:"salah", slots:5, since:"2026-11-15", lbl:{en:"4 refuges before salam (incl. Dajjal)", ur:"سلام سے پہلے 4 پناہیں (دجال سمیت)"}},
  {id:"d_eat",   item:"after_eat",   act:"eat",   slots:1, since:"2026-11-15", lbl:{en:"Alḥamdulillāh alladhī aṭʿamanī… after a meal", ur:"کھانے کے بعد الحمد للہ الذی أطعمنی…"}}
+);
+
+// ===== Foods: Jannah + Sunnah healing (Nov 16). Weak/made-up claims sit last in a marked box. =====
+KNOW.push(
+{id:"k_jannah_food", e:"🍇",
+ t:{en:"Foods of Jannah — what the Qur'an and Sunnah say", ur:"جنت کے کھانے — قرآن و سنت کیا کہتے ہیں"},
+ b:{en:`<div class="okh">✅ Authentic</div><ul>
+<li><b>Dates and pomegranates</b> — «In both of them are fruit, date-palms and pomegranates» (55:68).</li>
+<li><b>Grapes</b> — «gardens and grapevines» (78:32). In the eclipse prayer the Prophet ﷺ saw Jannah and reached for a bunch of its fruit: «Had I taken it, you would have eaten from it for as long as the world remains» (Bukhari 1052).</li>
+<li><b>Bananas</b> — «ṭalḥ manḍūd» (56:29). Ibn ʿAbbās, Abū Saʿīd, Abū Hurayrah and others explained it as bananas; some scholars said it is a large shady tree (Tafsīr Ibn Kathīr).</li>
+<li><b>Lote-fruit with no thorns</b> (56:28) and <b>bird meat of whatever they wish</b> (56:21).</li>
+<li><b>Milk and honey</b> — rivers of milk whose taste never changes, and rivers of pure honey (47:15).</li>
+<li><b>Ginger</b> — a drink mixed with ginger (zanjabīl) (76:17).</li>
+<li><b>ʿAjwa dates</b> — «ʿAjwa is from Jannah, and in it is a cure for poison» (Tirmidhi 2066; Ibn Majah 3455 — sahih).</li></ul>
+<p>Ibn ʿAbbās said nothing in Jannah resembles what is in this world except the names (Tafsīr al-Ṭabarī) — the real thing is far better.</p>
+<div class="weakbox"><div class="wh">⚠️ Weak or made-up — not proven from the Prophet ﷺ</div><ul>
+<li><span class="wtag">WEAK</span>«If I said a fruit came down from Jannah, I would say it is the fig… it cures piles» — weak (al-Albānī). Figs are honoured in the Qur'an — Allah swears by them (95:1) — but no authentic hadith calls them a fruit of Jannah.</li>
+<li><span class="wtag fab">MADE-UP</span>«Every pomegranate has a seed from Jannah» — fabricated (Ibn al-Jawzī, al-Dhahabī). Pomegranates in Jannah are proven by 55:68 only.</li>
+<li><span class="wtag">WEAK</span>Versions of the eclipse hadith that name the bunch as grapes (Ahmad) — weak; the authentic wording in Bukhari just says «a bunch».</li>
+<li><span class="wtag fab">MADE-UP</span>«Jibrīl brought him grapes from Jannah», «the spring of my Ummah is grapes and watermelon», «he ate grapes by the bunch» — no basis / fabricated.</li></ul></div>`,
+    ur:`<div class="okh">✅ مستند</div><ul>
+<li><b>کھجور اور انار</b> — «ان دونوں میں میوے، کھجوریں اور انار ہیں» (الرحمن 55:68)۔</li>
+<li><b>انگور</b> — «باغ اور انگور» (النبأ 78:32)۔ سورج گرہن کی نماز میں نبی ﷺ نے جنت دیکھی اور اس کے پھل کا ایک گچھا لینے کو ہاتھ بڑھایا: «اگر میں اسے لے لیتا تو تم رہتی دنیا تک اس میں سے کھاتے» (بخاری 1052)۔</li>
+<li><b>کیلا</b> — «طلحٍ منضود» (الواقعہ 56:29)۔ ابن عباس، ابو سعید، ابو ہریرہؓ وغیرہ نے اس کی تفسیر کیلا کی؛ بعض علماء نے اسے ایک بڑا سایہ دار درخت کہا (تفسیر ابن کثیر)۔</li>
+<li><b>بے کانٹوں والی بیری</b> (56:28) اور <b>جو چاہیں پرندوں کا گوشت</b> (56:21)۔</li>
+<li><b>دودھ اور شہد</b> — دودھ کی نہریں جن کا ذائقہ کبھی نہیں بدلتا، اور خالص شہد کی نہریں (محمد 47:15)۔</li>
+<li><b>ادرک</b> — ادرک (زنجبیل) ملا مشروب (الانسان 76:17)۔</li>
+<li><b>عجوہ کھجور</b> — «عجوہ جنت سے ہے اور اس میں زہر سے شفا ہے» (ترمذی 2066؛ ابن ماجہ 3455 — صحیح)۔</li></ul>
+<p>ابن عباسؓ نے فرمایا: جنت کی کوئی چیز دنیا کی چیزوں جیسی نہیں، سوائے ناموں کے (تفسیر طبری) — اصل چیز کہیں بہتر ہے۔</p>
+<div class="weakbox"><div class="wh">⚠️ ضعیف یا من گھڑت — نبی ﷺ سے ثابت نہیں</div><ul>
+<li><span class="wtag">ضعیف</span>«اگر میں کہوں کہ کوئی پھل جنت سے اترا ہے تو وہ انجیر ہے… یہ بواسیر ختم کرتا ہے» — ضعیف (البانی)۔ انجیر کو قرآن میں عزت ملی — اللہ نے اس کی قسم کھائی (التین 95:1) — مگر کسی صحیح حدیث میں اسے جنت کا پھل نہیں کہا گیا۔</li>
+<li><span class="wtag fab">من گھڑت</span>«ہر انار میں جنت کا ایک دانہ ہوتا ہے» — من گھڑت (ابن الجوزی، ذہبی)۔ جنت میں انار صرف 55:68 سے ثابت ہے۔</li>
+<li><span class="wtag">ضعیف</span>گرہن والی حدیث کی وہ روایتیں جن میں گچھے کو انگور کہا گیا (احمد) — ضعیف؛ بخاری کے صحیح الفاظ میں صرف «گچھا» ہے۔</li>
+<li><span class="wtag fab">من گھڑت</span>«جبریلؑ جنت سے انگور لائے»، «میری امت کی بہار انگور اور تربوز ہیں»، «آپ ﷺ انگور گچھوں سے کھاتے تھے» — بے اصل / من گھڑت۔</li></ul></div>`},
+ src:"Qur'an 55:68, 78:32, 56:28–29, 56:21, 47:15, 76:17, 95:1 · Sahih al-Bukhari 1052 · Jami' at-Tirmidhi 2066 · Sunan Ibn Majah 3455"},
+
+{id:"k_sunnah_food", e:"🌿",
+ t:{en:"Sunnah foods for healing — kalonji, ʿAjwa, honey, milk & more", ur:"شفا والی سنت غذائیں — کلونجی، عجوہ، شہد، دودھ وغیرہ"},
+ b:{en:`<div class="okh">✅ Authentic</div><ul>
+<li><b>Kalonji (black seed)</b> — «In the black seed is a cure for every disease except death» (Bukhari 5688; Muslim 2215).</li>
+<li><b>7 ʿAjwa dates in the morning</b> — «Whoever eats seven ʿAjwa dates in the morning, no poison or magic will harm him that day» (Bukhari 5445; Muslim 2047).</li>
+<li><b>Honey</b> — «In it is healing for people» (16:69). When a man's brother had a stomach illness, the Prophet ﷺ told him to give honey, and he recovered (Bukhari 5684).</li>
+<li><b>Talbīna</b> (barley cooked in milk, often with honey) — «It soothes the heart of the sick and takes away some of the grief» (Bukhari 5689).</li>
+<li><b>Milk</b> — on the Night Journey the Prophet ﷺ chose milk and was told «you have been guided to the fitrah» (Bukhari 3394). When drinking milk say: «Allāhumma bārik lanā fīhi wa zidnā minhu» — O Allah, bless it for us and give us more of it (Tirmidhi 3455 — hasan). «Allah sent down no disease without its cure — so drink cows' milk, for they graze from every plant» (an-Nasāʾī, Ibn Ḥibbān — al-Albānī: sahih).</li>
+<li><b>Olive oil</b> — «Eat olive oil and rub it on, for it comes from a blessed tree» (Tirmidhi 1851 — sahih).</li>
+<li><b>Zamzam</b> — «Zamzam water is for whatever it is drunk for» (Ibn Majah 3062 — sahih); «it is a food that nourishes» (Muslim 2473).</li>
+<li><b>Truffles</b> — «their water is a cure for the eyes» (Bukhari 5708).</li>
+<li><b>Dates</b> — he ﷺ broke his fast with fresh dates, else dry dates, else water (Abu Dawud 2356); «a house with no dates — its people go hungry» (Muslim 2046).</li></ul>
+<p>«Allah has not sent down a disease except that He sent down its cure» (Bukhari 5678), and the Prophet ﷺ said «seek treatment» (Abu Dawud 3855). These foods are a Sunnah and a blessing — keep seeing a doctor as well.</p>
+<div class="weakbox"><div class="wh">⚠️ Weak or not the Prophet's ﷺ words</div><ul>
+<li><span class="wtag">NOT HADITH</span>«Take the two cures: honey and the Qur'an» — authentic only as the saying of the Companion Ibn Masʿūd, not of the Prophet ﷺ (Ibn Majah 3452).</li>
+<li><span class="wtag">WEAK</span>«Whoever licks honey three mornings every month will not be struck by a great affliction» — weak (Ibn Majah 3450).</li></ul></div>`,
+    ur:`<div class="okh">✅ مستند</div><ul>
+<li><b>کلونجی</b> — «کلونجی میں موت کے سوا ہر بیماری کی شفا ہے» (بخاری 5688؛ مسلم 2215)۔</li>
+<li><b>صبح 7 عجوہ کھجوریں</b> — «جو صبح سات عجوہ کھجوریں کھائے، اس دن اسے نہ زہر نقصان دے گا نہ جادو» (بخاری 5445؛ مسلم 2047)۔</li>
+<li><b>شہد</b> — «اس میں لوگوں کے لیے شفا ہے» (النحل 16:69)۔ ایک شخص کے بھائی کو پیٹ کی بیماری تھی تو نبی ﷺ نے شہد پلانے کو کہا اور وہ ٹھیک ہو گیا (بخاری 5684)۔</li>
+<li><b>تلبینہ</b> (دودھ میں پکا جَو، اکثر شہد کے ساتھ) — «یہ بیمار کے دل کو سکون دیتا ہے اور کچھ غم دور کرتا ہے» (بخاری 5689)۔</li>
+<li><b>دودھ</b> — معراج کی رات نبی ﷺ نے دودھ چنا تو کہا گیا «آپ کو فطرت کی راہ ملی» (بخاری 3394)۔ دودھ پیتے وقت کہیں: «اللّٰہم بارک لنا فیہ وزدنا منہ» — اے اللہ! ہمارے لیے اس میں برکت دے اور ہمیں اور زیادہ دے (ترمذی 3455 — حسن)۔ «اللہ نے کوئی بیماری نہیں اتاری مگر اس کی شفا بھی اتاری — پس گائے کا دودھ پیو کہ وہ ہر قسم کا پودا چرتی ہے» (نسائی، ابن حبان — البانی: صحیح)۔</li>
+<li><b>زیتون کا تیل</b> — «زیتون کا تیل کھاؤ اور لگاؤ، یہ مبارک درخت سے ہے» (ترمذی 1851 — صحیح)۔</li>
+<li><b>زمزم</b> — «زمزم جس نیت سے پیا جائے اسی کے لیے ہے» (ابن ماجہ 3062 — صحیح)؛ «یہ پیٹ بھرنے والی غذا ہے» (مسلم 2473)۔</li>
+<li><b>کھمبی (کمأۃ)</b> — «اس کا پانی آنکھ کی شفا ہے» (بخاری 5708)۔</li>
+<li><b>کھجور</b> — آپ ﷺ تازہ کھجور سے افطار کرتے، وہ نہ ہوتی تو خشک کھجور، ورنہ پانی (ابوداؤد 2356)؛ «جس گھر میں کھجور نہ ہو اس کے گھر والے بھوکے ہیں» (مسلم 2046)۔</li></ul>
+<p>«اللہ نے کوئی بیماری نہیں اتاری مگر اس کی شفا بھی اتاری» (بخاری 5678)، اور نبی ﷺ نے فرمایا «علاج کرواؤ» (ابوداؤد 3855)۔ یہ غذائیں سنت اور برکت ہیں — ساتھ ڈاکٹر سے علاج بھی جاری رکھیں۔</p>
+<div class="weakbox"><div class="wh">⚠️ ضعیف یا نبی ﷺ کا قول نہیں</div><ul>
+<li><span class="wtag">حدیث نہیں</span>«دو شفاؤں کو لازم پکڑو: شہد اور قرآن» — صرف صحابی ابن مسعودؓ کے قول کے طور پر صحیح ہے، نبی ﷺ کا فرمان نہیں (ابن ماجہ 3452)۔</li>
+<li><span class="wtag">ضعیف</span>«جو ہر مہینے تین صبح شہد چاٹے اسے کوئی بڑی مصیبت نہیں پہنچے گی» — ضعیف (ابن ماجہ 3450)۔</li></ul></div>`},
+ src:"Sahih al-Bukhari 5688, 5445, 5684, 5689, 3394, 5708, 5678 · Sahih Muslim 2215, 2047, 2473, 2046 · Qur'an 16:69 · Jami' at-Tirmidhi 3455, 1851 · Sunan Ibn Majah 3062, 3452, 3450 · Sunan Abi Dawud 2356, 3855"}
 );
 
 </script>
