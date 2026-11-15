@@ -1,5 +1,5 @@
 /* Noor offline service worker */
-const V = "noor-v1";            // bump on each release
+const V = "noor-v2";            // bump on each release
 const FONTS = "noor-fonts";     // kept across releases
 const CORE = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png", "icons/apple-touch-icon.png"];
 const FONT_CSS = "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap";
