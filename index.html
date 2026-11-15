@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="noor-build" content="20261115144538">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0d1714">
@@ -1105,8 +1106,8 @@ KNOW.push(
 );
 
 DAILY.push(
- {id:"d_four",  item:"four_refuge", act:"salah", slots:5, lbl:{en:"4 refuges before salam (incl. Dajjal)", ur:"سلام سے پہلے 4 پناہیں (دجال سمیت)"}},
- {id:"d_eat",   item:"after_eat",   act:"eat",   slots:1, lbl:{en:"Alḥamdulillāh alladhī aṭʿamanī… after a meal", ur:"کھانے کے بعد الحمد للہ الذی أطعمنی…"}}
+ {id:"d_four",  item:"four_refuge", act:"salah", slots:5, since:"2026-11-15", lbl:{en:"4 refuges before salam (incl. Dajjal)", ur:"سلام سے پہلے 4 پناہیں (دجال سمیت)"}},
+ {id:"d_eat",   item:"after_eat",   act:"eat",   slots:1, since:"2026-11-15", lbl:{en:"Alḥamdulillāh alladhī aṭʿamanī… after a meal", ur:"کھانے کے بعد الحمد للہ الذی أطعمنی…"}}
 );
 
 </script>
@@ -1134,7 +1135,7 @@ const S={
   kinds:{dua:"Dua",quran:"Qur'an",dhikr:"Dhikr",action:"Action"},
   dailyB:"Daily habit", chk:"Arabic checked", genW:"General wording", legend:"Grade colours", foot:"Every card shows its reference, grading and tap-to-open source links. Qur'an text is checked word-for-word against quran.com (imla'i script); hadith Arabic against sunnah.com / hadithunlocked.com. «✓ Arabic checked» means the Arabic matched the source page. Gradings follow al-Albani unless another scholar is named. Ticks are saved on this phone only.",
   prayers:["F","D","A","M","I"], prayerNames:["Fajr","Dhuhr","Asr","Maghrib","Isha"], noRes:"Nothing found", knowSub:"Stories, warnings and lessons — separate from the duas.",
-  needSub:"Tap what you need right now.", help:"How to open this anytime", noSave:"Opened this way, your phone can’t remember ticks. Open the file in Chrome instead (see ℹ️ for steps).", actSub:"What to say during each moment of your day.", resetDay:"Clear today’s ticks", cleared:"Today cleared", inst:"Install", instA:"Add Noor to your home screen — it works offline.", instI:"Add Noor to your home screen: tap ••• → Share (older iPhones: the Share ⬆ button) → “Add to Home Screen”. It works offline.", instD:"Add Noor to your home screen: Chrome ⋮ → “Add to Home screen”. It works offline."},
+  needSub:"Tap what you need right now.", help:"How to open this anytime", noSave:"Opened this way, your phone can’t remember ticks. Open the file in Chrome instead (see ℹ️ for steps).", actSub:"What to say during each moment of your day.", resetDay:"Clear today’s ticks", resetSure:"Tap again to clear today", cleared:"Today cleared", updated:"✨ Noor was updated — you’ll see it next time you open it", inst:"Install", instA:"Add Noor to your home screen — it works offline.", instI:"Add Noor to your home screen: tap ••• → Share (older iPhones: the Share ⬆ button) → “Add to Home Screen”. It works offline.", instD:"Add Noor to your home screen: Chrome ⋮ → “Add to Home screen”. It works offline."},
  ur:{app:"نور", tag:"آپ کی ریلز کی دعائیں اور اذکار — تصدیق شدہ", today:"آج", act:"عمل کے مطابق", need:"ضرورت کے مطابق", ruq:"رقیہ", know:"علم",
   done:"مکمل", of:"میں سے", streak:"دن کا تسلسل", perfect:"مکمل دن", surprise:"کوئی دعا دکھائیں", searchPh:"دعا، اجر، حوالہ تلاش کریں…",
   dailyOnly:"صرف روزانہ کی عادات", all:"سب", forW:"کس لیے", reward:"اجر", how:"کب اور کیسے", note:"توجہ", source:"حوالہ",
@@ -1148,7 +1149,7 @@ const S={
   kinds:{dua:"دعا",quran:"قرآن",dhikr:"ذکر",action:"عمل"},
   dailyB:"روزانہ عادت", chk:"عربی متن جانچا گیا", genW:"عمومی الفاظ", legend:"درجات کے رنگ", foot:"ہر کارڈ پر حوالہ، درجہ اور ماخذ کھولنے کے لنک موجود ہیں۔ قرآنی متن quran.com (املائی رسم الخط) سے لفظ بہ لفظ جانچا گیا؛ احادیث کی عربی sunnah.com / hadithunlocked.com سے۔ «✓ عربی متن جانچا گیا» کا مطلب ہے کہ عربی ماخذ کے مطابق ہے۔ درجات البانیؒ کے مطابق ہیں جب تک کسی اور عالم کا نام نہ ہو۔ ٹِک صرف اسی فون میں محفوظ ہوتے ہیں۔",
   prayers:["ف","ظ","عص","م","عش"], prayerNames:["فجر","ظہر","عصر","مغرب","عشاء"], noRes:"کچھ نہیں ملا", knowSub:"واقعات، تنبیہات اور اسباق — دعاؤں سے الگ۔",
-  needSub:"ابھی جو چاہیے اس پر دبائیں۔", help:"اسے کبھی بھی کیسے کھولیں", noSave:"اس طرح کھولنے پر فون آپ کے ٹِک یاد نہیں رکھ سکتا۔ فائل کو Chrome میں کھولیں (طریقہ ℹ️ میں دیکھیں)۔", actSub:"دن کے ہر لمحے میں کیا پڑھیں۔", resetDay:"آج کے ٹِک صاف کریں", cleared:"آج صاف ہو گیا", inst:"انسٹال", instA:"نور کو ہوم اسکرین پر لگائیں — آف لائن چلتی ہے۔", instI:"نور کو ہوم اسکرین پر لگائیں: ••• → Share دبائیں (پرانے آئی فون پر Share ⬆ بٹن)، پھر «Add to Home Screen»۔ آف لائن چلتی ہے۔", instD:"نور کو ہوم اسکرین پر لگائیں: Chrome ⋮ → «Add to Home screen»۔ آف لائن چلتی ہے۔"}
+  needSub:"ابھی جو چاہیے اس پر دبائیں۔", help:"اسے کبھی بھی کیسے کھولیں", noSave:"اس طرح کھولنے پر فون آپ کے ٹِک یاد نہیں رکھ سکتا۔ فائل کو Chrome میں کھولیں (طریقہ ℹ️ میں دیکھیں)۔", actSub:"دن کے ہر لمحے میں کیا پڑھیں۔", resetDay:"آج کے ٹِک صاف کریں", resetSure:"صاف کرنے کے لیے دوبارہ دبائیں", cleared:"آج صاف ہو گیا", updated:"✨ نور اپ ڈیٹ ہو گئی — اگلی بار کھولنے پر نظر آئے گی", inst:"انسٹال", instA:"نور کو ہوم اسکرین پر لگائیں — آف لائن چلتی ہے۔", instI:"نور کو ہوم اسکرین پر لگائیں: ••• → Share دبائیں (پرانے آئی فون پر Share ⬆ بٹن)، پھر «Add to Home Screen»۔ آف لائن چلتی ہے۔", instD:"نور کو ہوم اسکرین پر لگائیں: Chrome ⋮ → «Add to Home screen»۔ آف لائن چلتی ہے۔"}
 };
 
 /* ---------- storage (safe) ---------- */
@@ -1159,14 +1160,16 @@ const st=Object.assign({lang:"en",ar:30,tab:"today",act:"morning",need:null,dail
 let persistOK=true;try{localStorage.setItem("noor_t","1");persistOK=localStorage.getItem("noor_t")==="1";localStorage.removeItem("noor_t")}catch(e){persistOK=false}
 const save=()=>store.set({lang:st.lang,ar:st.ar,tab:st.tab,act:st.act,dailyOnly:st.dailyOnly,days:st.days,noInst:st.noInst||0});
 const L=()=>S[st.lang]; const tx=o=>o?(o[st.lang]||o.en):"";
-const dkey=(d=new Date())=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const now=()=>new Date(Date.now()-4*36e5); // a "day" runs 4am→4am so late-night ticks count for the right day
+const dkey=(d=now())=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 const day=k=>st.days[k]||(st.days[k]={});
 const slotsOf=(id,k=dkey())=>{const d=DAILY.find(x=>x.id===id);const a=(st.days[k]||{})[id]||[];return Array.from({length:d.slots},(_,i)=>!!a[i])};
-const totals=(k=dkey())=>{let t=0,dn=0;DAILY.forEach(d=>{t+=d.slots;dn+=slotsOf(d.id,k).filter(Boolean).length});return{t,dn,p:t?dn/t:0}};
+const live=(d,k)=>!d.since||d.since<=k; // items added later don't lower old days
+const totals=(k=dkey())=>{let t=0,dn=0;DAILY.forEach(d=>{if(!live(d,k))return;t+=d.slots;dn+=slotsOf(d.id,k).filter(Boolean).length});return{t,dn,p:t?dn/t:0}};
 function setSlot(id,i,val){const k=dkey();const d=day(k);const n=DAILY.find(x=>x.id===id).slots;const a=d[id]||Array(n).fill(false);a[i]=val===undefined?!a[i]:val;d[id]=a;save();}
 function tickNext(itemId){ // auto-tick first open slot of first daily entry for this item
   const ents=DAILY.filter(d=>d.item===itemId); for(const e of ents){const s=slotsOf(e.id);const i=s.indexOf(false);if(i>-1){setSlot(e.id,i,true);return true}} return false;}
-function streak(){let s=0;const d=new Date();if(totals(dkey(d)).p<0.5)d.setDate(d.getDate()-1);while(totals(dkey(d)).p>=0.5){s++;d.setDate(d.getDate()-1)}return s}
+function streak(){let s=0;const d=now();if(totals(dkey(d)).p<0.5)d.setDate(d.getDate()-1);while(totals(dkey(d)).p>=0.5){s++;d.setDate(d.getDate()-1)}return s}
 const perfect=()=>Object.keys(st.days).filter(k=>totals(k).p>=1).length;
 
 /* ---------- helpers ---------- */
@@ -1227,13 +1230,13 @@ function card(x){
 }
 
 /* ---------- views ---------- */
-function greet(){const h=new Date().getHours(),l=L();return h<12&&h>=4?l.morning:h<18?l.gm:h<21?l.evening:l.night}
+function greet(){const h=new Date().getHours(),l=L();return h>=4&&h<12?l.morning:h>=12&&h<18?l.gm:h>=18&&h<21?l.evening:l.night}
 function viewToday(){
   const l=L(),T=totals(),pct=Math.round(T.p*100);
   let h=`<div class="hello"><h2>${greet()} 👋</h2><p>${l.todaySub}</p></div>`+(persistOK?"":`<div class="note" style="margin:0 0 12px">⚠️ ${l.noSave}</div>`)+installBanner();
   h+=`<section class="hero"><div class="ring">${ringSVG(108,11,T.p,"#46c08f","#d9b46a","rg")}<div class="pct"><div>${pct}%<small>${T.dn} ${l.of} ${T.t}</small></div></div></div><div style="flex:1;min-width:0;position:relative;z-index:1"><h2>${T.p>=1?l.allDone:l.today}</h2><div class="stats"><span class="pill">🔥 ${streak()} ${l.streak}</span><span class="pill">⭐ ${perfect()} ${l.perfect}</span></div><div class="week">${week()}</div></div></section>`;
   h+=`<div class="row-btns"><button class="chipbtn gold" id="surprise">🎲 ${l.surprise}</button></div>`;
-  const order=["morning","adhan","salah","after","sleep","any"];
+  const order=ACTS.map(a=>a.k).filter(k=>DAILY.some(d=>d.act===k));
   order.forEach(ak=>{const ents=DAILY.filter(d=>d.act===ak);if(!ents.length)return;const a=ACT[ak];
     let t=0,dn=0;ents.forEach(e=>{t+=e.slots;dn+=slotsOf(e.id).filter(Boolean).length});
     h+=`<section class="group"><div class="ghead"><span class="e">${a.e}</span>${esc(tx(a))}<span class="cnt ${dn===t?"done":""}">${dn}/${t}</span></div><div class="gbar"><i style="width:${t?dn/t*100:0}%"></i></div>`;
@@ -1247,7 +1250,7 @@ function viewToday(){
   h+=`<div class="row-btns"><button class="chipbtn" id="resetDay">↺ ${l.resetDay}</button></div>`;
   return h;
 }
-function week(){let h="";const d=new Date();d.setDate(d.getDate()-6);const names=st.lang==="ur"?["ا","پ","م","ب","جم","ج","ہ"]:["S","M","T","W","T","F","S"];
+function week(){let h="";const d=now();d.setDate(d.getDate()-6);const names=st.lang==="ur"?["ا","پ","م","ب","جم","ج","ہ"]:["S","M","T","W","T","F","S"];
   for(let i=0;i<7;i++){const k=dkey(d),p=totals(k).p;h+=`<i class="${p>=1?"full":p>=.5?"half":""} ${i===6?"today":""}" title="${k}">${names[d.getDay()]}</i>`;d.setDate(d.getDate()+1)}return h}
 
 function viewAct(){
@@ -1307,7 +1310,7 @@ function openCounter(id,opts){V=null;
   C={id,seq,stage:0,n:0,onDone:opts&&opts.onDone,simple:!x.seq};
   $("#ovT").textContent=tx(x.t);
   $("#ovC").innerHTML=`<div class="counter"><div class="cstage" id="cStage"></div><div class="cphrase" id="cPhrase"></div><div class="bigring" id="cRing"><div id="cSvg"></div><div style="position:relative;text-align:center"><div class="n" id="cN">0</div><div class="of" id="cOf"></div></div></div><div class="tapme">${l.tapCount}</div>${C.simple?`<div class="targets" id="cTargets">${[3,7,10,33,100].map(t=>`<button data-t="${t}" class="${t===seq[0].n?"on":""}">${t}</button>`).join("")}</div>`:""}</div><div class="ctrl"><button id="cUndo">↶ ${l.undo}</button><button id="cReset">↺ ${l.reset}</button></div>`;
-  $("#ov").classList.add("show"); document.body.style.overflow="hidden"; drawC();
+  ovOpen(); drawC();
 }
 function drawC(){const s=C.seq[C.stage],tot=C.seq.reduce((a,b)=>a+b.n,0),before=C.seq.slice(0,C.stage).reduce((a,b)=>a+b.n,0);
   $("#cN").textContent=C.n; $("#cOf").textContent="/ "+s.n+(C.seq.length>1?`  ·  ${before+C.n}/${tot}`:"");
@@ -1318,18 +1321,21 @@ function bump(){const s=C.seq[C.stage]; if(C.fin)return; C.n++; buzz(12);
       const ticked=tickNext(C.id); toast(L().completed+(ticked?" ☑️":"")); if(C.onDone)C.onDone(); render(true); return;} }
   drawC();}
 let V=null;
-function closeOv(){$("#ov").classList.remove("show");document.body.style.overflow="";C=null;R=null;V=null;}
+let HOPEN=false;
+function ovOpen(){if(!$("#ov").classList.contains("show")){try{history.pushState({ov:1},"")}catch(e){}}$("#ov").classList.add("show");document.body.style.overflow="hidden";}
+function closeOv(fromPop){if(!$("#ov").classList.contains("show"))return;$("#ov").classList.remove("show");document.body.style.overflow="";C=null;R=null;V=null;HOPEN=false;if(fromPop!==true){try{if(history.state&&history.state.ov)history.back()}catch(e){}}}
+addEventListener("popstate",()=>{if($("#ov").classList.contains("show"))closeOv(true)});
 
 /* ---------- ruqyah session ---------- */
 let R=null;
-function openRuq(){V=null;R={i:0};drawR();$("#ov").classList.add("show");document.body.style.overflow="hidden";}
+function openRuq(){V=null;R={i:0};drawR();ovOpen();}
 function drawR(){const l=L(),x=BY_ID[RQ[R.i]];$("#ovT").textContent=`${l.step} ${R.i+1}/${RQ.length}`;
   $("#ovC").innerHTML=`<div class="sheet">${card(x)}</div><div class="ctrl"><button id="rPrev" ${R.i?"":"disabled style='opacity:.4'"}>${st.lang==="ur"?"→":"←"} ${l.prev}</button>${x.cnt||x.seq?`<button id="rCount" style="background:var(--gold);color:#1a1408;border:0">🔢 ${l.count}</button>`:""}<button id="rNext">${R.i<RQ.length-1?l.next+(st.lang==="ur"?" ←":" →"):l.finish+" ✓"}</button></div>`;
   $("#ovC .sheet").scrollTop=0;}
 
 /* ---------- search ---------- */
 const norm=s=>String(s||"").toLowerCase().replace(/[ً-ٰٟـ]/g,"").replace(/[أإآٱ]/g,"ا");
-function openSearch(){const l=L();$("#ovT").textContent="🔍";$("#ovC").innerHTML=`<div class="sheet"><input class="search-in" id="q" placeholder="${l.searchPh}" autocomplete="off"><div id="qr" style="margin-top:12px"></div></div>`;$("#ov").classList.add("show");document.body.style.overflow="hidden";setTimeout(()=>$("#q").focus(),50);}
+function openSearch(){const l=L();HOPEN=false;V=null;$("#ovT").textContent="🔍";$("#ovC").innerHTML=`<div class="sheet"><input class="search-in" id="q" placeholder="${l.searchPh}" autocomplete="off"><div id="qr" style="margin-top:12px"></div></div>`;ovOpen();setTimeout(()=>$("#q").focus(),50);}
 function doSearch(q){q=norm(q).trim();if(q.length<2){$("#qr").innerHTML="";return}
   const r=ITEMS.filter(x=>norm([x.t.en,x.t.ur,x.ar,x.ar2,x.m&&x.m.en,x.m&&x.m.ur,x.use.en,x.use.ur,x.rw.en,x.rw.ur,x.src,x.from].join(" ")).includes(q));
   const k=KNOW.filter(x=>norm([x.t.en,x.t.ur,x.b.en,x.b.ur,x.src].join(" ")).includes(q));
@@ -1344,7 +1350,18 @@ const ANDROID=/android/i.test(navigator.userAgent);
 let instPrompt=null;
 addEventListener("beforeinstallprompt",e=>{e.preventDefault();instPrompt=e;if(st.tab==="today")render(true)});
 addEventListener("appinstalled",()=>{instPrompt=null;st.noInst=1;save();if(st.tab==="today")render(true)});
-if(WEB&&"serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+const T0=Date.now();let updPending=false,lastCheck=Date.now();
+if(WEB&&"serviceWorker" in navigator){
+  addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+  // the offline helper tells us when a newer version of Noor has been downloaded
+  navigator.serviceWorker.addEventListener("message",e=>{if(!e.data||e.data.type!=="noor-updated")return;
+    if(Date.now()-T0<20000&&!$("#ov").classList.contains("show"))location.reload();
+    else{updPending=true;toast(L().updated)}});
+  document.addEventListener("visibilitychange",()=>{if(document.visibilityState!=="visible")return;
+    if(updPending&&!$("#ov").classList.contains("show")){location.reload();return}
+    if(Date.now()-lastCheck>3600000){lastCheck=Date.now();navigator.serviceWorker.ready.then(r=>{r.update().catch(()=>{});r.active&&r.active.postMessage("check")}).catch(()=>{})}});
+}
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist().catch(()=>{})}catch(e){}
 function installBanner(){
   if(!WEB||STANDALONE||st.noInst)return "";
   const l=L();
@@ -1392,19 +1409,19 @@ ur:`<div class="kbody" style="display:block;padding:0">
 <p>ٹِک آپ کے اپنے فون پر محفوظ ہوتے ہیں، ہر ورژن میں الگ — ہمیشہ وہی استعمال کریں۔ اگر «آج» ٹیب پر پیلی تنبیہ نظر آئے تو یہ ایسے ویوئر میں کھلی ہے جو محفوظ نہیں کر سکتا؛ Chrome میں کھولیں۔</p>
 <div class="sub">🔤 فونٹس</div>
 <p>لنک والا ورژن Amiri اور نستعلیق فونٹ آف لائن کے لیے محفوظ کر لیتا ہے۔ فائل اور APK آف لائن ہونے پر فون کا اپنا عربی فونٹ استعمال کرتے ہیں — الفاظ اور اعراب وہی رہتے ہیں، صرف انداز بدلتا ہے۔</p></div>`};
-function openHelp(){V=null;$("#ovT").textContent="ℹ️ "+L().help;let hh=HELP[st.lang];if(location.protocol==="https:"){const here=location.origin+location.pathname.replace(/index\.html$/,"");hh=hh.split("https://muhammadadilawan68.github.io/noor/").join(here).split("muhammadadilawan68.github.io/noor").join(here.replace("https://","").replace(/\/$/,""))}$("#ovC").innerHTML=`<div class="sheet">${hh}</div>`;$("#ov").classList.add("show");document.body.style.overflow="hidden";}
+function openHelp(){V=null;HOPEN=true;$("#ovT").textContent="ℹ️ "+L().help;let hh=HELP[st.lang];if(location.protocol==="https:"){const here=location.origin+location.pathname.replace(/index\.html$/,"");hh=hh.split("https://muhammadadilawan68.github.io/noor/").join(here).split("muhammadadilawan68.github.io/noor").join(here.replace("https://","").replace(/\/$/,""))}$("#ovC").innerHTML=`<div class="sheet">${hh}</div>`;ovOpen();}
 
 /* ---------- events ---------- */
 document.addEventListener("click",e=>{
   const t=e.target.closest("[data-tab],[data-lang],[data-slot],[data-open],[data-count],[data-copy],[data-tick],[data-act],[data-need],[data-k],[data-t],#needBack,#dailyTog,#surprise,#rqStart,#ovX,#cUndo,#cReset,#cRing,#rPrev,#rNext,#rCount,#searchBtn,#helpBtn,#szUp,#szDn,#resetDay");
   if(!t)return; const d=t.dataset;
   if(d.tab){st.tab=d.tab;if(d.tab!=="need")st.need=null;save();render();scrollTo(0,0);return}
-  if(d.lang){st.lang=d.lang;save();render(true);if(C)drawC();return}
+  if(d.lang){st.lang=d.lang;save();render(true);if(C){$("#ovT").textContent=tx(BY_ID[C.id].t);drawC()}else if(R)drawR();else if(V)showCard(V);else if(HOPEN)openHelp();return}
   if(d.slot){const[id,i]=d.slot.split(":");const before=totals().p;setSlot(id,+i);buzz(15);const after=totals().p;render(true);if(after>=1&&before<1){confetti();toast(L().allDone)}return}
   if(d.open){showCard(d.open);return}
   if(d.count){openCounter(d.count);return}
   if(d.copy){const x=BY_ID[d.copy];const txt=x.ar+(x.ar2?"\n"+x.ar2:"");(navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast(L().copied)).catch(()=>{const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast(L().copied)}catch(_){}ta.remove()});return}
-  if(d.tick){const ents=DAILY.filter(x=>x.item===d.tick);const all=ents.every(en=>slotsOf(en.id).every(Boolean));const before=totals().p;if(all){ents.forEach(en=>slotsOf(en.id).forEach((_,i)=>setSlot(en.id,i,false)))}else{tickNext(d.tick);buzz(15);toast("☑️ "+L().isDone)}if(totals().p>=1&&before<1)confetti();render(true);if(R)drawR();else if(V)showCard(V);return}
+  if(d.tick){const ents=DAILY.filter(x=>x.item===d.tick);const all=ents.every(en=>slotsOf(en.id).every(Boolean));const before=totals().p;if(all){const en=ents[ents.length-1];setSlot(en.id,slotsOf(en.id).lastIndexOf(true),false)}else{tickNext(d.tick);buzz(15);toast("☑️ "+L().isDone)}if(totals().p>=1&&before<1)confetti();render(true);if(R)drawR();else if(V)showCard(V);return}
   if(d.act){st.act=d.act;save();render();return}
   if(d.need){st.need=d.need;render();scrollTo(0,0);return}
   if(d.k){t.parentElement.classList.toggle("open");return}
@@ -1425,13 +1442,17 @@ document.addEventListener("click",e=>{
     case"helpBtn":openHelp();return;
     case"szUp":st.ar=Math.min(44,st.ar+2);save();render(true);return;
     case"szDn":st.ar=Math.max(22,st.ar-2);save();render(true);return;
-    case"resetDay":st.days[dkey()]={};save();render(true);toast(L().cleared);return;
+    case"resetDay":if(!t.dataset.arm){t.dataset.arm="1";t.textContent="⚠️ "+L().resetSure;setTimeout(()=>{if(t.isConnected){delete t.dataset.arm;t.textContent="↺ "+L().resetDay}},3000);return}st.days[dkey()]={};save();render(true);toast(L().cleared);return;
   }
 });
 document.addEventListener("input",e=>{if(e.target.id==="q")doSearch(e.target.value)});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#ov").classList.contains("show"))closeOv();if(C&&(e.key===" "||e.key==="Enter")){e.preventDefault();bump()}});
-function showCard(id){V=id;const l=L();$("#ovT").textContent=tx(BY_ID[id].t);$("#ovC").innerHTML=`<div class="sheet">${card(BY_ID[id])}</div>`;$("#ov").classList.add("show");document.body.style.overflow="hidden";}
+function showCard(id){V=id;HOPEN=false;const l=L();$("#ovT").textContent=tx(BY_ID[id].t);$("#ovC").innerHTML=`<div class="sheet">${card(BY_ID[id])}</div>`;ovOpen();}
 
+let lastDay=dkey();
+function dayCheck(){const k=dkey();if(k!==lastDay){lastDay=k;render(true)}}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")dayCheck()});
+setInterval(dayCheck,60000);
 render();
 })();
 
