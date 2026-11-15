@@ -1392,7 +1392,7 @@ ur:`<div class="kbody" style="display:block;padding:0">
 <p>ٹِک آپ کے اپنے فون پر محفوظ ہوتے ہیں، ہر ورژن میں الگ — ہمیشہ وہی استعمال کریں۔ اگر «آج» ٹیب پر پیلی تنبیہ نظر آئے تو یہ ایسے ویوئر میں کھلی ہے جو محفوظ نہیں کر سکتا؛ Chrome میں کھولیں۔</p>
 <div class="sub">🔤 فونٹس</div>
 <p>لنک والا ورژن Amiri اور نستعلیق فونٹ آف لائن کے لیے محفوظ کر لیتا ہے۔ فائل اور APK آف لائن ہونے پر فون کا اپنا عربی فونٹ استعمال کرتے ہیں — الفاظ اور اعراب وہی رہتے ہیں، صرف انداز بدلتا ہے۔</p></div>`};
-function openHelp(){V=null;$("#ovT").textContent="ℹ️ "+L().help;$("#ovC").innerHTML=`<div class="sheet">${HELP[st.lang]}</div>`;$("#ov").classList.add("show");document.body.style.overflow="hidden";}
+function openHelp(){V=null;$("#ovT").textContent="ℹ️ "+L().help;let hh=HELP[st.lang];if(location.protocol==="https:"){const here=location.origin+location.pathname.replace(/index\.html$/,"");hh=hh.split("https://muhammadadilawan68.github.io/noor/").join(here).split("muhammadadilawan68.github.io/noor").join(here.replace("https://","").replace(/\/$/,""))}$("#ovC").innerHTML=`<div class="sheet">${hh}</div>`;$("#ov").classList.add("show");document.body.style.overflow="hidden";}
 
 /* ---------- events ---------- */
 document.addEventListener("click",e=>{
