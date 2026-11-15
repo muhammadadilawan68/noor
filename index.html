@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="noor-build" content="20261115205345">
+<meta name="noor-build" content="20261115211041">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0d1714">
@@ -250,7 +250,7 @@ body.ur .inst{line-height:2.1}
 <div class="toast" id="toast"></div>
 <canvas id="confetti"></canvas>
 <script>
-// ===== Categories =====
+
 const ACTS = [
   {k:"wake",   e:"🌙", en:"Waking at night",   ur:"رات کو آنکھ کھلے"},
   {k:"morning",e:"🌅", en:"Morning & Evening", ur:"صبح و شام"},
@@ -280,11 +280,10 @@ const NEEDS = [
   {k:"reward",  e:"💎", en:"Huge rewards, little effort", ur:"تھوڑی محنت، بڑا اجر"}
 ];
 
-// grade keys: sahih | hasan | quran | weak | disputed | general
-// Each item: id, kind (dua|quran|dhikr|action), t (title = the action), ar (Arabic), ar2/ar2l (optional second Arabic + label),
-// m (meaning), use, rw (reward), how, note, src, g, acts, needs, cnt (counter), seq (sequence counter), from (reel)
+
+
 const ITEMS = [
-/* ================= FROM YOUR SCREENSHOTS ================= */
+
 {id:"baqarah_end", kind:"quran", g:"quran",
  t:{en:"Recite the last two verses of Surah Al-Baqarah (2:285–286) at night", ur:"رات کو سورۂ بقرہ کی آخری دو آیتیں (285–286) پڑھیں"},
  ar:"آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ ﴿٢٨٥﴾ لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ ۖ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ۚ أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ ﴿٢٨٦﴾",
@@ -293,7 +292,7 @@ const ITEMS = [
  use:{en:"Night-time protection, forgiveness, and asking Allah not to burden you beyond your strength.", ur:"رات کی حفاظت، مغفرت، اور یہ دعا کہ اللہ طاقت سے زیادہ بوجھ نہ ڈالے۔"},
  rw:{en:"The Prophet ﷺ said: whoever recites the last two verses of Surah Al-Baqarah at night, they will suffice him (Bukhari 5009, Muslim 807).", ur:"نبی ﷺ نے فرمایا: جو رات کو سورۂ بقرہ کی آخری دو آیتیں پڑھ لے، وہ اس کے لیے کافی ہو جاتی ہیں (بخاری 5009، مسلم 807)۔"},
  how:{en:"Once every night — after Isha or before sleeping.", ur:"ہر رات ایک بار — عشاء کے بعد یا سونے سے پہلے۔"},
- src:"Qur'an 2:285–286 · Bukhari 5009 · Muslim 807", acts:["sleep"], needs:["protect","forgive"], ruq:true, from:"Your screenshots (2.285 & 2.286)"},
+ src:"Qur'an 2:285–286 · Bukhari 5009 · Muslim 807", acts:["sleep"], needs:["protect","forgive"], ruq:true},
 
 {id:"adhan_dua", kind:"dua", g:"sahih",
  t:{en:"Say the dua after the Adhan ends", ur:"اذان ختم ہونے کے بعد یہ دعا پڑھیں"},
@@ -303,7 +302,7 @@ const ITEMS = [
  rw:{en:"His intercession becomes due for you on the Day of Judgement (Bukhari 614).", ur:"قیامت کے دن اس کے لیے نبی ﷺ کی شفاعت واجب ہو جاتی ہے (بخاری 614)۔"},
  how:{en:"After each of the 5 Adhans. First repeat the Adhan after the muezzin, then send salawat, then say this.", ur:"پانچوں اذانوں کے بعد۔ پہلے مؤذن کے ساتھ اذان کے کلمات دہرائیں، پھر درود پڑھیں، پھر یہ دعا۔"},
  note:{en:"Your screenshot ends with «إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ». That ending is not in Bukhari; it comes from a later narration (al-Bayhaqi) that al-Albani judged an irregular (shādh) addition. The version above is the Bukhari wording.", ur:"آپ کے اسکرین شاٹ کے آخر میں «إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ» ہے۔ یہ الفاظ بخاری میں نہیں؛ یہ بیہقی کی روایت کا اضافہ ہے جسے البانیؒ نے شاذ قرار دیا۔ اوپر بخاری کے الفاظ ہیں۔"},
- src:"Sahih al-Bukhari 614", acts:["adhan"], needs:["jannah","reward"], from:"Your screenshot"},
+ src:"Sahih al-Bukhari 614", acts:["adhan"], needs:["jannah","reward"]},
 
 {id:"adhan_reply", kind:"action", g:"sahih",
  t:{en:"Repeat the Adhan after the muezzin — and say «lā ḥawla…» at «ḥayya ʿalā…»", ur:"مؤذن کے ساتھ اذان دہرائیں — اور «حَیَّ عَلَی…» پر «لا حول…» کہیں"},
@@ -312,9 +311,9 @@ const ITEMS = [
  use:{en:"Answering the call to prayer the Sunnah way.", ur:"سنت کے مطابق اذان کا جواب دینا۔"},
  rw:{en:"Whoever answers the Adhan this way from his heart will enter Jannah (Muslim 385).", ur:"جو دل سے اس طرح اذان کا جواب دے وہ جنت میں داخل ہوگا (مسلم 385)۔"},
  how:{en:"Say what the muezzin says, except at «ḥayya ʿalaṣ-ṣalāh» and «ḥayya ʿalal-falāḥ» — there say «lā ḥawla wa lā quwwata illā billāh».", ur:"جو مؤذن کہے وہی کہیں، سوائے «حَیَّ عَلَی الصَّلَاۃ» اور «حَیَّ عَلَی الفَلَاح» کے — وہاں «لا حول ولا قوۃ الا باللہ» کہیں۔"},
- src:"Sahih Muslim 385", acts:["adhan"], needs:["jannah"], from:"@aliexplainsdeen slides"},
+ src:"Sahih Muslim 385", acts:["adhan"], needs:["jannah"]},
 
-/* ================= RUQYAH ================= */
+
 {id:"fatiha", kind:"quran", g:"quran",
  t:{en:"Recite Surah Al-Fatiha over yourself (ruqyah)", ur:"اپنے اوپر سورۂ فاتحہ پڑھ کر دم کریں (رقیہ)"},
  ar:"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ﴿١﴾ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ﴿٢﴾ الرَّحْمَٰنِ الرَّحِيمِ ﴿٣﴾ مَالِكِ يَوْمِ الدِّينِ ﴿٤﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿٥﴾ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ﴿٦﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿٧﴾",
@@ -322,8 +321,8 @@ const ITEMS = [
  use:{en:"Healing and ruqyah — the Prophet ﷺ called it a ruqyah.", ur:"شفا اور رقیہ — نبی ﷺ نے اسے رقیہ قرار دیا۔"},
  rw:{en:"A companion recited Al-Fatiha over a man stung by a scorpion and he recovered; the Prophet ﷺ asked: «How did you know it is a ruqyah?» (Bukhari 5736).", ur:"ایک صحابی نے بچھو کے ڈسے ہوئے پر سورۂ فاتحہ پڑھ کر دم کیا تو وہ ٹھیک ہو گیا؛ نبی ﷺ نے فرمایا: «تمہیں کیسے معلوم ہوا کہ یہ رقیہ ہے؟» (بخاری 5736)۔"},
  how:{en:"Recite, then lightly blow (with a little breath) over yourself or into your palms and wipe over your body.", ur:"پڑھ کر اپنے اوپر یا ہتھیلیوں میں ہلکی پھونک ماریں اور جسم پر پھیر لیں۔"},
- note:{en:"The reel says to recite it 1, 3, 5 or 7 times «as long as it’s odd». There is no specific narration requiring an odd number for Al-Fatiha — recite it as many times as you like.", ur:"ریل میں کہا گیا کہ 1، 3، 5 یا 7 بار، یعنی طاق عدد۔ فاتحہ کے لیے طاق عدد کی کوئی خاص روایت نہیں — جتنی بار چاہیں پڑھیں۔"},
- src:"Qur'an 1 · Sahih al-Bukhari 5736, 5007", acts:["ill"], needs:["heal","protect"], ruq:true, cnt:7, from:"Ruqyah screenshot (@abostani)"},
+ note:{en:"It is often said to recite it 1, 3, 5 or 7 times «as long as it’s odd». There is no specific narration requiring an odd number for Al-Fatiha — recite it as many times as you like.", ur:"اکثر کہا جاتا ہے کہ 1، 3، 5 یا 7 بار، یعنی طاق عدد۔ فاتحہ کے لیے طاق عدد کی کوئی خاص روایت نہیں — جتنی بار چاہیں پڑھیں۔"},
+ src:"Qur'an 1 · Sahih al-Bukhari 5736, 5007", acts:["ill"], needs:["heal","protect"], ruq:true, cnt:7},
 
 {id:"ayat_kursi", kind:"quran", g:"quran",
  t:{en:"Recite Ayat al-Kursi (2:255)", ur:"آیت الکرسی (2:255) پڑھیں"},
@@ -332,7 +331,7 @@ const ITEMS = [
  use:{en:"Protection through the night, and a key to Jannah after every prayer.", ur:"رات بھر کی حفاظت، اور ہر نماز کے بعد جنت کی کنجی۔"},
  rw:{en:"At bedtime: a guardian from Allah stays with you and no devil comes near you until morning (Bukhari 2311). After every obligatory prayer: nothing stands between you and Jannah except death (an-Nasa'i, al-Sunan al-Kubra 9928 — graded sahih by Ibn Hibban and al-Albani).", ur:"سوتے وقت: اللہ کی طرف سے ایک نگہبان مقرر رہتا ہے اور صبح تک شیطان قریب نہیں آتا (بخاری 2311)۔ ہر فرض نماز کے بعد: جنت میں داخلے سے صرف موت رکاوٹ رہ جاتی ہے (نسائی، السنن الکبریٰ 9928 — ابن حبانؒ و البانیؒ: صحیح)۔"},
  how:{en:"After each of the 5 prayers, before sleeping, and in ruqyah.", ur:"پانچوں نمازوں کے بعد، سونے سے پہلے، اور رقیہ میں۔"},
- src:"Qur'an 2:255 · Bukhari 2311 · an-Nasa'i al-Kubra 9928", acts:["after","sleep"], needs:["protect","jannah"], ruq:true, from:"Ruqyah screenshot, @aboo.yahyaa, @brother_sulaiman_fariz"},
+ src:"Qur'an 2:255 · Bukhari 2311 · an-Nasa'i al-Kubra 9928", acts:["after","sleep"], needs:["protect","jannah"], ruq:true},
 
 {id:"three_quls", kind:"quran", g:"quran",
  t:{en:"Recite Al-Ikhlas, Al-Falaq and An-Nas — 3 times each", ur:"سورۂ اخلاص، فلق اور ناس — ہر ایک تین بار"},
@@ -341,7 +340,7 @@ const ITEMS = [
  use:{en:"All-round protection — from envy, evil eye, magic and Shaytan’s whispers.", ur:"ہر طرح کی حفاظت — حسد، نظرِ بد، جادو اور شیطانی وسوسوں سے۔"},
  rw:{en:"Said 3 times in the morning and evening, «they will suffice you against everything» (Abu Dawud 5082 — hasan per al-Albani). Every night the Prophet ﷺ blew into his cupped hands, recited them and wiped over his body, three times (Bukhari 5017). He also used them as ruqyah when ill (Bukhari 5748).", ur:"صبح و شام تین تین بار پڑھیں تو «یہ ہر چیز سے تمہیں کافی ہوں گی» (ابوداؤد 5082)۔ نبی ﷺ ہر رات ہتھیلیاں جوڑ کر ان میں پھونکتے، یہ سورتیں پڑھتے اور پورے جسم پر ہاتھ پھیرتے، تین بار (بخاری 5017)۔ بیماری میں بھی ان سے دم کرتے (بخاری 5748)۔"},
  how:{en:"Morning (after Fajr) and evening (after Maghrib): 3 times each. Before sleep: cup your hands, blow lightly, recite all three, wipe over as much of your body as you can — do this 3 times.", ur:"صبح (فجر کے بعد) اور شام (مغرب کے بعد): ہر ایک تین بار۔ سونے سے پہلے: ہتھیلیاں جوڑیں، ہلکی پھونک ماریں، تینوں سورتیں پڑھیں، جسم پر ہاتھ پھیریں — یہ تین بار کریں۔"},
- src:"Qur'an 112–114 · Abu Dawud 5082 · Bukhari 5017, 5748", acts:["morning","sleep"], needs:["protect","heal"], ruq:true, cnt:3, from:"Ruqyah screenshot (@abostani)"},
+ src:"Qur'an 112–114 · Abu Dawud 5082 · Bukhari 5017, 5748", acts:["morning","sleep"], needs:["protect","heal"], ruq:true, cnt:3},
 
 {id:"ruqyah_nas", kind:"dua", g:"sahih",
  t:{en:"Make the Prophet’s healing dua (place your hand where it hurts)", ur:"نبی ﷺ کی شفا والی دعا پڑھیں (تکلیف کی جگہ ہاتھ رکھ کر)"},
@@ -350,19 +349,19 @@ const ITEMS = [
  use:{en:"Healing for yourself or someone sick.", ur:"اپنے یا کسی بیمار کے لیے شفا۔"},
  rw:{en:"The Prophet ﷺ used to say this when visiting the sick, wiping with his right hand (Bukhari 5675, Muslim 2191).", ur:"نبی ﷺ بیمار کی عیادت میں داہنا ہاتھ پھیرتے ہوئے یہ دعا پڑھتے تھے (بخاری 5675، مسلم 2191)۔"},
  how:{en:"Place your right hand on the pain and say it — repeat as you like.", ur:"داہنا ہاتھ تکلیف کی جگہ رکھ کر پڑھیں — جتنی بار چاہیں۔"},
- note:{en:"The reel’s caption wording («Allāhumma rabban-nās…») is also authentic (Bukhari 5743). The Arabic above is exactly as in Bukhari 5675 — «al-bās» is the narrated spelling of «al-baʾs» (harm).", ur:"ریل کے کیپشن کے الفاظ («اللّٰہم ربّ الناس…») بھی صحیح ہیں (بخاری 5743)۔ اوپر بالکل بخاری 5675 کے الفاظ ہیں — «الباس» روایت کا املا ہے، «البأس» (تکلیف) ہی کا لفظ۔"},
- src:"Sahih al-Bukhari 5675, 5743 · Sahih Muslim 2191", acts:["ill"], needs:["heal"], ruq:true, cnt:3, from:"Ruqyah screenshot (@abostani)"},
+ note:{en:"Another wording («Allāhumma rabban-nās…») is also authentic (Bukhari 5743). The Arabic above is exactly as in Bukhari 5675 — «al-bās» is the narrated spelling of «al-baʾs» (harm).", ur:"ایک اور الفاظ («اللّٰہم ربّ الناس…») بھی صحیح ہیں (بخاری 5743)۔ اوپر بالکل بخاری 5675 کے الفاظ ہیں — «الباس» روایت کا املا ہے، «البأس» (تکلیف) ہی کا لفظ۔"},
+ src:"Sahih al-Bukhari 5675, 5743 · Sahih Muslim 2191", acts:["ill"], needs:["heal"], ruq:true, cnt:3},
 
 {id:"ruqyah_jibril", kind:"dua", g:"sahih",
  t:{en:"Recite Jibril’s ruqyah", ur:"جبریلؑ والا رقیہ پڑھیں"},
  ar:"بِاسْمِ اللَّهِ أَرْقِيكَ، مِنْ كُلِّ شَيْءٍ يُؤْذِيكَ، مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنِ حَاسِدٍ، اللَّهُ يَشْفِيكَ، بِاسْمِ اللَّهِ أَرْقِيكَ",
  ar2:"بِاسْمِ اللَّهِ أَرْقِي نَفْسِي، مِنْ كُلِّ شَيْءٍ يُؤْذِينِي، مِنْ شَرِّ كُلِّ نَفْسٍ أَوْ عَيْنِ حَاسِدٍ، اللَّهُ يَشْفِينِي",
- ar2l:{en:"Adapted for yourself (as in the reel’s caption):", ur:"اپنے لیے (جیسا ریل کے کیپشن میں ہے):"},
+ ar2l:{en:"Adapted for yourself:", ur:"اپنے لیے:"},
  m:{en:"In the name of Allah I perform ruqyah for you, from everything that harms you, from the evil of every soul or envious eye. May Allah heal you. In the name of Allah I perform ruqyah for you.", ur:"اللہ کے نام سے میں تجھ پر دم کرتا ہوں، ہر اس چیز سے جو تجھے تکلیف دے، ہر نفس کے شر سے یا حسد کرنے والی آنکھ کے شر سے۔ اللہ تجھے شفا دے۔ اللہ کے نام سے میں تجھ پر دم کرتا ہوں۔"},
  use:{en:"Evil eye, envy and illness.", ur:"نظرِ بد، حسد اور بیماری۔"},
  rw:{en:"Jibril came to the Prophet ﷺ when he was ill and recited this over him (Muslim 2186).", ur:"نبی ﷺ بیمار تھے تو جبریلؑ آئے اور یہ پڑھ کر دم کیا (مسلم 2186)۔"},
  how:{en:"Say it over yourself or someone else, then blow lightly.", ur:"اپنے یا کسی اور پر پڑھ کر ہلکی پھونک ماریں۔"},
- src:"Sahih Muslim 2186", acts:["ill"], needs:["heal","protect"], ruq:true, cnt:3, from:"Ruqyah screenshot (@abostani)"},
+ src:"Sahih Muslim 2186", acts:["ill"], needs:["heal","protect"], ruq:true, cnt:3},
 
 {id:"auzu_kalimat", kind:"dua", g:"sahih",
  t:{en:"Seek refuge in Allah’s perfect words when you stop somewhere, and in the evening", ur:"کسی جگہ ٹھہریں اور شام کو — اللہ کے کامل کلمات کی پناہ مانگیں"},
@@ -371,7 +370,7 @@ const ITEMS = [
  use:{en:"Protection from anything harmful — stings, bites, unseen harm.", ur:"ہر نقصان دہ چیز سے حفاظت — ڈنک، کاٹنا، نظر نہ آنے والا نقصان۔"},
  rw:{en:"Whoever stops at a place and says this, nothing will harm him until he leaves it (Muslim 2708). Said in the evening, a scorpion’s sting would not have harmed (Muslim 2709).", ur:"جو کسی جگہ اترے اور یہ پڑھے، وہاں سے روانہ ہونے تک اسے کوئی چیز نقصان نہیں دے گی (مسلم 2708)۔ شام کو پڑھنے پر بچھو کا ڈسنا بھی نقصان نہ دیتا (مسلم 2709)۔"},
  how:{en:"Evening: 3 times. Also whenever you arrive somewhere new.", ur:"شام: تین بار۔ اور جب بھی کسی نئی جگہ پہنچیں۔"},
- src:"Sahih Muslim 2708, 2709", acts:["morning","out"], needs:["protect"], ruq:true, cnt:3, from:"Ruqyah screenshot (@abostani)"},
+ src:"Sahih Muslim 2708, 2709", acts:["morning","out"], needs:["protect"], ruq:true, cnt:3},
 
 {id:"pain_dua", kind:"dua", g:"sahih",
  t:{en:"For pain: hand on the spot, «Bismillah» ×3, then this ×7", ur:"درد کے لیے: جگہ پر ہاتھ، تین بار «بسم اللہ»، پھر یہ سات بار"},
@@ -380,7 +379,7 @@ const ITEMS = [
  use:{en:"Any physical pain.", ur:"کسی بھی جسمانی درد کے لیے۔"},
  rw:{en:"The Prophet ﷺ taught this to ʿUthman ibn Abi al-ʿAs who complained of pain (Muslim 2202).", ur:"نبی ﷺ نے یہ عثمان بن ابی العاصؓ کو سکھائی جب انہوں نے درد کی شکایت کی (مسلم 2202)۔"},
  how:{en:"Put your hand where it hurts. Bismillah 3 times, then the line 7 times.", ur:"درد کی جگہ ہاتھ رکھیں۔ تین بار بسم اللہ، پھر سات بار یہ کلمات۔"},
- note:{en:"Added by me from Sahih Muslim — not from your reels — because it completes the ruqyah set.", ur:"یہ میں نے صحیح مسلم سے شامل کی — آپ کی ریلز میں نہیں تھی — کیونکہ رقیہ کا سیٹ مکمل ہو جاتا ہے۔"},
+ note:{en:"Included here to complete the ruqyah set.", ur:"رقیہ کا مجموعہ مکمل کرنے کے لیے یہاں شامل کی گئی ہے۔"},
  src:"Sahih Muslim 2202", acts:["ill"], needs:["heal"], ruq:true, cnt:7},
 
 {id:"kids_auzu", kind:"dua", g:"sahih",
@@ -392,23 +391,23 @@ const ITEMS = [
  use:{en:"Protecting children from Shaytan and the evil eye.", ur:"بچوں کو شیطان اور نظرِ بد سے بچانا۔"},
  rw:{en:"The Prophet ﷺ said this over Hasan and Husayn (Tirmidhi 2060 — this exact wording). He said Ibrahim used to seek refuge for Ismaʿil and Ishaq with «أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّةِ…» (Bukhari 3371). Shaytan touches every newborn except Maryam and her son — because of her mother’s dua (Bukhari 3431).", ur:"نبی ﷺ یہ حسنؓ و حسینؓ پر پڑھتے تھے (ترمذی 2060 — یہی الفاظ)۔ آپ ﷺ نے فرمایا کہ ابراہیمؑ اسماعیلؑ اور اسحاقؑ کے لیے «أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّةِ…» سے پناہ مانگتے تھے (بخاری 3371)۔ شیطان ہر نومولود کو چھوتا ہے سوائے مریمؑ اور ان کے بیٹے کے — ان کی والدہ کی دعا کی وجہ سے (بخاری 3431)۔"},
  how:{en:"For one boy say «uʿīdhuka», for one girl «uʿīdhuki», for two «uʿīdhukumā», for more «uʿīdhukum».", ur:"ایک لڑکے کے لیے «أُعِيذُكَ»، ایک لڑکی کے لیے «أُعِيذُكِ»، دو کے لیے «أُعِيذُكُمَا»، زیادہ کے لیے «أُعِيذُكُمْ»۔"},
- src:"Jami' at-Tirmidhi 2060 · Sahih al-Bukhari 3371, 3431 · Qur'an 3:36", acts:["any"], needs:["family","protect"], ruq:true, from:"@quranflows.app"},
+ src:"Jami' at-Tirmidhi 2060 · Sahih al-Bukhari 3371, 3431 · Qur'an 3:36", acts:["any"], needs:["family","protect"], ruq:true},
 
 {id:"devils_dua", kind:"dua", g:"disputed",
  t:{en:"Say the words Jibril taught on the night the devils came with fire", ur:"وہ کلمات پڑھیں جو جبریلؑ نے اُس رات سکھائے جب شیاطین آگ لے کر آئے"},
  ar:"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ شَرِّ مَا خَلَقَ، وَذَرَأَ وَبَرَأَ، وَمِنْ شَرِّ مَا يَنْزِلُ مِنَ السَّمَاءِ، وَمِنْ شَرِّ مَا يَعْرُجُ فِيهَا، وَمِنْ شَرِّ فِتَنِ اللَّيْلِ وَالنَّهَارِ، وَمِنْ شَرِّ كُلِّ طَارِقٍ إِلَّا طَارِقًا يَطْرُقُ بِخَيْرٍ يَا رَحْمَنُ",
  ar2:"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ الَّتِي لَا يُجَاوِزُهُنَّ بَرٌّ وَلَا فَاجِرٌ، مِنْ شَرِّ مَا خَلَقَ وَبَرَأَ وَذَرَأَ، وَمِنْ شَرِّ مَا يَنْزِلُ مِنَ السَّمَاءِ، وَمِنْ شَرِّ مَا يَعْرُجُ فِيهَا، وَمِنْ شَرِّ مَا ذَرَأَ فِي الْأَرْضِ، وَمِنْ شَرِّ مَا يَخْرُجُ مِنْهَا، وَمِنْ شَرِّ فِتَنِ اللَّيْلِ وَالنَّهَارِ، وَمِنْ شَرِّ كُلِّ طَارِقٍ إِلَّا طَارِقًا يَطْرُقُ بِخَيْرٍ يَا رَحْمَنُ",
- ar2l:{en:"The longer wording from the reel’s caption (it adds phrases found in other narrations — it is not the exact text of Ahmad 15460):", ur:"ریل کے کیپشن والے لمبے الفاظ (ان میں دوسری روایات کے جملے شامل ہیں — یہ مسند احمد 15460 کے بالکل الفاظ نہیں):"},
+ ar2l:{en:"A longer wording that is widely shared (it adds phrases found in other narrations — it is not the exact text of Ahmad 15460):", ur:"ایک لمبے الفاظ جو عام طور پر پھیلائے جاتے ہیں (ان میں دوسری روایات کے جملے شامل ہیں — یہ مسند احمد 15460 کے بالکل الفاظ نہیں):"},
  m:{en:"I seek refuge in the perfect words of Allah from the evil of what He created, spread and brought into being; from the evil of what comes down from the sky and what rises up into it; from the evil of the trials of night and day; and from the evil of every night-comer — except one who comes with good, O Most Merciful.", ur:"میں اللہ کے کامل کلمات کی پناہ مانگتا ہوں اس کے شر سے جو اس نے پیدا کیا، پھیلایا اور بنایا؛ اس کے شر سے جو آسمان سے اترتا ہے اور جو اس میں چڑھتا ہے؛ رات اور دن کے فتنوں کے شر سے؛ اور رات کو آنے والے ہر آنے والے کے شر سے — سوائے اس کے جو خیر لے کر آئے، اے رحمٰن!"},
  use:{en:"Protection from devils, jinn and the trials of night and day.", ur:"شیاطین، جنات اور دن رات کے فتنوں سے حفاظت۔"},
  rw:{en:"When devils came down from the valleys with a torch of fire to burn the Prophet ﷺ, Jibril told him to say this — their fire went out and Allah defeated them (Musnad Ahmad 15460, from ʿAbd al-Rahman ibn Khanbash).", ur:"جب شیاطین وادیوں سے آگ کا شعلہ لے کر نبی ﷺ کو جلانے آئے تو جبریلؑ نے یہ پڑھنے کو کہا — ان کی آگ بجھ گئی اور اللہ نے انہیں شکست دی (مسند احمد 15460)۔"},
  how:{en:"Morning, evening, or whenever you feel afraid at night.", ur:"صبح، شام، یا جب رات کو خوف محسوس ہو۔"},
  note:{en:"Grading differs: Shuʿayb al-Arnaʾut graded this chain weak and al-Bukhari said its chain needs scrutiny, while some other scholars judged it good. The words are a sound way of seeking refuge — for a fully authentic short version, use «Aʿūdhu bi-kalimātillāhit-tāmmāti min sharri mā khalaq» (Muslim 2708).", ur:"درجے میں اختلاف ہے: شعیب ارناؤوطؒ نے سند کو ضعیف کہا اور امام بخاریؒ نے فرمایا اس کی سند محلِ نظر ہے، جبکہ بعض دیگر علماء نے اسے جید کہا۔ الفاظ پناہ مانگنے کا درست طریقہ ہیں — مکمل صحیح مختصر الفاظ کے لیے «أعوذ بكلمات الله التامات من شر ما خلق» پڑھیں (مسلم 2708)۔"},
- src:"Musnad Ahmad 15460", acts:["morning","any"], needs:["protect"], ruq:true, from:"@towards.hu (caption)"}
+ src:"Musnad Ahmad 15460", acts:["morning","any"], needs:["protect"], ruq:true}
 ];
 
 ITEMS.push(
-/* ================= DHIKR (aliexplainsdeen + videos) ================= */
+
 {id:"subhan_bihamdih", kind:"dhikr", g:"sahih",
  t:{en:"Say «SubḥānAllāhi wa biḥamdihi» 100 times a day", ur:"دن میں سو بار «سبحان اللہ وبحمدہ» کہیں"},
  ar:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
@@ -416,7 +415,7 @@ ITEMS.push(
  use:{en:"Wiping away sins — the words Allah chose for His angels.", ur:"گناہ مٹانا — وہ کلمات جو اللہ نے اپنے فرشتوں کے لیے چنے۔"},
  rw:{en:"Said 100 times in a day, your sins are wiped away even if they are like the foam of the sea (Bukhari 6405, Muslim 2691). Asked which words are best, the Prophet ﷺ said: what Allah chose for His angels — SubḥānAllāhi wa biḥamdihi (Muslim 2731).", ur:"دن میں سو بار کہنے سے گناہ مٹ جاتے ہیں چاہے سمندر کی جھاگ کے برابر ہوں (بخاری 6405، مسلم 2691)۔ پوچھا گیا کون سا کلام بہترین ہے؟ فرمایا: جو اللہ نے اپنے فرشتوں کے لیے چنا — سبحان اللہ وبحمدہ (مسلم 2731)۔"},
  how:{en:"100 times — any time of day. Morning or evening is easiest.", ur:"سو بار — دن میں کسی بھی وقت۔ صبح یا شام سب سے آسان۔"},
- src:"Sahih al-Bukhari 6405 · Sahih Muslim 2691, 2731", acts:["morning","any"], needs:["forgive","reward"], cnt:100, from:"@aliexplainsdeen slides"},
+ src:"Sahih al-Bukhari 6405 · Sahih Muslim 2691, 2731", acts:["morning","any"], needs:["forgive","reward"], cnt:100},
 
 {id:"tahlil100", kind:"dhikr", g:"sahih",
  t:{en:"Say the full «Lā ilāha illallāh…» 100 times a day", ur:"دن میں سو بار مکمل «لا الٰہ الا اللہ…» پڑھیں"},
@@ -425,7 +424,7 @@ ITEMS.push(
  use:{en:"Massive reward and protection from Shaytan for the whole day.", ur:"بہت بڑا اجر اور سارا دن شیطان سے حفاظت۔"},
  rw:{en:"Equal to freeing ten slaves, 100 good deeds written, 100 sins erased, and protection from Shaytan that day until evening (Bukhari 6403, Muslim 2691).", ur:"دس غلام آزاد کرنے کے برابر، سو نیکیاں لکھی جاتی ہیں، سو گناہ مٹا دیے جاتے ہیں، اور اس دن شام تک شیطان سے حفاظت (بخاری 6403، مسلم 2691)۔"},
  how:{en:"100 times in a day — best early, so the protection covers your day.", ur:"دن میں سو بار — صبح سویرے بہتر تاکہ پورا دن حفاظت رہے۔"},
- src:"Sahih al-Bukhari 6403 · Sahih Muslim 2691", acts:["morning","any"], needs:["reward","protect"], cnt:100, from:"@aliexplainsdeen slides"},
+ src:"Sahih al-Bukhari 6403 · Sahih Muslim 2691", acts:["morning","any"], needs:["reward","protect"], cnt:100},
 
 {id:"alhamdulillah", kind:"dhikr", g:"sahih",
  t:{en:"Say «Alḥamdulillāh» — especially after eating or drinking", ur:"«الحمد للہ» کہیں — خاص طور پر کھانے پینے کے بعد"},
@@ -434,7 +433,7 @@ ITEMS.push(
  use:{en:"Gratitude — and gratitude brings increase.", ur:"شکر — اور شکر سے نعمت بڑھتی ہے۔"},
  rw:{en:"«Alḥamdulillāh fills the scale; SubḥānAllāh and Alḥamdulillāh together fill what is between the heavens and the earth» (Muslim 223). Allah is pleased with the servant who praises Him after eating or drinking (Muslim 2734). «If you are grateful, I will surely increase you» (Qur'an 14:7). It is also how the people of Paradise end their prayer (10:10).", ur:"«الحمد للہ میزان کو بھر دیتا ہے؛ سبحان اللہ اور الحمد للہ مل کر آسمان و زمین کے درمیان کو بھر دیتے ہیں» (مسلم 223)۔ اللہ اس بندے سے راضی ہوتا ہے جو کھا پی کر اس کی حمد کرے (مسلم 2734)۔ «اگر تم شکر کرو گے تو میں تمہیں ضرور زیادہ دوں گا» (ابراہیم 14:7)۔ اہلِ جنت کی دعا کا آخر بھی یہی ہے (یونس 10:10)۔"},
  how:{en:"After every meal and drink, and whenever you notice a blessing.", ur:"ہر کھانے اور پینے کے بعد، اور جب بھی کوئی نعمت محسوس ہو۔"},
- src:"Sahih Muslim 223, 2734 · Qur'an 14:7, 10:10", acts:["eat","any"], needs:["grat","rizq"], from:"@aliexplainsdeen slides, @reachmohammed"},
+ src:"Sahih Muslim 223, 2734 · Qur'an 14:7, 10:10", acts:["eat","any"], needs:["grat","rizq"]},
 
 {id:"sleep_tasbih", kind:"dhikr", g:"sahih",
  t:{en:"Before sleep: SubḥānAllāh 33 · Alḥamdulillāh 33 · Allāhu Akbar 34", ur:"سونے سے پہلے: سبحان اللہ 33 · الحمد للہ 33 · اللہ اکبر 34"},
@@ -444,7 +443,7 @@ ITEMS.push(
  rw:{en:"Fatimah’s hands were sore from the hand-mill and she asked for a servant. He ﷺ said: «Shall I not teach you something better than what you asked?» — this at bedtime — «It is better for you both than a servant» (Bukhari 3705, Muslim 2727). «Allāhu Akbar» is one of the four phrases most beloved to Allah (Muslim 2137).", ur:"فاطمہؓ کے ہاتھ چکی سے زخمی تھے، انہوں نے خادم مانگا۔ آپ ﷺ نے فرمایا: «کیا میں تمہیں اس سے بہتر چیز نہ بتاؤں؟» — سوتے وقت یہ — «یہ تم دونوں کے لیے خادم سے بہتر ہے» (بخاری 3705، مسلم 2727)۔ «اللہ اکبر» اللہ کے سب سے پسندیدہ چار کلمات میں سے ہے (مسلم 2137)۔"},
  how:{en:"In bed, before sleeping. Tap the counter — it walks you through all 100.", ur:"بستر پر، سونے سے پہلے۔ کاؤنٹر دبائیں — یہ آپ کو پورے 100 تک لے جائے گا۔"},
  src:"Sahih al-Bukhari 3705 · Sahih Muslim 2727, 2137", acts:["sleep"], needs:["ease","reward"],
- seq:[{ar:"سُبْحَانَ اللَّهِ",n:33},{ar:"الْحَمْدُ لِلَّهِ",n:33},{ar:"اللَّهُ أَكْبَرُ",n:34}], from:"@aliexplainsdeen slides"},
+ seq:[{ar:"سُبْحَانَ اللَّهِ",n:33},{ar:"الْحَمْدُ لِلَّهِ",n:33},{ar:"اللَّهُ أَكْبَرُ",n:34}]},
 
 {id:"la_hawla", kind:"dhikr", g:"sahih",
  t:{en:"Say «Lā ḥawla wa lā quwwata illā billāh» often", ur:"کثرت سے «لا حول ولا قوۃ الا باللہ» کہیں"},
@@ -453,7 +452,7 @@ ITEMS.push(
  use:{en:"When you feel weak or helpless — handing everything over to Allah.", ur:"جب کمزوری یا بے بسی محسوس ہو — سب کچھ اللہ کے سپرد کرنا۔"},
  rw:{en:"The Prophet ﷺ called it «a treasure from the treasures of Paradise» (Bukhari 6384). Ibn Masʿud explained it: no turning from sin except by His protection, no strength to obey except by His help.", ur:"نبی ﷺ نے اسے «جنت کے خزانوں میں سے ایک خزانہ» فرمایا (بخاری 6384)۔ ابن مسعودؓ نے فرمایا: اللہ کی حفاظت کے بغیر گناہ سے بچنا ممکن نہیں، اور اس کی مدد کے بغیر اطاعت کی طاقت نہیں۔"},
  how:{en:"Any time — especially when overwhelmed, and when the Adhan says «ḥayya ʿalaṣ-ṣalāh».", ur:"کسی بھی وقت — خاص طور پر پریشانی میں، اور جب اذان میں «حَیَّ عَلَی الصَّلَاۃ» آئے۔"},
- src:"Sahih al-Bukhari 6384 · Sahih Muslim 385", acts:["any","adhan"], needs:["ease","reward"], cnt:33, from:"@aliexplainsdeen slides, @piousdeenn (April)"},
+ src:"Sahih al-Bukhari 6384 · Sahih Muslim 385", acts:["any","adhan"], needs:["ease","reward"], cnt:33},
 
 {id:"umm_hani", kind:"dhikr", g:"hasan",
  t:{en:"The «sitting-down» deed: SubḥānAllāh, Alḥamdulillāh, Allāhu Akbar, Lā ilāha illallāh — 100 each", ur:"«بیٹھے بیٹھے» والا عمل: سبحان اللہ، الحمد للہ، اللہ اکبر، لا الٰہ الا اللہ — ہر ایک سو بار"},
@@ -464,7 +463,7 @@ ITEMS.push(
  how:{en:"100 of each, any time. The counter goes through all four.", ur:"ہر ایک سو بار، کسی بھی وقت۔ کاؤنٹر چاروں سے گزارے گا۔"},
  note:{en:"Al-Albani graded the Ahmad version hasan (Sahih at-Targhib 1553). The shorter Ibn Majah 3810 version is graded weak.", ur:"البانیؒ نے مسند احمد والی روایت کو حسن کہا (صحیح الترغیب 1553)۔ ابن ماجہ 3810 والی مختصر روایت ضعیف ہے۔"},
  src:"Musnad Ahmad 26911 · Sahih at-Targhib 1553", acts:["any"], needs:["reward"],
- seq:[{ar:"سُبْحَانَ اللَّهِ",n:100},{ar:"الْحَمْدُ لِلَّهِ",n:100},{ar:"اللَّهُ أَكْبَرُ",n:100},{ar:"لَا إِلَٰهَ إِلَّا اللَّهُ",n:100}], from:"@ikh_islamicstudio"},
+ seq:[{ar:"سُبْحَانَ اللَّهِ",n:100},{ar:"الْحَمْدُ لِلَّهِ",n:100},{ar:"اللَّهُ أَكْبَرُ",n:100},{ar:"لَا إِلَٰهَ إِلَّا اللَّهُ",n:100}]},
 
 {id:"juwayriyah", kind:"dhikr", g:"sahih",
  t:{en:"After Fajr: say the four heavy phrases 3 times", ur:"فجر کے بعد: چار وزنی کلمات تین بار"},
@@ -473,7 +472,7 @@ ITEMS.push(
  use:{en:"Outweighing hours of dhikr in seconds.", ur:"چند سیکنڈ میں گھنٹوں کے ذکر سے بھاری۔"},
  rw:{en:"The Prophet ﷺ left Juwayriyah sitting in dhikr after Fajr and returned at mid-morning. He said: «I said four phrases three times after leaving you; if weighed against all you said today, they would outweigh it» (Muslim 2726).", ur:"نبی ﷺ فجر کے بعد جویریہؓ کو ذکر میں بیٹھا چھوڑ کر گئے اور چاشت کو لوٹے۔ فرمایا: «میں نے تمہارے بعد چار کلمے تین بار کہے؛ اگر انہیں تمہارے آج کے سارے ذکر سے تولا جائے تو یہ بھاری ہوں گے» (مسلم 2726)۔"},
  how:{en:"3 times, ideally after Fajr.", ur:"تین بار، بہتر ہے فجر کے بعد۔"},
- src:"Sahih Muslim 2726", acts:["morning"], needs:["reward"], cnt:3, from:"@youssefbaleeghcoach"},
+ src:"Sahih Muslim 2726", acts:["morning"], needs:["reward"], cnt:3},
 
 {id:"five_foam", kind:"dhikr", g:"hasan",
  t:{en:"Say the five words that erase sins «like the foam of the sea»", ur:"وہ پانچ کلمات کہیں جو «سمندر کی جھاگ جتنے» گناہ مٹا دیں"},
@@ -482,7 +481,7 @@ ITEMS.push(
  use:{en:"Quick forgiveness, any time.", ur:"کسی بھی وقت فوری مغفرت۔"},
  rw:{en:"«There is no one on earth who says [these] except that his sins are expiated, even if they were like the foam of the sea» (Tirmidhi 3460 — hasan per al-Albani; Ahmad 6479 includes SubḥānAllāh and Alḥamdulillāh — sahih chain per Ahmad Shakir).", ur:"«زمین پر جو بھی یہ کلمات کہے اس کے گناہ معاف کر دیے جاتے ہیں چاہے سمندر کی جھاگ کے برابر ہوں» (ترمذی 3460 — البانیؒ: حسن؛ مسند احمد 6479 میں سبحان اللہ اور الحمد للہ بھی ہیں — احمد شاکر: سند صحیح)۔"},
  how:{en:"Any time, as often as you like.", ur:"کسی بھی وقت، جتنی بار چاہیں۔"},
- src:"Jami' at-Tirmidhi 3460 · Musnad Ahmad 6479", acts:["any"], needs:["forgive"], cnt:10, from:"@samer_speaks"},
+ src:"Jami' at-Tirmidhi 3460 · Musnad Ahmad 6479", acts:["any"], needs:["forgive"], cnt:10},
 
 {id:"five_illness", kind:"dhikr", g:"sahih",
  t:{en:"When ill: say the five «Lā ilāha illallāh» phrases that Allah answers", ur:"بیماری میں: «لا الٰہ الا اللہ» کے وہ پانچ کلمات جن کی اللہ تصدیق فرماتا ہے"},
@@ -491,10 +490,10 @@ ITEMS.push(
  use:{en:"Saying them in illness — protection from the Fire.", ur:"بیماری میں پڑھنا — جہنم سے حفاظت۔"},
  rw:{en:"For each phrase, Allah confirms it: «There is no god but Me, and I am the Greatest…». «Whoever says them in his illness and then dies, the Fire will not consume him» (Tirmidhi 3430 — sahih per al-Albani; hasan per Ibn Hajar).", ur:"ہر کلمے پر اللہ تصدیق فرماتا ہے: «میرے سوا کوئی معبود نہیں اور میں سب سے بڑا ہوں…»۔ «جو بیماری میں یہ کہے اور پھر فوت ہو جائے، آگ اسے نہیں کھائے گی» (ترمذی 3430 — البانیؒ: صحیح؛ ابن حجرؒ: حسن)۔"},
  how:{en:"Any time — especially when unwell. Saying them daily is a good habit too.", ur:"کسی بھی وقت — خاص طور پر بیماری میں۔ روزانہ پڑھنا بھی اچھی عادت ہے۔"},
- note:{en:"The reel says «if you die that day, week or month your sins are forgiven». The well-graded wording is the one above (said in illness → the Fire will not consume him).", ur:"ریل میں کہا گیا «اسی دن، ہفتے یا مہینے مرو تو گناہ معاف»۔ مستند الفاظ اوپر والے ہیں (بیماری میں پڑھنے پر آگ نہیں کھائے گی)۔"},
- src:"Jami' at-Tirmidhi 3430 · Ibn Majah 3794", acts:["ill","any"], needs:["jannah","heal"], from:"@samer_speaks"},
+ note:{en:"It is often said «if you die that day, week or month your sins are forgiven». The well-graded wording is the one above (said in illness → the Fire will not consume him).", ur:"اکثر کہا جاتا ہے «اسی دن، ہفتے یا مہینے مرو تو گناہ معاف»۔ مستند الفاظ اوپر والے ہیں (بیماری میں پڑھنے پر آگ نہیں کھائے گی)۔"},
+ src:"Jami' at-Tirmidhi 3430 · Ibn Majah 3794", acts:["ill","any"], needs:["jannah","heal"]},
 
-/* ================= DUAS BY NEED (piousdeenn + videos) ================= */
+
 {id:"la_sahla", kind:"dua", g:"sahih",
  t:{en:"Ask Allah to make a hard thing easy", ur:"اللہ سے مشکل کام آسان کرنے کی دعا"},
  ar:"اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا، وَأَنْتَ تَجْعَلُ الْحَزْنَ سَهْلًا إِذَا شِئْتَ",
@@ -503,7 +502,7 @@ ITEMS.push(
  rw:{en:"A dua of the Prophet ﷺ (Ibn Hibban 974 — chain sahih per al-Albani, Silsilah as-Sahihah 2886).", ur:"نبی ﷺ کی دعا (ابن حبان 974 — البانیؒ: سند صحیح، سلسلہ صحیحہ 2886)۔"},
  how:{en:"Before starting anything difficult.", ur:"کوئی بھی مشکل کام شروع کرنے سے پہلے۔"},
  note:{en:"The carousel links this dua to people born in January. Matching duas to birth months has no basis — it’s a good dua for everyone.", ur:"کیروسل نے اسے جنوری میں پیدا ہونے والوں سے جوڑا۔ پیدائش کے مہینے سے دعا جوڑنے کی کوئی بنیاد نہیں — یہ سب کے لیے اچھی دعا ہے۔"},
- src:"Sahih Ibn Hibban 974 · as-Silsilah as-Sahihah 2886", acts:["any"], needs:["ease"], from:"@piousdeenn (January)"},
+ src:"Sahih Ibn Hibban 974 · as-Silsilah as-Sahihah 2886", acts:["any"], needs:["ease"]},
 
 {id:"hasbunallah", kind:"quran", g:"quran",
  t:{en:"Say «Ḥasbunallāhu wa niʿmal-wakīl» when afraid or overwhelmed", ur:"ڈر یا پریشانی میں «حسبنا اللہ ونعم الوکیل» کہیں"},
@@ -512,7 +511,7 @@ ITEMS.push(
  use:{en:"Fear, pressure, people against you, situations beyond your control.", ur:"خوف، دباؤ، لوگ مخالف ہوں، حالات قابو سے باہر ہوں۔"},
  rw:{en:"Ibrahim said it when thrown into the fire, and Muhammad ﷺ said it when told «people have gathered against you» (Bukhari 4563). Allah says they returned «with favour and bounty from Allah; no harm touched them» (3:173–174).", ur:"ابراہیمؑ نے آگ میں ڈالے جاتے وقت یہ کہا، اور محمد ﷺ نے تب کہا جب کہا گیا «لوگ تمہارے خلاف جمع ہو گئے ہیں» (بخاری 4563)۔ اللہ فرماتا ہے وہ «اللہ کی نعمت اور فضل کے ساتھ لوٹے، انہیں کوئی تکلیف نہ پہنچی» (آل عمران 3:173–174)۔"},
  how:{en:"Whenever worry hits. Say it with full trust.", ur:"جب بھی پریشانی آئے۔ پورے بھروسے کے ساتھ کہیں۔"},
- src:"Qur'an 3:173–174 · Sahih al-Bukhari 4563", acts:["any"], needs:["worry","ease","rizq"], cnt:7, from:"@piousdeenn (February), @uqbah.ibn.faisal, @reachmohammed"},
+ src:"Qur'an 3:173–174 · Sahih al-Bukhari 4563", acts:["any"], needs:["worry","ease","rizq"], cnt:7},
 
 {id:"yunus", kind:"quran", g:"sahih",
  t:{en:"Make the dua of Yunus (inside the whale) in distress", ur:"مصیبت میں یونسؑ (مچھلی کے پیٹ والی) کی دعا"},
@@ -521,7 +520,7 @@ ITEMS.push(
  use:{en:"Distress, regret, and asking for relief and forgiveness.", ur:"مصیبت، ندامت، راحت اور معافی کی طلب۔"},
  rw:{en:"«No Muslim ever calls upon his Lord with it for anything except that He answers him» (Tirmidhi 3505 — sahih per al-Albani). Allah says: «So We answered him and saved him from distress — and thus do We save the believers» (21:88).", ur:"«جو مسلمان بھی کسی معاملے میں اس کے ذریعے اپنے رب کو پکارے، اللہ اس کی دعا قبول کرتا ہے» (ترمذی 3505 — البانیؒ: صحیح)۔ اللہ فرماتا ہے: «ہم نے اس کی دعا قبول کی اور غم سے نجات دی، اور ہم مومنوں کو یوں ہی نجات دیتے ہیں» (الانبیاء 21:88)۔"},
  how:{en:"As often as you like, especially in hard moments.", ur:"جتنی بار چاہیں، خاص طور پر مشکل وقت میں۔"},
- src:"Qur'an 21:87–88 · Jami' at-Tirmidhi 3505", acts:["any"], needs:["worry","forgive","answer"], cnt:33, from:"@piousdeenn (March)"},
+ src:"Qur'an 21:87–88 · Jami' at-Tirmidhi 3505", acts:["any"], needs:["worry","forgive","answer"], cnt:33},
 
 {id:"musa_rizq", kind:"quran", g:"quran",
  t:{en:"Make Musa’s dua when you need a job, home or an opening", ur:"نوکری، گھر یا کسی دروازے کے کھلنے کے لیے موسیٰؑ کی دعا"},
@@ -530,8 +529,8 @@ ITEMS.push(
  use:{en:"Rizq, a job, marriage, any opportunity.", ur:"رزق، نوکری، رشتہ، کوئی بھی موقع۔"},
  rw:{en:"Musa said it alone, hungry and a stranger in Madyan. In the very next verses Allah gave him safety, work and a wife (28:24–27).", ur:"موسیٰؑ نے مدین میں تنہا، بھوکے اور اجنبی حالت میں یہ کہا۔ اگلی ہی آیات میں اللہ نے انہیں امان، کام اور بیوی عطا کی (القصص 28:24–27)۔"},
  how:{en:"Any time. Pour your need into it.", ur:"کسی بھی وقت۔ اپنی ساری ضرورت اس میں رکھ دیں۔"},
- note:{en:"Reels suggested «pray two rakʿah first» and «do it for 7 nights». Praying first is a good adab, but the 7-night promise has no source.", ur:"ریلز میں «پہلے دو رکعت» اور «سات راتیں کریں» کہا گیا۔ پہلے نماز پڑھنا اچھا ادب ہے، لیکن سات راتوں کے وعدے کا کوئی ماخذ نہیں۔"},
- src:"Qur'an 28:24", acts:["any"], needs:["rizq","family"], cnt:7, from:"@piousdeenn (May), @minaretminds, @reachmohammed"},
+ note:{en:"Some people say «pray two rakʿah first» and «do it for 7 nights». Praying first is a good adab, but the 7-night promise has no source.", ur:"بعض لوگ «پہلے دو رکعت» اور «سات راتیں کریں» کہتے ہیں۔ پہلے نماز پڑھنا اچھا ادب ہے، لیکن سات راتوں کے وعدے کا کوئی ماخذ نہیں۔"},
+ src:"Qur'an 28:24", acts:["any"], needs:["rizq","family"], cnt:7},
 
 {id:"maiya_rabbi", kind:"quran", g:"quran",
  t:{en:"Remind yourself «My Lord is with me» when you feel lost", ur:"جب راستہ نہ سوجھے تو خود کو یاد دلائیں «میرا رب میرے ساتھ ہے»"},
@@ -540,7 +539,7 @@ ITEMS.push(
  use:{en:"Uncertainty, fear of the future, feeling trapped.", ur:"بے یقینی، مستقبل کا خوف، پھنسا ہوا محسوس کرنا۔"},
  rw:{en:"Musa said it with the sea in front and Pharaoh’s army behind — then the sea split (26:61–63).", ur:"موسیٰؑ نے یہ تب کہا جب آگے سمندر اور پیچھے فرعون کا لشکر تھا — پھر سمندر پھٹ گیا (الشعراء 26:61–63)۔"},
  how:{en:"A statement of trust (not a hadith dua) — say it to steady your heart.", ur:"یہ بھروسے کا اعلان ہے (حدیث والی دعا نہیں) — دل کو مضبوط کرنے کے لیے کہیں۔"},
- src:"Qur'an 26:62", acts:["any"], needs:["guide","worry"], from:"@piousdeenn (June)"},
+ src:"Qur'an 26:62", acts:["any"], needs:["guide","worry"]},
 
 {id:"muqallib", kind:"dua", g:"sahih",
  t:{en:"Ask Allah to keep your heart firm on His deen", ur:"اللہ سے دل کو دین پر ثابت رکھنے کی دعا"},
@@ -549,7 +548,7 @@ ITEMS.push(
  use:{en:"Staying steady in faith.", ur:"ایمان پر ثابت قدمی۔"},
  rw:{en:"Umm Salamah said this was the dua the Prophet ﷺ made most often (Tirmidhi 3522 — hasan per Darussalam; sahih per al-Albani).", ur:"ام سلمہؓ نے فرمایا یہ نبی ﷺ کی سب سے زیادہ کی جانے والی دعا تھی (ترمذی 3522 — دارالسلام: حسن؛ البانیؒ: صحیح)۔"},
  how:{en:"Often — in sujud, after salah, any time.", ur:"کثرت سے — سجدے میں، نماز کے بعد، کسی بھی وقت۔"},
- src:"Jami' at-Tirmidhi 3522", acts:["any","salah"], needs:["guide"], cnt:3, from:"@piousdeenn (July)"},
+ src:"Jami' at-Tirmidhi 3522", acts:["any","salah"], needs:["guide"], cnt:3},
 
 {id:"hasbiyallah", kind:"quran", g:"quran",
  t:{en:"Put your full trust in Allah with «Ḥasbiyallāh…»", ur:"«حسبی اللہ…» کے ساتھ اللہ پر پورا بھروسہ"},
@@ -559,7 +558,7 @@ ITEMS.push(
  rw:{en:"A verse of the Qur'an (9:129) — a powerful declaration of tawakkul.", ur:"قرآن کی آیت (التوبہ 9:129) — توکل کا زبردست اعلان۔"},
  how:{en:"Any time, morning and evening.", ur:"کسی بھی وقت، صبح و شام۔"},
  note:{en:"A popular claim says «say it 7 times morning and evening and Allah will suffice you». That report (Abu Dawud 5081) is a saying of Abu al-Dardaʾ, and al-Albani graded the attribution to the Prophet ﷺ as fabricated. The verse itself is beautiful to say — just don’t rely on that specific promise.", ur:"مشہور ہے کہ «صبح شام سات بار کہو تو اللہ کافی ہو جائے گا»۔ یہ روایت (ابوداؤد 5081) ابو الدرداءؓ کا قول ہے، اور البانیؒ نے اسے نبی ﷺ کی طرف منسوب کرنے کو موضوع کہا۔ آیت پڑھنا بہت اچھا ہے — بس اس خاص وعدے پر بھروسہ نہ کریں۔"},
- src:"Qur'an 9:129 · (Abu Dawud 5081 — see note)", acts:["morning","any"], needs:["worry","ease"], cnt:7, from:"@piousdeenn (August)"},
+ src:"Qur'an 9:129 · (Abu Dawud 5081 — see note)", acts:["morning","any"], needs:["worry","ease"], cnt:7},
 
 {id:"awzini", kind:"quran", g:"quran",
  t:{en:"Ask Allah to make you grateful (Sulayman’s dua)", ur:"اللہ سے شکر گزاری کی توفیق مانگیں (سلیمانؑ کی دعا)"},
@@ -569,7 +568,7 @@ ITEMS.push(
  rw:{en:"Sulayman’s dua when he heard the ant (27:19). A similar dua is at 46:15.", ur:"سلیمانؑ کی دعا جب انہوں نے چیونٹی کی بات سنی (النمل 27:19)۔ ایسی ہی دعا الاحقاف 46:15 میں بھی ہے۔"},
  how:{en:"When you receive something good, or any time.", ur:"جب کوئی اچھی چیز ملے، یا کسی بھی وقت۔"},
  note:{en:"The carousel showed only the first part; the full verse is above.", ur:"کیروسل میں صرف پہلا حصہ تھا؛ پوری آیت اوپر ہے۔"},
- src:"Qur'an 27:19", acts:["any"], needs:["grat","family"], from:"@piousdeenn (September)"},
+ src:"Qur'an 27:19", acts:["any"], needs:["grat","family"]},
 
 {id:"qurrata", kind:"quran", g:"quran",
  t:{en:"Pray for a righteous spouse and children", ur:"نیک شریکِ حیات اور اولاد کی دعا"},
@@ -578,7 +577,7 @@ ITEMS.push(
  use:{en:"Marriage, a loving home, righteous children.", ur:"شادی، محبت بھرا گھر، نیک اولاد۔"},
  rw:{en:"Among the duas of «the servants of the Most Merciful» (25:74).", ur:"«رحمٰن کے بندوں» کی دعاؤں میں سے (الفرقان 25:74)۔"},
  how:{en:"Any time — in sujud and after salah too.", ur:"کسی بھی وقت — سجدے میں اور نماز کے بعد بھی۔"},
- src:"Qur'an 25:74", acts:["any"], needs:["family"], from:"@piousdeenn (October)"},
+ src:"Qur'an 25:74", acts:["any"], needs:["family"]},
 
 {id:"sadness", kind:"dua", g:"sahih",
  t:{en:"Make the dua for sadness and worry", ur:"غم اور فکر کی دعا"},
@@ -587,7 +586,7 @@ ITEMS.push(
  use:{en:"Sadness, heaviness, «sad for no reason» days.", ur:"اداسی، بوجھل پن، «بلاوجہ اداس» دن۔"},
  rw:{en:"«No one says it except that Allah removes his worry and grief and replaces it with joy» — so learn it (Musnad Ahmad 3712 — sahih per al-Albani, Silsilah as-Sahihah 199, and Ahmad Shakir; Shuʿayb al-Arnaʾut graded the chain weak).", ur:"«جو بھی یہ کہے اللہ اس کی فکر اور غم دور کر کے اسے خوشی سے بدل دیتا ہے» — اس لیے اسے سیکھو (مسند احمد 3712 — البانیؒ: صحیح، سلسلہ صحیحہ 199، اور احمد شاکرؒ؛ شعیب ارناؤوطؒ نے سند کو ضعیف کہا)۔"},
  how:{en:"Whenever you feel low. Women say «amatuka bintu ʿabdika bintu amatik» (أَمَتُكَ بِنْتُ عَبْدِكَ بِنْتُ أَمَتِكَ).", ur:"جب بھی دل بوجھل ہو۔ خواتین کہیں «أَمَتُكَ بِنْتُ عَبْدِكَ بِنْتُ أَمَتِكَ»۔"},
- src:"Musnad Ahmad 3712 · as-Silsilah as-Sahihah 199", acts:["any"], needs:["worry"], from:"@dailyduaremindershq"},
+ src:"Musnad Ahmad 3712 · as-Silsilah as-Sahihah 199", acts:["any"], needs:["worry"]},
 
 {id:"istighfar_hayy", kind:"dua", g:"sahih",
  t:{en:"Seek forgiveness with the «Al-Ḥayy al-Qayyūm» istighfar", ur:"«الحی القیوم» والا استغفار پڑھیں"},
@@ -596,8 +595,8 @@ ITEMS.push(
  use:{en:"Forgiveness for even major sins — and istighfar opens rizq.", ur:"بڑے گناہوں کی بھی معافی — اور استغفار سے رزق کے دروازے کھلتے ہیں۔"},
  rw:{en:"«Whoever says it will be forgiven, even if he had fled from the battlefield» (Abu Dawud 1517 — sahih per al-Albani). Nuh told his people: «Seek forgiveness from your Lord… He will send rain, increase you in wealth and children, and give you gardens and rivers» (71:10–12).", ur:"«جو یہ کہے اسے بخش دیا جائے گا، چاہے میدانِ جنگ سے بھاگا ہو» (ابوداؤد 1517 — البانیؒ: صحیح)۔ نوحؑ نے قوم سے کہا: «اپنے رب سے مغفرت مانگو… وہ بارش برسائے گا، مال اور اولاد بڑھائے گا، باغ اور نہریں دے گا» (نوح 71:10–12)۔"},
  how:{en:"Any time — make it a constant habit.", ur:"کسی بھی وقت — اسے مستقل عادت بنائیں۔"},
- note:{en:"The reel also quotes «whoever holds to istighfar, Allah gives him a way out of every hardship, relief from every worry and provision from where he never expected». That hadith (Abu Dawud 1518) is graded weak by al-Albani — but Qur'an 71:10–12 and 65:2–3 make similar promises.", ur:"ریل میں یہ بھی ہے: «جو استغفار کو لازم پکڑ لے اللہ ہر تنگی سے نکلنے کا راستہ، ہر غم سے نجات اور بے گمان رزق دیتا ہے»۔ یہ حدیث (ابوداؤد 1518) البانیؒ کے نزدیک ضعیف ہے — لیکن قرآن 71:10–12 اور 65:2–3 میں ایسے ہی وعدے ہیں۔"},
- src:"Sunan Abi Dawud 1517 · Qur'an 71:10–12", acts:["any"], needs:["forgive","rizq"], cnt:3, from:"@alima.bytes, @reachmohammed"},
+ note:{en:"A popular narration says «whoever holds to istighfar, Allah gives him a way out of every hardship, relief from every worry and provision from where he never expected». That hadith (Abu Dawud 1518) is graded weak by al-Albani — but Qur'an 71:10–12 and 65:2–3 make similar promises.", ur:"ایک مشہور روایت ہے: «جو استغفار کو لازم پکڑ لے اللہ ہر تنگی سے نکلنے کا راستہ، ہر غم سے نجات اور بے گمان رزق دیتا ہے»۔ یہ حدیث (ابوداؤد 1518) البانیؒ کے نزدیک ضعیف ہے — لیکن قرآن 71:10–12 اور 65:2–3 میں ایسے ہی وعدے ہیں۔"},
+ src:"Sunan Abi Dawud 1517 · Qur'an 71:10–12", acts:["any"], needs:["forgive","rizq"], cnt:3},
 
 {id:"sayyid", kind:"dua", g:"sahih",
  t:{en:"Say Sayyid al-Istighfar — the master of seeking forgiveness — morning & evening", ur:"صبح و شام سید الاستغفار پڑھیں"},
@@ -606,7 +605,7 @@ ITEMS.push(
  use:{en:"The best form of asking forgiveness.", ur:"مغفرت مانگنے کا سب سے بہترین طریقہ۔"},
  rw:{en:"Whoever says it in the day with firm belief and dies before evening is among the people of Paradise; whoever says it at night with firm belief and dies before morning is among the people of Paradise (Bukhari 6306).", ur:"جو دن میں یقین کے ساتھ کہے اور شام سے پہلے فوت ہو جائے وہ جنتی ہے؛ جو رات کو یقین کے ساتھ کہے اور صبح سے پہلے فوت ہو جائے وہ جنتی ہے (بخاری 6306)۔"},
  how:{en:"Once in the morning and once in the evening.", ur:"ایک بار صبح، ایک بار شام۔"},
- src:"Sahih al-Bukhari 6306", acts:["morning"], needs:["forgive","jannah"], from:"@safideenn, @thehalalhustleclub"},
+ src:"Sahih al-Bukhari 6306", acts:["morning"], needs:["forgive","jannah"]},
 
 {id:"maghfiratuka", kind:"dua", g:"disputed",
  t:{en:"When sins weigh on you: «Your forgiveness is vaster than my sins»", ur:"جب گناہ بوجھ لگیں: «تیری مغفرت میرے گناہوں سے وسیع ہے»"},
@@ -616,7 +615,7 @@ ITEMS.push(
  rw:{en:"A man cried «my sins, my sins!». The Prophet ﷺ told him to say this; he repeated it three times, then: «Stand — Allah has forgiven you» (al-Hakim, al-Mustadrak 1/728, from Jabir ibn ʿAbdullah).", ur:"ایک شخص پکار رہا تھا «ہائے میرے گناہ!»۔ نبی ﷺ نے یہ کہنے کو فرمایا؛ اس نے تین بار کہا، پھر فرمایا: «اٹھو، اللہ نے تمہیں بخش دیا» (حاکم، المستدرک 1/728، جابر بن عبداللہؓ سے)۔"},
  how:{en:"3 times.", ur:"تین بار۔"},
  note:{en:"Graded differently: al-Hakim and al-Mundhiri considered the chain sound; others (incl. al-Albani) weakened it due to an unknown narrator. The meaning is fully sound.", ur:"درجے میں اختلاف: حاکمؒ اور منذریؒ نے سند کو درست کہا؛ دیگر (بشمول البانیؒ) نے ایک مجہول راوی کی وجہ سے ضعیف کہا۔ معنیٰ بالکل درست ہے۔"},
- src:"al-Mustadrak of al-Hakim (1/728) · al-Mundhiri, at-Targhib 2/386", acts:["any"], needs:["forgive"], cnt:3, from:"@the_scottish_beard"},
+ src:"al-Mustadrak of al-Hakim (1/728) · al-Mundhiri, at-Targhib 2/386", acts:["any"], needs:["forgive"], cnt:3},
 
 {id:"ya_rabbi_lakal", kind:"dua", g:"weak",
  t:{en:"Praise Allah «as befits the majesty of Your Face»", ur:"اللہ کی حمد «جیسے تیرے چہرے کے جلال کے لائق ہے»"},
@@ -626,7 +625,7 @@ ITEMS.push(
  rw:{en:"Narrated: two angels did not know how to record it, so Allah said «write it as My servant said it; I will reward him myself when he meets Me» (Ibn Majah 3801).", ur:"روایت ہے: دو فرشتے نہ جان سکے کہ اسے کیسے لکھیں، تو اللہ نے فرمایا «جیسے میرے بندے نے کہا ویسے لکھو؛ ملاقات کے دن میں خود اسے بدلہ دوں گا» (ابن ماجہ 3801)۔"},
  how:{en:"Fine to say as praise; don’t rely on the specific story.", ur:"حمد کے طور پر کہنا ٹھیک ہے؛ اس خاص قصے پر بھروسہ نہ کریں۔"},
  note:{en:"This hadith is graded weak (Darussalam; al-Albani). The words are sound praise, but the reward story isn’t established.", ur:"یہ حدیث ضعیف ہے (دارالسلام؛ البانیؒ)۔ الفاظ درست حمد ہیں، لیکن اجر والا قصہ ثابت نہیں۔"},
- src:"Sunan Ibn Majah 3801 (weak)", acts:["any"], needs:["grat"], from:"@saifwithyou"},
+ src:"Sunan Ibn Majah 3801 (weak)", acts:["any"], needs:["grat"]},
 
 {id:"comprehensive", kind:"dua", g:"sahih",
  t:{en:"Make the dua that covers everything (taught to ʿAʾishah)", ur:"وہ دعا جو ہر چیز کو سمیٹ لے (حضرت عائشہؓ کو سکھائی گئی)"},
@@ -635,7 +634,7 @@ ITEMS.push(
  use:{en:"When you don’t know what to ask — this asks for all of it.", ur:"جب سمجھ نہ آئے کیا مانگیں — یہ سب کچھ مانگ لیتی ہے۔"},
  rw:{en:"The Prophet ﷺ taught it to ʿAʾishah (Ibn Majah 3846 — sahih per al-Albani). Scholars call it one of the most comprehensive duas.", ur:"نبی ﷺ نے یہ عائشہؓ کو سکھائی (ابن ماجہ 3846 — البانیؒ: صحیح)۔ علماء اسے جامع ترین دعاؤں میں شمار کرتے ہیں۔"},
  how:{en:"Any time — great in sujud, after tashahhud, or in the last third of the night.", ur:"کسی بھی وقت — سجدے میں، تشہد کے بعد، یا رات کے آخری تہائی حصے میں بہترین۔"},
- src:"Sunan Ibn Majah 3846", acts:["any","salah"], needs:["answer","jannah"], from:"@bymouadh"},
+ src:"Sunan Ibn Majah 3846", acts:["any","salah"], needs:["answer","jannah"]},
 
 {id:"muadh_dream", kind:"dua", g:"sahih",
  t:{en:"Make the dua the Prophet ﷺ was taught when he saw his Lord in a dream", ur:"وہ دعا جو نبی ﷺ کو خواب میں اپنے رب کے دیدار پر سکھائی گئی"},
@@ -644,7 +643,7 @@ ITEMS.push(
  use:{en:"Love of Allah, good deeds, safety from fitnah.", ur:"اللہ کی محبت، نیک اعمال، فتنوں سے حفاظت۔"},
  rw:{en:"From the long hadith of Muʿadh: the Prophet ﷺ saw his Lord in the best form (in a dream) and was taught this. He said: «It is true — learn it and teach it» (Tirmidhi 3235 — al-Tirmidhi: hasan sahih; al-Bukhari called it sahih).", ur:"معاذؓ کی طویل حدیث سے: نبی ﷺ نے (خواب میں) اپنے رب کو بہترین صورت میں دیکھا اور یہ دعا سکھائی گئی۔ فرمایا: «یہ حق ہے — اسے سیکھو اور سکھاؤ» (ترمذی 3235 — ترمذیؒ: حسن صحیح؛ بخاریؒ نے صحیح کہا)۔"},
  how:{en:"Any time.", ur:"کسی بھی وقت۔"},
- src:"Jami' at-Tirmidhi 3235", acts:["any"], needs:["guide","forgive"], from:"@idawd_ (Urdu reel — dua shown on screen)"},
+ src:"Jami' at-Tirmidhi 3235", acts:["any"], needs:["guide","forgive"]},
 
 {id:"shaddad", kind:"dua", g:"hasan",
  t:{en:"Treasure these words when others treasure gold and silver", ur:"جب لوگ سونا چاندی جمع کریں تو یہ کلمات جمع کریں"},
@@ -654,11 +653,11 @@ ITEMS.push(
  rw:{en:"Shaddad ibn Aws reported: «When people hoard gold and silver, hoard these words» (Musnad Ahmad 17114). The Prophet ﷺ used to say it in his prayer (an-Nasa'i 1304 — hasan).", ur:"شداد بن اوسؓ سے روایت: «جب لوگ سونا چاندی جمع کریں تو تم یہ کلمات جمع کرو» (مسند احمد 17114)۔ نبی ﷺ یہ نماز میں پڑھتے تھے (نسائی 1304 — حسن)۔"},
  how:{en:"In salah after tashahhud, or any time.", ur:"نماز میں تشہد کے بعد، یا کسی بھی وقت۔"},
  note:{en:"«إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ» is in Ahmad’s narration; an-Nasa'i’s ends at «لِمَا تَعْلَمُ».", ur:"«إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ» احمد کی روایت میں ہے؛ نسائی کی روایت «لِمَا تَعْلَمُ» پر ختم ہوتی ہے۔"},
- src:"Sunan an-Nasa'i 1304 · Musnad Ahmad 17114", acts:["salah","any"], needs:["guide","grat"], from:"@official.sheima"}
+ src:"Sunan an-Nasa'i 1304 · Musnad Ahmad 17114", acts:["salah","any"], needs:["guide","grat"]}
 );
 
 ITEMS.push(
-/* ================= SALAH ================= */
+
 {id:"rabbana_lakal", kind:"dhikr", g:"sahih",
  t:{en:"Rising from rukuʿ: add «ḥamdan kathīran ṭayyiban mubārakan fīh»", ur:"رکوع سے اٹھ کر: «حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ» کا اضافہ کریں"},
  ar:"رَبَّنَا وَلَكَ الْحَمْدُ، حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ",
@@ -666,7 +665,7 @@ ITEMS.push(
  use:{en:"Turning one moment of every rakʿah into a race of angels.", ur:"ہر رکعت کے ایک لمحے کو فرشتوں کی دوڑ بنا دینا۔"},
  rw:{en:"A man behind the Prophet ﷺ said it after «samiʿAllāhu liman ḥamidah». He ﷺ said: «I saw over thirty angels racing to see which of them would write it first» (Bukhari 799).", ur:"نبی ﷺ کے پیچھے ایک شخص نے «سمع اللہ لمن حمدہ» کے بعد یہ کہا۔ آپ ﷺ نے فرمایا: «میں نے تیس سے زیادہ فرشتے دیکھے جو جلدی کر رہے تھے کہ کون اسے پہلے لکھے» (بخاری 799)۔"},
  how:{en:"Every time you rise from rukuʿ, in all 5 prayers.", ur:"ہر بار رکوع سے اٹھتے وقت، پانچوں نمازوں میں۔"},
- src:"Sahih al-Bukhari 799", acts:["salah"], needs:["reward","grat"], from:"@reflections.by.tahir"},
+ src:"Sahih al-Bukhari 799", acts:["salah"], needs:["reward","grat"]},
 
 {id:"between_sajdah", kind:"dua", g:"hasan",
  t:{en:"Between the two sajdahs: don’t rush — ask for these five things", ur:"دو سجدوں کے درمیان: جلدی نہ کریں — یہ پانچ چیزیں مانگیں"},
@@ -675,7 +674,7 @@ ITEMS.push(
  use:{en:"Forgiveness, mercy, health, guidance and rizq — everything you need, in one short sitting.", ur:"مغفرت، رحمت، صحت، ہدایت اور رزق — ایک مختصر جلسے میں سب کچھ۔"},
  rw:{en:"The Prophet ﷺ said this between the two prostrations (Abu Dawud 850 — hasan per al-Albani). He also said these words «gather for you your dunya and your akhirah» (Muslim 2697).", ur:"نبی ﷺ دو سجدوں کے درمیان یہ پڑھتے تھے (ابوداؤد 850 — البانیؒ: حسن)۔ آپ ﷺ نے فرمایا یہ کلمات «تمہاری دنیا اور آخرت دونوں کو جمع کر دیتے ہیں» (مسلم 2697)۔"},
  how:{en:"In every prayer, sitting between the two sajdahs. Sit still and say it calmly.", ur:"ہر نماز میں، دو سجدوں کے درمیان بیٹھ کر۔ اطمینان سے بیٹھ کر پڑھیں۔"},
- src:"Sunan Abi Dawud 850 · Sahih Muslim 2697", acts:["salah"], needs:["forgive","rizq","heal","guide"], from:"@brother_sulaiman_fariz, @abostani"},
+ src:"Sunan Abi Dawud 850 · Sahih Muslim 2697", acts:["salah"], needs:["forgive","rizq","heal","guide"]},
 
 {id:"greatest_b", kind:"dua", g:"sahih",
  t:{en:"After tashahhud, call Allah by His Greatest Name (Al-Ḥayy al-Qayyūm)", ur:"تشہد کے بعد اللہ کو اسمِ اعظم (الحی القیوم) سے پکاریں"},
@@ -684,7 +683,7 @@ ITEMS.push(
  use:{en:"Opening your dua with Allah’s Greatest Name — then ask for what you need.", ur:"اپنی دعا اسمِ اعظم سے شروع کریں — پھر اپنی حاجت مانگیں۔"},
  rw:{en:"A man prayed, recited the tashahhud and said this. The Prophet ﷺ said: «By the One in whose hand my soul is, he has called upon Allah by His Great Name — when called by it He answers, and when asked by it He gives» (an-Nasa'i 1300, Abu Dawud 1495 — sahih).", ur:"ایک شخص نے نماز پڑھی، تشہد پڑھا اور یہ کہا۔ نبی ﷺ نے فرمایا: «اس ذات کی قسم جس کے ہاتھ میں میری جان ہے، اس نے اللہ کو اس کے عظیم نام سے پکارا — جب اس سے پکارا جائے تو وہ جواب دیتا ہے، اور جب اس سے مانگا جائے تو عطا کرتا ہے» (نسائی 1300، ابوداؤد 1495 — صحیح)۔"},
  how:{en:"After the final tashahhud and salawat, before salam. Then add your own request.", ur:"آخری تشہد اور درود کے بعد، سلام سے پہلے۔ پھر اپنی دعا مانگیں۔"},
- src:"Sunan an-Nasa'i 1300 · Sunan Abi Dawud 1495", acts:["salah"], needs:["answer"], from:"@bobireality"},
+ src:"Sunan an-Nasa'i 1300 · Sunan Abi Dawud 1495", acts:["salah"], needs:["answer"]},
 
 {id:"greatest_a", kind:"dua", g:"sahih",
  t:{en:"Ask Allah by His Oneness — the other «Greatest Name» dua", ur:"اللہ کی وحدانیت کے واسطے سے مانگیں — اسمِ اعظم والی دوسری دعا"},
@@ -693,9 +692,9 @@ ITEMS.push(
  use:{en:"Getting duas answered — for deen or dunya.", ur:"دعا کی قبولیت — دین کی ہو یا دنیا کی۔"},
  rw:{en:"The Prophet ﷺ heard a man say this and said: «He has asked Allah by the Name which, when asked by it He gives, and when called by it He answers» (Abu Dawud 1493 — sahih; Ibn Hajar called it the strongest narration on the Greatest Name).", ur:"نبی ﷺ نے ایک شخص کو یہ کہتے سنا تو فرمایا: «اس نے اللہ سے اس نام کے ذریعے مانگا کہ جب اس سے مانگا جائے تو وہ دیتا ہے، اور جب پکارا جائے تو جواب دیتا ہے» (ابوداؤد 1493 — صحیح؛ ابن حجرؒ نے اسے اسمِ اعظم کی سب سے مضبوط روایت کہا)۔"},
  how:{en:"Before asking for anything — in salah or any time.", ur:"کچھ بھی مانگنے سے پہلے — نماز میں یا کسی بھی وقت۔"},
- src:"Sunan Abi Dawud 1493 · Jami' at-Tirmidhi 3475", acts:["salah","any"], needs:["answer"], from:"@moen.bobak (Urdu reel)"},
+ src:"Sunan Abi Dawud 1493 · Jami' at-Tirmidhi 3475", acts:["salah","any"], needs:["answer"]},
 
-/* ================= AFTER SALAH ================= */
+
 {id:"after_istighfar", kind:"dhikr", g:"sahih",
  t:{en:"Right after salam: «Astaghfirullāh» ×3, then «Allāhumma antas-salām…»", ur:"سلام پھیرتے ہی: تین بار «استغفر اللہ»، پھر «اللّٰہم انت السلام…»"},
  ar:"أَسْتَغْفِرُ اللَّهَ (×٣)\nاللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ ذَا الْجَلَالِ وَالْإِكْرَامِ",
@@ -704,7 +703,7 @@ ITEMS.push(
  rw:{en:"The Prophet ﷺ did this after finishing every prayer (Muslim 591).", ur:"نبی ﷺ ہر نماز کے بعد یہی کرتے تھے (مسلم 591)۔"},
  note:{en:"Muslim 591 says he «sought forgiveness three times»; the narrator al-Awzaʿi explained it as saying «Astaghfirullāh, Astaghfirullāh…». The Arabic is exactly as in Muslim 591 («tabārakta dhal-jalāl…»); some other narrations say «yā dhal-jalāl».", ur:"مسلم 591 میں ہے کہ آپ ﷺ نے «تین بار استغفار کیا»؛ راوی اوزاعیؒ نے بتایا کہ «استغفر اللہ، استغفر اللہ…» کہتے۔ عربی بالکل مسلم 591 کے مطابق ہے («تَبَارَكْتَ ذَا الْجَلَالِ…»)؛ بعض دیگر روایات میں «يَا ذَا الْجَلَالِ» ہے۔"},
  how:{en:"Immediately after salam in all 5 prayers.", ur:"پانچوں نمازوں میں سلام کے فوراً بعد۔"},
- src:"Sahih Muslim 591", acts:["after"], needs:["forgive"], from:"@brother_sulaiman_fariz"},
+ src:"Sahih Muslim 591", acts:["after"], needs:["forgive"]},
 
 {id:"after_tasbih", kind:"dhikr", g:"sahih",
  t:{en:"After salah: 33 · 33 · 33 + the 100th", ur:"نماز کے بعد: 33 · 33 · 33 + سوواں کلمہ"},
@@ -714,7 +713,7 @@ ITEMS.push(
  rw:{en:"«His sins will be forgiven even if they are like the foam of the sea» (Muslim 597).", ur:"«اس کے گناہ معاف کر دیے جائیں گے چاہے سمندر کی جھاگ کے برابر ہوں» (مسلم 597)۔"},
  how:{en:"After each of the 5 prayers. Use the counter — it walks you through all 100.", ur:"پانچوں نمازوں کے بعد۔ کاؤنٹر استعمال کریں — یہ پورے 100 تک لے جائے گا۔"},
  src:"Sahih Muslim 597", acts:["after"], needs:["forgive","reward"],
- seq:[{ar:"سُبْحَانَ اللَّهِ",n:33},{ar:"الْحَمْدُ لِلَّهِ",n:33},{ar:"اللَّهُ أَكْبَرُ",n:33},{ar:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",n:1}], from:"@brother_sulaiman_fariz"},
+ seq:[{ar:"سُبْحَانَ اللَّهِ",n:33},{ar:"الْحَمْدُ لِلَّهِ",n:33},{ar:"اللَّهُ أَكْبَرُ",n:33},{ar:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",n:1}]},
 
 {id:"muadh_aini", kind:"dua", g:"sahih",
  t:{en:"Never leave this dua at the end of any prayer (the Prophet’s gift to Muʿadh)", ur:"کسی نماز کے آخر میں یہ دعا نہ چھوڑیں (معاذؓ کو نبی ﷺ کا تحفہ)"},
@@ -723,7 +722,7 @@ ITEMS.push(
  use:{en:"When you keep promising to change and falling back — ask Him for the strength.", ur:"جب بار بار بدلنے کا وعدہ کر کے پھر پھسل جائیں — اسی سے طاقت مانگیں۔"},
  rw:{en:"The Prophet ﷺ took Muʿadh’s hand and said: «O Muʿadh, by Allah I love you… do not leave saying this at the end of every prayer» (Abu Dawud 1522 — sahih per al-Albani).", ur:"نبی ﷺ نے معاذؓ کا ہاتھ پکڑ کر فرمایا: «اے معاذ! اللہ کی قسم میں تم سے محبت کرتا ہوں… ہر نماز کے آخر میں یہ کہنا نہ چھوڑنا» (ابوداؤد 1522 — البانیؒ: صحیح)۔"},
  how:{en:"At the end of every prayer (before or after salam — scholars mention both).", ur:"ہر نماز کے آخر میں (سلام سے پہلے یا بعد — علماء نے دونوں ذکر کیے ہیں)۔"},
- src:"Sunan Abi Dawud 1522", acts:["after"], needs:["guide"], from:"@dailyduaremindershq, @brother_sulaiman_fariz"},
+ src:"Sunan Abi Dawud 1522", acts:["after"], needs:["guide"]},
 
 {id:"stay_seated", kind:"action", g:"sahih",
  t:{en:"Don’t rush off after salah — stay in your place a little (Shaytan’s trap is the phone)", ur:"نماز کے بعد فوراً نہ اٹھیں — کچھ دیر اپنی جگہ بیٹھیں (شیطان کا جال: فون)"},
@@ -732,7 +731,7 @@ ITEMS.push(
  use:{en:"Beating Shaytan’s trick of pulling you straight to your phone and losing the after-prayer adhkar.", ur:"شیطان کی اس چال کو ناکام بنانا کہ آپ فوراً فون اٹھا لیں اور نماز کے بعد کے اذکار رہ جائیں۔"},
  rw:{en:"«The angels keep praying for one of you as long as he stays in the place where he prayed: ‘O Allah, forgive him; O Allah, have mercy on him’» (Bukhari 445).", ur:"«فرشتے تم میں سے ہر ایک کے لیے دعا کرتے رہتے ہیں جب تک وہ اپنی نماز کی جگہ بیٹھا رہے: ’اے اللہ! اسے بخش دے، اے اللہ! اس پر رحم فرما‘» (بخاری 445)۔"},
  how:{en:"Finish the after-salah adhkar before touching your phone.", ur:"فون اٹھانے سے پہلے نماز کے بعد کے اذکار مکمل کریں۔"},
- src:"Sahih al-Bukhari 445", acts:["after"], needs:["forgive"], from:"@brother_sulaiman_fariz"},
+ src:"Sahih al-Bukhari 445", acts:["after"], needs:["forgive"]},
 
 {id:"qini", kind:"dua", g:"sahih",
  t:{en:"Ask to be saved from punishment on the Day of Resurrection (at bedtime, after salah)", ur:"قیامت کے دن کے عذاب سے بچاؤ کی دعا (سوتے وقت، نماز کے بعد)"},
@@ -740,18 +739,18 @@ ITEMS.push(
  m:{en:"O Allah, protect me from Your punishment on the Day You resurrect Your servants.", ur:"اے اللہ! مجھے اپنے عذاب سے بچا جس دن تو اپنے بندوں کو اٹھائے گا۔"},
  use:{en:"Safety on the Day of Judgement.", ur:"قیامت کے دن حفاظت۔"},
  rw:{en:"When going to sleep, the Prophet ﷺ placed his right hand under his cheek and said this (Abu Dawud 5045 — al-Albani: sahih, except the words «three times»). After prayer, when he turned to face people, he said «Rabbi qinī ʿadhābaka…» (Muslim 709).", ur:"سوتے وقت نبی ﷺ داہنا ہاتھ رخسار کے نیچے رکھتے اور یہ کہتے (ابوداؤد 5045 — البانیؒ: صحیح، سوائے «تین بار» کے الفاظ کے)۔ نماز کے بعد لوگوں کی طرف رخ کرتے تو «رَبِّ قِنِي عَذَابَكَ…» کہتے (مسلم 709)۔"},
- how:{en:"In bed on your right side, right hand under your cheek. Saying it once follows the authentic part; the «3 times» in the reels is from the part al-Albani did not authenticate.", ur:"بستر پر داہنی کروٹ، داہنا ہاتھ رخسار کے نیچے۔ ایک بار کہنا مستند حصے کے مطابق ہے؛ ریلز والا «تین بار» اس حصے سے ہے جسے البانیؒ نے صحیح نہیں کہا۔"},
- note:{en:"One reel shows «Allāhumma iḥfaẓnī min ʿadhābik». The authentic wording is «qinī» (قِنِي), as above.", ur:"ایک ریل میں «اللّٰہم احفظنی من عذابک» ہے۔ مستند الفاظ «قِنِي» ہیں، جیسا اوپر۔"},
- src:"Sunan Abi Dawud 5045 · Jami' at-Tirmidhi 3398 · Sahih Muslim 709", acts:["sleep","after"], needs:["jannah"], from:"@farhatbashir04, WhatsApp video (@xeshaanstudio), @danielle_best_"},
+ how:{en:"In bed on your right side, right hand under your cheek. Saying it once follows the authentic part; the popular «3 times» is from the part al-Albani did not authenticate.", ur:"بستر پر داہنی کروٹ، داہنا ہاتھ رخسار کے نیچے۔ ایک بار کہنا مستند حصے کے مطابق ہے؛ مشہور «تین بار» اس حصے سے ہے جسے البانیؒ نے صحیح نہیں کہا۔"},
+ note:{en:"Some share it as «Allāhumma iḥfaẓnī min ʿadhābik». The authentic wording is «qinī» (قِنِي), as above.", ur:"بعض لوگ اسے «اللّٰہم احفظنی من عذابک» کہتے ہیں۔ مستند الفاظ «قِنِي» ہیں، جیسا اوپر۔"},
+ src:"Sunan Abi Dawud 5045 · Jami' at-Tirmidhi 3398 · Sahih Muslim 709", acts:["sleep","after"], needs:["jannah"]},
 
-/* ================= SLEEP ================= */
+
 {id:"witr", kind:"action", g:"sahih",
  t:{en:"Pray Witr before you sleep — even one rakʿah", ur:"سونے سے پہلے وتر پڑھیں — چاہے ایک رکعت"},
  ar:null, m:{en:"",ur:""},
  use:{en:"Never ending a day without Witr.", ur:"کوئی دن وتر کے بغیر ختم نہ ہو۔"},
  rw:{en:"Abu Hurayrah: «My close friend ﷺ advised me… to pray Witr before sleeping» (Bukhari 1981). «Allah is Witr (One) and loves Witr» (Muslim 2677).", ur:"ابو ہریرہؓ: «میرے خلیل ﷺ نے مجھے وصیت کی… کہ سونے سے پہلے وتر پڑھوں» (بخاری 1981)۔ «اللہ وتر (طاق) ہے اور وتر کو پسند کرتا ہے» (مسلم 2677)۔"},
  how:{en:"After Isha, before bed (or in the last part of the night if you are sure you’ll wake).", ur:"عشاء کے بعد، سونے سے پہلے (یا اگر جاگنے کا یقین ہو تو رات کے آخری حصے میں)۔"},
- src:"Sahih al-Bukhari 1981 · Sahih Muslim 2677", acts:["sleep"], needs:["reward"], from:"@aboo.yahyaa"},
+ src:"Sahih al-Bukhari 1981 · Sahih Muslim 2677", acts:["sleep"], needs:["reward"]},
 
 {id:"wudu_sleep", kind:"action", g:"sahih",
  t:{en:"Go to sleep with wudu", ur:"باوضو سوئیں"},
@@ -759,7 +758,7 @@ ITEMS.push(
  use:{en:"An angel prays for you all night.", ur:"ساری رات ایک فرشتہ آپ کے لیے دعا کرتا ہے۔"},
  rw:{en:"«Whoever sleeps in a state of purity, an angel stays with him; whenever he wakes, the angel says: ‘O Allah, forgive Your servant, for he slept pure’» (Ibn Hibban 1051 — graded sahih by Ibn Hibban; some critics weakened one narrator). The Prophet ﷺ also told al-Baraʾ: «When you go to bed, make wudu as for prayer» (Bukhari 247).", ur:"«جو پاکیزگی کی حالت میں سوئے، ایک فرشتہ اس کے ساتھ رہتا ہے؛ جب بھی وہ جاگے، فرشتہ کہتا ہے: ’اے اللہ! اپنے بندے کو بخش دے، یہ پاک ہو کر سویا تھا‘» (ابن حبان 1051 — ابن حبانؒ نے صحیح کہا؛ بعض ناقدین نے ایک راوی کو کمزور کہا)۔ نبی ﷺ نے براءؓ سے فرمایا: «جب بستر پر جاؤ تو نماز جیسا وضو کرو» (بخاری 247)۔"},
  how:{en:"Make wudu right before bed.", ur:"سونے سے بالکل پہلے وضو کریں۔"},
- src:"Sahih Ibn Hibban 1051 · Sahih al-Bukhari 247", acts:["sleep"], needs:["forgive"], from:"@aboo.yahyaa"},
+ src:"Sahih Ibn Hibban 1051 · Sahih al-Bukhari 247", acts:["sleep"], needs:["forgive"]},
 
 {id:"bed_foam", kind:"dhikr", g:"sahih",
  t:{en:"In bed: the dhikr that erases sins «like the foam of the sea»", ur:"بستر پر: وہ ذکر جو «سمندر کی جھاگ» جتنے گناہ مٹا دے"},
@@ -768,10 +767,10 @@ ITEMS.push(
  use:{en:"Going to sleep forgiven.", ur:"بخشش کے ساتھ سونا۔"},
  rw:{en:"«Whoever says when he goes to bed: … his sins are forgiven, even if they are like the foam of the sea» (Ibn Hibban 5528 — sahih per al-Albani, Sahih at-Targhib 607, and Shuʿayb al-Arnaʾut).", ur:"«جو بستر پر جاتے وقت یہ کہے… اس کے گناہ معاف کر دیے جاتے ہیں چاہے سمندر کی جھاگ کے برابر ہوں» (ابن حبان 5528 — البانیؒ: صحیح، صحیح الترغیب 607، اور شعیب ارناؤوطؒ)۔"},
  how:{en:"Once, when you lie down to sleep.", ur:"ایک بار، جب سونے کے لیے لیٹیں۔"},
- note:{en:"One reel says «say each part 3 times». The hadith mentions saying it once at bedtime.", ur:"ایک ریل میں «ہر حصہ تین بار» کہا گیا۔ حدیث میں سوتے وقت ایک بار کہنا مذکور ہے۔"},
- src:"Sahih Ibn Hibban 5528 · Sahih at-Targhib 607", acts:["sleep"], needs:["forgive"], from:"@the_scottish_beard, @aboo.yahyaa"},
+ note:{en:"Some say «say each part 3 times». The hadith mentions saying it once at bedtime.", ur:"بعض لوگ «ہر حصہ تین بار» کہتے ہیں۔ حدیث میں سوتے وقت ایک بار کہنا مذکور ہے۔"},
+ src:"Sahih Ibn Hibban 5528 · Sahih at-Targhib 607", acts:["sleep"], needs:["forgive"]},
 
-/* ================= NIGHT ================= */
+
 {id:"wake_night", kind:"dhikr", g:"sahih",
  t:{en:"If you wake up at night — before you touch your phone — say this, then ask", ur:"رات کو آنکھ کھلے — فون چھونے سے پہلے — یہ کہیں، پھر مانگیں"},
  ar:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، الْحَمْدُ لِلَّهِ، وَسُبْحَانَ اللَّهِ، وَلَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
@@ -780,9 +779,9 @@ ITEMS.push(
  use:{en:"«The blank cheque» — a dua that gets answered.", ur:"«بلینک چیک» — وہ دعا جو قبول ہوتی ہے۔"},
  rw:{en:"«Whoever wakes at night and says [this], then says ‘O Allah, forgive me’ or makes a dua, it is answered; and if he makes wudu and prays, his prayer is accepted» (Bukhari 1154).", ur:"«جو رات کو جاگے اور یہ کہے، پھر ’اے اللہ مجھے بخش دے‘ کہے یا کوئی دعا کرے تو قبول ہوتی ہے؛ اور اگر وضو کر کے نماز پڑھے تو نماز قبول ہوتی ہے» (بخاری 1154)۔"},
  how:{en:"Whenever you wake during the night — first thing.", ur:"رات میں جب بھی آنکھ کھلے — سب سے پہلے۔"},
- src:"Sahih al-Bukhari 1154", acts:["wake"], needs:["answer","forgive"], from:"@niiirjon, @muslims_reminder12"},
+ src:"Sahih al-Bukhari 1154", acts:["wake"], needs:["answer","forgive"]},
 
-/* ================= PEOPLE / OUT ================= */
+
 {id:"market", kind:"dhikr", g:"disputed",
  t:{en:"Entering a market, mall or shop — say this", ur:"بازار، مال یا دکان میں داخل ہوتے وقت یہ کہیں"},
  ar:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لَا يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
@@ -791,7 +790,7 @@ ITEMS.push(
  rw:{en:"Allah writes a million good deeds, erases a million sins, raises a million ranks (and builds a house in Paradise) (Tirmidhi 3428/3429 — hasan per al-Albani).", ur:"اللہ دس لاکھ نیکیاں لکھتا ہے، دس لاکھ گناہ مٹاتا ہے، دس لاکھ درجے بلند کرتا ہے (اور جنت میں گھر بناتا ہے) (ترمذی 3428/3429 — البانیؒ: حسن)۔"},
  how:{en:"Each time you enter a market, mall or shop.", ur:"ہر بار بازار، مال یا دکان میں داخل ہوتے وقت۔"},
  note:{en:"Grading differs: sunnah.com shows Tirmidhi 3428 as daʿif (Darussalam); al-Albani graded the hadith hasan through its other chains (3429).", ur:"درجے میں اختلاف: sunnah.com پر ترمذی 3428 دارالسلام کے مطابق ضعیف ہے؛ البانیؒ نے دوسری سندوں (3429) کی بنا پر حسن کہا۔"},
- src:"Jami' at-Tirmidhi 3428, 3429 · Ibn Majah 2235", acts:["out"], needs:["reward"], from:"@anshida.azeez"},
+ src:"Jami' at-Tirmidhi 3428, 3429 · Ibn Majah 2235", acts:["out"], needs:["reward"]},
 
 {id:"love_allah", kind:"action", g:"hasan",
  t:{en:"Tell a brother or sister «I love you for the sake of Allah»", ur:"کسی بھائی یا بہن سے کہیں «میں تم سے اللہ کے لیے محبت کرتا ہوں»"},
@@ -801,9 +800,9 @@ ITEMS.push(
  use:{en:"A bond the Prophets will envy on the Day of Judgement.", ur:"ایسا رشتہ جس پر قیامت کے دن انبیاء بھی رشک کریں گے۔"},
  rw:{en:"A man said he loved another; the Prophet ﷺ said «Tell him» (Abu Dawud 5125). Allah says: «Those who love each other for My glory will have pulpits of light that the Prophets and martyrs will envy» (Tirmidhi 2390 — hasan sahih). Two who love each other for Allah are among the seven shaded on the Day with no shade but His (Bukhari 660).", ur:"ایک شخص نے کہا وہ کسی سے محبت کرتا ہے؛ نبی ﷺ نے فرمایا: «اسے بتا دو» (ابوداؤد 5125)۔ اللہ فرماتا ہے: «میری عظمت کی خاطر آپس میں محبت کرنے والوں کے لیے نور کے منبر ہوں گے جن پر انبیاء اور شہداء رشک کریں گے» (ترمذی 2390)۔ اللہ کے لیے محبت کرنے والے دو افراد ان سات میں ہیں جو عرش کے سائے میں ہوں گے (بخاری 660)۔"},
  how:{en:"Send that message today to someone you love for Allah.", ur:"آج ہی کسی کو یہ پیغام بھیجیں جس سے آپ اللہ کے لیے محبت کرتے ہیں۔"},
- src:"Sunan Abi Dawud 5125 · Jami' at-Tirmidhi 2390 · Sahih al-Bukhari 660", acts:["people"], needs:["reward","family"], from:"@youssefbaleeghcoach"},
+ src:"Sunan Abi Dawud 5125 · Jami' at-Tirmidhi 2390 · Sahih al-Bukhari 660", acts:["people"], needs:["reward","family"]},
 
-/* ================= SALAWAT ================= */
+
 {id:"salawat", kind:"dhikr", g:"sahih",
  t:{en:"Send salawat on the Prophet ﷺ (Durood Ibrahimi)", ur:"نبی ﷺ پر درود بھیجیں (درودِ ابراہیمی)"},
  ar:"اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ",
@@ -811,10 +810,10 @@ ITEMS.push(
  use:{en:"Love for the Prophet ﷺ — and Allah’s blessings on you.", ur:"نبی ﷺ سے محبت — اور آپ پر اللہ کی رحمتیں۔"},
  rw:{en:"«Whoever sends one salah upon me, Allah sends ten upon him» (Muslim 408). This is the wording the Prophet ﷺ taught when asked how to send salawat (Bukhari 3370).", ur:"«جو مجھ پر ایک بار درود بھیجے، اللہ اس پر دس رحمتیں بھیجتا ہے» (مسلم 408)۔ یہ وہ الفاظ ہیں جو نبی ﷺ نے درود کا طریقہ پوچھنے پر سکھائے (بخاری 3370)۔"},
  how:{en:"In every tashahhud, after every Adhan, and as often as you can — especially on Friday.", ur:"ہر تشہد میں، ہر اذان کے بعد، اور جتنی بار ہو سکے — خاص طور پر جمعہ کو۔"},
- note:{en:"A reel promotes a different salawat («…an-nabiyyi wa azwājihi ummahātil-muʾminīn…», Abu Dawud 982) claiming you’ll see the Prophet ﷺ in dreams, die Muslim and be guaranteed Jannah. That narration is graded weak by al-Albani, and those specific promises are not in it. The Durood Ibrahimi above is from Sahih al-Bukhari.", ur:"ایک ریل میں ایک اور درود («…النَّبِيِّ وَأَزْوَاجِهِ أُمَّهَاتِ الْمُؤْمِنِينَ…»، ابوداؤد 982) کے بارے میں کہا گیا کہ اس سے نبی ﷺ کی خواب میں زیارت، ایمان پر موت اور جنت کی ضمانت ہے۔ وہ روایت البانیؒ کے نزدیک ضعیف ہے اور یہ وعدے اس میں نہیں ہیں۔ اوپر والا درودِ ابراہیمی صحیح بخاری سے ہے۔"},
- src:"Sahih al-Bukhari 3370 · Sahih Muslim 408", acts:["any","salah","adhan"], needs:["reward","answer"], cnt:10, from:"@nafees__l, @farhatbashir04"},
+ note:{en:"A different salawat is widely shared («…an-nabiyyi wa azwājihi ummahātil-muʾminīn…», Abu Dawud 982) claiming you’ll see the Prophet ﷺ in dreams, die Muslim and be guaranteed Jannah. That narration is graded weak by al-Albani, and those specific promises are not in it. The Durood Ibrahimi above is from Sahih al-Bukhari.", ur:"ایک اور مشہور درود («…النَّبِيِّ وَأَزْوَاجِهِ أُمَّهَاتِ الْمُؤْمِنِينَ…»، ابوداؤد 982) کے بارے میں کہا گیا کہ اس سے نبی ﷺ کی خواب میں زیارت، ایمان پر موت اور جنت کی ضمانت ہے۔ وہ روایت البانیؒ کے نزدیک ضعیف ہے اور یہ وعدے اس میں نہیں ہیں۔ اوپر والا درودِ ابراہیمی صحیح بخاری سے ہے۔"},
+ src:"Sahih al-Bukhari 3370 · Sahih Muslim 408", acts:["any","salah","adhan"], needs:["reward","answer"], cnt:10},
 
-/* ================= JANNAH ================= */
+
 {id:"la_tukhzina", kind:"quran", g:"quran",
  t:{en:"Ask Allah not to disgrace you on the Day of Judgement", ur:"اللہ سے قیامت کے دن رسوائی سے بچنے کی دعا"},
  ar:"رَبَّنَا وَآتِنَا مَا وَعَدتَّنَا عَلَىٰ رُسُلِكَ وَلَا تُخْزِنَا يَوْمَ الْقِيَامَةِ ۗ إِنَّكَ لَا تُخْلِفُ الْمِيعَادَ",
@@ -822,7 +821,7 @@ ITEMS.push(
  use:{en:"Protection from public humiliation when everything is exposed.", ur:"اُس دن سرِعام رسوائی سے حفاظت جب سب کچھ کھل جائے گا۔"},
  rw:{en:"The dua of «those of understanding» (3:190–194). Allah responded: «I will not let the deed of any doer among you be lost» (3:195).", ur:"«عقل والوں» کی دعا (آل عمران 3:190–194)۔ اللہ نے جواب دیا: «میں تم میں سے کسی عمل کرنے والے کا عمل ضائع نہیں کروں گا» (3:195)۔"},
  how:{en:"Any time — and make it for the whole Ummah too.", ur:"کسی بھی وقت — اور پوری امت کے لیے بھی مانگیں۔"},
- src:"Qur'an 3:194–195", acts:["any"], needs:["jannah"], from:"@deentourr"},
+ src:"Qur'an 3:194–195", acts:["any"], needs:["jannah"]},
 
 {id:"jannah3", kind:"dua", g:"sahih",
  t:{en:"Ask for Jannah 3 times and refuge from the Fire 3 times — they will speak for you", ur:"تین بار جنت مانگیں اور تین بار جہنم سے پناہ — وہ آپ کے لیے دعا کریں گی"},
@@ -832,7 +831,7 @@ ITEMS.push(
  rw:{en:"«Whoever asks Allah for Paradise three times, Paradise says: ‘O Allah, admit him into Paradise.’ Whoever seeks refuge from the Fire three times, the Fire says: ‘O Allah, save him from the Fire’» (Tirmidhi 2572 — sahih per al-Albani).", ur:"«جو تین بار اللہ سے جنت مانگے، جنت کہتی ہے: ’اے اللہ! اسے جنت میں داخل کر دے۔‘ اور جو تین بار جہنم سے پناہ مانگے، جہنم کہتی ہے: ’اے اللہ! اسے جہنم سے بچا لے‘» (ترمذی 2572 — البانیؒ: صحیح)۔"},
  how:{en:"3 + 3, any time — easy to add after every prayer.", ur:"تین + تین، کسی بھی وقت — ہر نماز کے بعد آسانی سے۔"},
  note:{en:"The hadith says «whoever asks Allah for Paradise three times»; the Arabic above is a simple way of asking, not a wording quoted from the hadith.", ur:"حدیث میں ہے «جو تین بار اللہ سے جنت مانگے»؛ اوپر کی عربی مانگنے کا سادہ طریقہ ہے، حدیث کے الفاظ نہیں۔"},
- src:"Jami' at-Tirmidhi 2572", acts:["any","after"], needs:["jannah"], cnt:3, from:"@samer_speaks"},
+ src:"Jami' at-Tirmidhi 2572", acts:["any","after"], needs:["jannah"], cnt:3},
 
 {id:"firdaws", kind:"dua", g:"sahih",
  t:{en:"Aim high: ask for Al-Firdaws, the highest Jannah", ur:"بلند ہمت رکھیں: سب سے اونچی جنت، الفردوس مانگیں"},
@@ -842,7 +841,7 @@ ITEMS.push(
  rw:{en:"«When you ask Allah, ask Him for Al-Firdaws; it is the middle and highest part of Paradise, above it is the Throne of the Most Merciful, and from it the rivers of Paradise flow» (Bukhari 2790, 7423).", ur:"«جب اللہ سے مانگو تو الفردوس مانگو؛ وہ جنت کا درمیانی اور سب سے اونچا حصہ ہے، اس کے اوپر رحمٰن کا عرش ہے، اور اسی سے جنت کی نہریں نکلتی ہیں» (بخاری 2790، 7423)۔"},
  how:{en:"Often — in sujud, after salah.", ur:"کثرت سے — سجدے میں، نماز کے بعد۔"},
  note:{en:"The command to ask for Firdaws is from Bukhari; this exact wording is a natural way of doing so.", ur:"فردوس مانگنے کا حکم بخاری سے ہے؛ یہ الفاظ اس کا فطری طریقہ ہیں۔"},
- src:"Sahih al-Bukhari 2790, 7423", acts:["any","salah"], needs:["jannah"], from:"@youssefbaleeghcoach"},
+ src:"Sahih al-Bukhari 2790, 7423", acts:["any","salah"], needs:["jannah"]},
 
 {id:"ammar", kind:"dua", g:"sahih",
  t:{en:"Ask for the joy of looking at Allah’s Face — greater than Jannah itself", ur:"اللہ کے دیدار کی لذت مانگیں — جو جنت سے بھی بڑی نعمت ہے"},
@@ -851,7 +850,7 @@ ITEMS.push(
  use:{en:"Longing for the greatest reward of all.", ur:"سب سے بڑے انعام کی آرزو۔"},
  rw:{en:"Part of a dua the Prophet ﷺ made in his prayer (an-Nasa'i 1305 — hasan per Darussalam; sahih per al-Albani). Seeing Allah will be dearer to the people of Paradise than anything they were given (Muslim 181).", ur:"اس دعا کا حصہ جو نبی ﷺ نماز میں کرتے تھے (نسائی 1305 — دارالسلام: حسن؛ البانیؒ: صحیح)۔ اہلِ جنت کو اللہ کا دیدار ہر نعمت سے زیادہ محبوب ہوگا (مسلم 181)۔"},
  how:{en:"In salah after tashahhud, or any time. You can begin with «Allāhumma innī» (اللَّهُمَّ إِنِّي).", ur:"نماز میں تشہد کے بعد، یا کسی بھی وقت۔ «اللَّهُمَّ إِنِّي» سے شروع کر سکتے ہیں۔"},
- src:"Sunan an-Nasa'i 1305 · Sahih Muslim 181", acts:["salah","any"], needs:["jannah"], from:"@youssefbaleeghcoach"},
+ src:"Sunan an-Nasa'i 1305 · Sahih Muslim 181", acts:["salah","any"], needs:["jannah"]},
 
 {id:"rabbana_atina", kind:"quran", g:"sahih",
  t:{en:"Make the Prophet’s most frequent dua — good in this world and the next", ur:"نبی ﷺ کی سب سے زیادہ کی جانے والی دعا — دنیا اور آخرت کی بھلائی"},
@@ -860,7 +859,7 @@ ITEMS.push(
  use:{en:"Rizq, a good life and Jannah — all in one line.", ur:"رزق، اچھی زندگی اور جنت — ایک ہی جملے میں۔"},
  rw:{en:"Anas said this was the dua the Prophet ﷺ made most often (Bukhari 6389).", ur:"انسؓ نے فرمایا یہ نبی ﷺ کی سب سے زیادہ کی جانے والی دعا تھی (بخاری 6389)۔"},
  how:{en:"Any time; also between the Yemeni corner and the Black Stone in tawaf.", ur:"کسی بھی وقت؛ طواف میں رکنِ یمانی اور حجرِ اسود کے درمیان بھی۔"},
- src:"Qur'an 2:201 · Sahih al-Bukhari 6389", acts:["any"], needs:["rizq","jannah"], cnt:3, from:"@reachmohammed"},
+ src:"Qur'an 2:201 · Sahih al-Bukhari 6389", acts:["any"], needs:["rizq","jannah"], cnt:3},
 
 {id:"ramadan_atiq", kind:"dua", g:"general",
  t:{en:"Every Ramadan night: ask to be freed from the Fire", ur:"رمضان کی ہر رات: جہنم سے آزادی مانگیں"},
@@ -870,10 +869,9 @@ ITEMS.push(
  rw:{en:"«Allah has people He frees from the Fire, and that is every night» of Ramadan (Tirmidhi 682 — authenticated by al-Albani).", ur:"«اللہ رمضان کی ہر رات کچھ لوگوں کو جہنم سے آزاد کرتا ہے» (ترمذی 682 — البانیؒ نے صحیح قرار دیا)۔"},
  how:{en:"Every night of Ramadan — especially at iftar and in the last third of the night.", ur:"رمضان کی ہر رات — خاص طور پر افطار پر اور رات کے آخری تہائی حصے میں۔"},
  note:{en:"This exact wording is a general dua (not quoted from a specific hadith); the reward of being freed each night is from Tirmidhi 682.", ur:"یہ الفاظ ایک عام دعا ہیں (کسی خاص حدیث کے الفاظ نہیں)؛ ہر رات آزادی کی فضیلت ترمذی 682 سے ہے۔"},
- src:"Jami' at-Tirmidhi 682 (for the virtue)", acts:["ramadan"], needs:["jannah"], cnt:3, from:"@youssefbaleeghcoach"}
+ src:"Jami' at-Tirmidhi 682 (for the virtue)", acts:["ramadan"], needs:["jannah"], cnt:3}
 );
 
-// ===== KNOWLEDGE (independent of acts/needs) =====
 const KNOW = [
 {id:"k_greatest", e:"👑",
  t:{en:"The Greatest Name of Allah (Ism-e-Aʿẓam)", ur:"اللہ کا اسمِ اعظم"},
@@ -893,106 +891,105 @@ const KNOW = [
 <p><b>نتیجہ:</b> سب سے مضبوط جواب <span class="ar-inline">الْحَيُّ الْقَيُّومُ</span> ہے۔ وہ ایک جملہ جو چھ کی چھ نصوص کو چھوتا ہے:</p>
 <div class="ar-block">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ</div>
 <p>دعا میں: <span class="ar-inline">يَا حَيُّ يَا قَيُّومُ</span> — «اے ہمیشہ زندہ، اے سب کو قائم رکھنے والے»۔ علماء میں اب بھی اختلاف ہے (ابن حجرؒ نے 14 اقوال ذکر کیے)؛ یہ سب سے مضبوط رائے ہے، واللہ اعلم۔</p>`},
- src:"Ibn Majah 3856 · Abu Dawud 1493, 1495, 1496 · an-Nasa'i 1300 · al-Hakim 1885", from:"Our earlier research"},
+ src:"Ibn Majah 3856 · Abu Dawud 1493, 1495, 1496 · an-Nasa'i 1300 · al-Hakim 1885"},
 
 {id:"k_beloved", e:"💛",
  t:{en:"The four most beloved words — and the deeds that last", ur:"چار سب سے پسندیدہ کلمات — اور باقی رہنے والے اعمال"},
  b:{en:`<p>«The most beloved words to Allah are four: <b>SubḥānAllāh, Alḥamdulillāh, Lā ilāha illallāh, Allāhu Akbar</b> — it doesn’t matter which you begin with» (Muslim 2137). Saying them is «dearer to me than everything the sun rises over» (Muslim 2695).</p><p>Some of the salaf (Saʿid ibn al-Musayyib) said these are the «lasting good deeds» in <span class="ar-inline">وَالْبَاقِيَاتُ الصَّالِحَاتُ خَيْرٌ عِندَ رَبِّكَ ثَوَابًا وَخَيْرٌ أَمَلًا</span> (18:46) — wealth and children fade; these stay.</p>`,
     ur:`<p>«اللہ کو سب سے پسندیدہ کلمات چار ہیں: <b>سبحان اللہ، الحمد للہ، لا الٰہ الا اللہ، اللہ اکبر</b> — جس سے چاہو شروع کرو» (مسلم 2137)۔ ان کا کہنا «مجھے ہر اس چیز سے زیادہ محبوب ہے جس پر سورج طلوع ہوتا ہے» (مسلم 2695)۔</p><p>بعض سلف (سعید بن المسیبؒ) نے کہا یہی وہ «باقی رہنے والی نیکیاں» ہیں: <span class="ar-inline">وَالْبَاقِيَاتُ الصَّالِحَاتُ خَيْرٌ عِندَ رَبِّكَ ثَوَابًا وَخَيْرٌ أَمَلًا</span> (الکہف 18:46) — مال اور اولاد ختم ہو جاتے ہیں؛ یہ باقی رہتے ہیں۔</p>`},
- src:"Sahih Muslim 2137, 2695 · Qur'an 18:46 · Muwatta Malik", from:"@aliexplainsdeen slides"},
+ src:"Sahih Muslim 2137, 2695 · Qur'an 18:46 · Muwatta Malik"},
 
 {id:"k_muadh", e:"🤫",
  t:{en:"The secret Muʿadh kept until he died", ur:"وہ راز جو معاذؓ نے موت تک چھپائے رکھا"},
  b:{en:`<p>Muʿadh was riding behind the Prophet ﷺ when he heard: «No one testifies, truly from the heart, that there is no god but Allah and that Muhammad is His Messenger, except that Allah makes the Fire forbidden for him.» Muʿadh asked: «Shall I tell people so they rejoice?» He ﷺ said: «Then they will just rely on it.» Muʿadh told it only at his death, fearing the sin of hiding knowledge (Bukhari 128).</p>`,
     ur:`<p>معاذؓ نبی ﷺ کے پیچھے سوار تھے جب سنا: «جو بھی سچے دل سے گواہی دے کہ اللہ کے سوا کوئی معبود نہیں اور محمد اس کے رسول ہیں، اللہ اس پر آگ حرام کر دیتا ہے۔» معاذؓ نے پوچھا: «کیا لوگوں کو بتا دوں تاکہ خوش ہوں؟» فرمایا: «پھر وہ اسی پر بھروسہ کر بیٹھیں گے۔» معاذؓ نے یہ صرف وفات کے وقت بتایا، علم چھپانے کے گناہ کے ڈر سے (بخاری 128)۔</p>`},
- src:"Sahih al-Bukhari 128 · Sahih Muslim 32", from:"@aliexplainsdeen slides"},
+ src:"Sahih al-Bukhari 128 · Sahih Muslim 32"},
 
 {id:"k_after_salah", e:"📱",
  t:{en:"Shaytan’s trap right after salah", ur:"نماز کے فوراً بعد شیطان کا جال"},
  b:{en:`<p>Many people finish with «as-salāmu ʿalaykum» and immediately grab their phone or get up — losing the after-prayer adhkar that erase sins «like the foam of the sea» (Muslim 597).</p><p>Meanwhile, «the angels keep praying for you as long as you stay in your place of prayer: ‘O Allah forgive him, O Allah have mercy on him’» (Bukhari 445). Sit for a few minutes — it’s the cheapest reward of your day.</p>`,
     ur:`<p>بہت سے لوگ «السلام علیکم» کہتے ہی فون اٹھا لیتے ہیں یا اٹھ جاتے ہیں — اور نماز کے بعد کے وہ اذکار رہ جاتے ہیں جو «سمندر کی جھاگ» جتنے گناہ مٹا دیتے ہیں (مسلم 597)۔</p><p>جبکہ «جب تک تم اپنی نماز کی جگہ بیٹھے رہو فرشتے تمہارے لیے دعا کرتے رہتے ہیں: ’اے اللہ اسے بخش دے، اے اللہ اس پر رحم فرما‘» (بخاری 445)۔ چند منٹ بیٹھیں — یہ آپ کے دن کا سب سے سستا اجر ہے۔</p>`},
- src:"Sahih Muslim 597 · Sahih al-Bukhari 445", from:"@brother_sulaiman_fariz"},
+ src:"Sahih Muslim 597 · Sahih al-Bukhari 445"},
 
 {id:"k_love", e:"🤝",
  t:{en:"People the Prophets will envy", ur:"وہ لوگ جن پر انبیاء بھی رشک کریں گے"},
  b:{en:`<p>Not martyrs, not scholars — two friends who loved each other only for Allah, with no family tie and no worldly benefit. Allah says: «Those who love each other for My glory will have pulpits of light; the Prophets and martyrs will envy them» (Tirmidhi 2390). They are also among the seven in Allah’s shade on the Day there is no shade but His (Bukhari 660). See the «With people» card for what to say.</p>`,
     ur:`<p>شہید نہیں، عالم نہیں — دو دوست جو صرف اللہ کے لیے ایک دوسرے سے محبت کرتے تھے، نہ رشتہ داری، نہ دنیاوی فائدہ۔ اللہ فرماتا ہے: «میری عظمت کی خاطر آپس میں محبت کرنے والوں کے لیے نور کے منبر ہوں گے؛ انبیاء اور شہداء ان پر رشک کریں گے» (ترمذی 2390)۔ یہ ان سات میں بھی ہیں جو اس دن اللہ کے سائے میں ہوں گے جب کوئی سایہ نہ ہوگا (بخاری 660)۔ کیا کہنا ہے — «لوگوں کے ساتھ» والا کارڈ دیکھیں۔</p>`},
- src:"Jami' at-Tirmidhi 2390 · Sahih al-Bukhari 660", from:"@youssefbaleeghcoach"},
+ src:"Jami' at-Tirmidhi 2390 · Sahih al-Bukhari 660"},
 
 {id:"k_birth", e:"👶",
  t:{en:"Why every baby cries at birth", ur:"ہر بچہ پیدائش پر کیوں روتا ہے"},
  b:{en:`<p>«No child of Adam is born without Shaytan touching it when it is born, so it cries out from his touch — except Maryam and her son» (Bukhari 3431). Abu Hurayrah then recited her mother’s words: <span class="ar-inline">وَإِنِّي أُعِيذُهَا بِكَ وَذُرِّيَّتَهَا مِنَ الشَّيْطَانِ الرَّجِيمِ</span> (3:36). You can make the same dua for your children — see the Ruqyah tab.</p>`,
     ur:`<p>«آدم کی ہر اولاد کو پیدائش کے وقت شیطان چھوتا ہے تو وہ اس کے چھونے سے چیختا ہے — سوائے مریمؑ اور ان کے بیٹے کے» (بخاری 3431)۔ پھر ابو ہریرہؓ نے ان کی والدہ کے الفاظ پڑھے: <span class="ar-inline">وَإِنِّي أُعِيذُهَا بِكَ وَذُرِّيَّتَهَا مِنَ الشَّيْطَانِ الرَّجِيمِ</span> (آل عمران 3:36)۔ آپ بھی اپنی اولاد کے لیے یہی دعا کر سکتے ہیں — رقیہ ٹیب دیکھیں۔</p>`},
- src:"Sahih al-Bukhari 3431 · Qur'an 3:36", from:"@quranflows.app"},
+ src:"Sahih al-Bukhari 3431 · Qur'an 3:36"},
 
 {id:"k_argue", e:"⚖️",
  t:{en:"When Jannah and Jahannam argued", ur:"جب جنت اور جہنم نے آپس میں بحث کی"},
  b:{en:`<p>The Fire said: «The arrogant and the tyrants will enter me.» Paradise said: «The weak and the humble will enter me.» Allah said to Paradise: «You are My mercy — through you I show mercy to whom I will,» and to the Fire: «You are My punishment.» And each will be filled (Muslim 2846).</p><p>And they speak for you: ask for Jannah 3 times and it asks Allah to admit you; seek refuge from the Fire 3 times and it asks Allah to protect you (Tirmidhi 2572).</p>`,
     ur:`<p>جہنم نے کہا: «مجھ میں متکبر اور ظالم داخل ہوں گے۔» جنت نے کہا: «مجھ میں کمزور اور عاجز لوگ داخل ہوں گے۔» اللہ نے جنت سے فرمایا: «تو میری رحمت ہے، تیرے ذریعے جس پر چاہوں رحم کروں،» اور جہنم سے: «تو میرا عذاب ہے۔» اور دونوں بھر دی جائیں گی (مسلم 2846)۔</p><p>اور یہ آپ کے لیے بولتی ہیں: تین بار جنت مانگیں تو وہ اللہ سے آپ کو داخل کرنے کی دعا کرتی ہے؛ تین بار جہنم سے پناہ مانگیں تو وہ آپ کو بچانے کی دعا کرتی ہے (ترمذی 2572)۔</p>`},
- src:"Sahih Muslim 2846 · Jami' at-Tirmidhi 2572", from:"@samer_speaks"},
+ src:"Sahih Muslim 2846 · Jami' at-Tirmidhi 2572"},
 
 {id:"k_lowest", e:"🏰",
  t:{en:"The lowest level of Jannah — so aim for Firdaws", ur:"جنت کا سب سے نچلا درجہ — اس لیے فردوس کا ہدف رکھیں"},
  b:{en:`<p>The last person to enter Jannah will be told to wish; he wishes until his wishes run out, and Allah says: «You have that, and ten times as much» (Muslim 186). That is the <i>lowest</i> rank. The Prophet ﷺ told us: when you ask Allah, ask for Al-Firdaws — the highest, beneath the Throne, where the rivers of Jannah begin (Bukhari 2790).</p>`,
     ur:`<p>جنت میں آخری داخل ہونے والے سے کہا جائے گا آرزو کرو؛ وہ آرزوئیں کرتا رہے گا یہاں تک کہ ختم ہو جائیں، اور اللہ فرمائے گا: «یہ سب تمہارا ہے اور اس کا دس گنا» (مسلم 186)۔ یہ سب سے <i>نچلا</i> درجہ ہے۔ نبی ﷺ نے فرمایا: جب اللہ سے مانگو تو فردوس مانگو — سب سے اونچا، عرش کے نیچے، جہاں سے جنت کی نہریں نکلتی ہیں (بخاری 2790)۔</p>`},
- src:"Sahih Muslim 186 · Sahih al-Bukhari 2790 · Riyad as-Salihin", from:"@youssefbaleeghcoach"},
+ src:"Sahih Muslim 186 · Sahih al-Bukhari 2790 · Riyad as-Salihin"},
 
 {id:"k_greater", e:"✨",
  t:{en:"Something greater than Jannah", ur:"جنت سے بھی بڑی نعمت"},
  b:{en:`<p>Allah will ask the people of Paradise: «Are you satisfied?» They say: «How could we not be, when You gave us what You gave no one else?» He says: «Shall I not give you something better? I bestow My pleasure upon you and will never be angry with you again» (Bukhari 6549). And when the veil is lifted, «nothing they were given will be dearer to them than looking at their Lord» (Muslim 181).</p>`,
     ur:`<p>اللہ اہلِ جنت سے پوچھے گا: «کیا تم راضی ہو؟» وہ کہیں گے: «کیوں نہ ہوں، تو نے ہمیں وہ دیا جو کسی کو نہیں دیا۔» فرمائے گا: «کیا میں تمہیں اس سے بہتر چیز نہ دوں؟ میں تم پر اپنی رضا نازل کرتا ہوں، اس کے بعد کبھی ناراض نہ ہوں گا» (بخاری 6549)۔ اور جب پردہ اٹھے گا تو «انہیں اپنے رب کے دیدار سے زیادہ محبوب کوئی چیز نہ دی گئی ہوگی» (مسلم 181)۔</p>`},
- src:"Sahih al-Bukhari 6549 · Sahih Muslim 181", from:"@youssefbaleeghcoach"},
+ src:"Sahih al-Bukhari 6549 · Sahih Muslim 181"},
 
 {id:"k_999", e:"🔥",
  t:{en:"999 of every 1000 — and why Ramadan matters", ur:"ہر ہزار میں سے 999 — اور رمضان کیوں اہم ہے"},
  b:{en:`<p>On the Day of Judgement Allah will tell Adam: «Bring out the people of the Fire.» «How many?» «From every thousand, nine hundred and ninety-nine.» The companions were shaken; the Prophet ﷺ reassured them that Gog and Magog make up the vast number and said: «I hope you will be half the people of Paradise» (Bukhari 3348).</p><p>And in Ramadan, «Allah has people He frees from the Fire — every night» (Tirmidhi 682). So ask every night.</p>`,
     ur:`<p>قیامت کے دن اللہ آدمؑ سے فرمائے گا: «جہنم والوں کو نکالو۔» «کتنے؟» «ہر ہزار میں سے نو سو ننانوے۔» صحابہ گھبرا گئے؛ نبی ﷺ نے تسلی دی کہ اتنی بڑی تعداد یاجوج ماجوج کی ہوگی اور فرمایا: «مجھے امید ہے تم اہلِ جنت کا آدھا ہو گے» (بخاری 3348)۔</p><p>اور رمضان میں «اللہ ہر رات کچھ لوگوں کو جہنم سے آزاد کرتا ہے» (ترمذی 682)۔ اس لیے ہر رات مانگیں۔</p>`},
- src:"Sahih al-Bukhari 3348 · Jami' at-Tirmidhi 682", from:"@youssefbaleeghcoach"},
+ src:"Sahih al-Bukhari 3348 · Jami' at-Tirmidhi 682"},
 
 {id:"k_seven", e:"⚠️",
  t:{en:"Seven kinds of Muslims in danger", ur:"سات قسم کے مسلمان جو خطرے میں ہیں"},
  b:{en:`<ol><li><b>The show-off</b> — doing deeds to be seen; the Prophet ﷺ called it «the minor shirk» (Ahmad 23630).</li><li><b>The bankrupt</b> — comes with prayer and fasting but had insulted, slandered and wronged people; his good deeds are given to them (Muslim 2581).</li><li><b>The one who abandons prayer</b> — «between a man and shirk and kufr is abandoning the prayer» (Muslim 82).</li><li><b>The arrogant</b> — «no one with a mustard seed of arrogance in his heart will enter Paradise» (Muslim 91).</li><li><b>The private sinner</b> — good deeds like mountains made scattered dust, because alone he violated Allah’s limits (Ibn Majah 4245 — sahih per al-Albani).</li><li><b>«I’ll repent later»</b> — delaying tawbah until it’s too late; tawbah is accepted only until the death-rattle (Tirmidhi 3537).</li><li><b>The complacent «born Muslim»</b> — relying on a Muslim name and family instead of actually practising (a general reminder, see 49:14).</li></ol>`,
     ur:`<ol><li><b>دکھاوا کرنے والا</b> — لوگوں کو دکھانے کے لیے عمل؛ نبی ﷺ نے اسے «شرکِ اصغر» فرمایا (مسند احمد 23630)۔</li><li><b>مفلس</b> — نماز روزہ لے کر آئے گا مگر لوگوں کو گالی دی، تہمت لگائی، ظلم کیا؛ اس کی نیکیاں انہیں دے دی جائیں گی (مسلم 2581)۔</li><li><b>نماز چھوڑنے والا</b> — «آدمی اور شرک و کفر کے درمیان نماز کا چھوڑنا ہے» (مسلم 82)۔</li><li><b>متکبر</b> — «جس کے دل میں رائی کے دانے برابر تکبر ہو وہ جنت میں داخل نہ ہوگا» (مسلم 91)۔</li><li><b>چھپ کر گناہ کرنے والا</b> — پہاڑوں جیسی نیکیاں بکھری ہوئی دھول بنا دی جائیں گی، کیونکہ تنہائی میں اللہ کی حدیں توڑیں (ابن ماجہ 4245 — البانیؒ: صحیح)۔</li><li><b>«بعد میں توبہ کر لوں گا»</b> — توبہ ٹالتے رہنا؛ توبہ صرف موت کے غرغرے سے پہلے تک قبول ہے (ترمذی 3537)۔</li><li><b>بے فکر «پیدائشی مسلمان»</b> — عمل کے بجائے مسلم نام اور خاندان پر بھروسہ (عمومی نصیحت، دیکھیں الحجرات 49:14)۔</li></ol>`},
- src:"Muslim 2581, 82, 91 · Ahmad 23630 · Ibn Majah 4245 · Tirmidhi 3537", from:"@samer_speaks"},
+ src:"Muslim 2581, 82, 91 · Ahmad 23630 · Ibn Majah 4245 · Tirmidhi 3537"},
 
 {id:"k_near", e:"📡",
  t:{en:"Al-Qarīb & Al-Mujīb — the Near, the Responder", ur:"القریب اور المجیب — قریب، جواب دینے والا"},
  b:{en:`<p>«When My servants ask you about Me — I am near. I respond to the call of the caller when he calls Me» (2:186). Salih said: <span class="ar-inline">إِنَّ رَبِّي قَرِيبٌ مُّجِيبٌ</span> «My Lord is Near and Responsive» (11:61). He is «nearer than the jugular vein» (50:16). No dua is lost: He answers it, stores its reward, or averts an equal harm (Ahmad 11133).</p>`,
     ur:`<p>«جب میرے بندے تم سے میرے بارے میں پوچھیں — میں قریب ہوں۔ پکارنے والے کی پکار کا جواب دیتا ہوں جب وہ مجھے پکارے» (البقرہ 2:186)۔ صالحؑ نے کہا: <span class="ar-inline">إِنَّ رَبِّي قَرِيبٌ مُّجِيبٌ</span> «میرا رب قریب ہے، قبول کرنے والا» (ہود 11:61)۔ وہ «شہ رگ سے بھی زیادہ قریب» ہے (ق 50:16)۔ کوئی دعا ضائع نہیں: یا قبول ہوتی ہے، یا اس کا اجر محفوظ ہوتا ہے، یا اتنی ہی کوئی مصیبت ٹل جاتی ہے (مسند احمد 11133)۔</p>`},
- src:"Qur'an 2:186, 11:61, 50:16 · Musnad Ahmad 11133", from:"@samiespeaks"},
+ src:"Qur'an 2:186, 11:61, 50:16 · Musnad Ahmad 11133"},
 
 {id:"k_rizq", e:"🗝️",
  t:{en:"Your rizq is already written", ur:"آپ کا رزق پہلے سے لکھا جا چکا ہے"},
  b:{en:`<p>«And in the heaven is your provision and whatever you are promised» (51:22). When a baby is in the womb, an angel writes its provision, lifespan, deeds and whether it will be wretched or happy (Bukhari 3208). So chase it the halal way, without panic — and remember: «If you are grateful, I will surely increase you» (14:7). Tie your camel and trust Allah (Tirmidhi 2517).</p>`,
     ur:`<p>«اور آسمان میں تمہارا رزق ہے اور وہ جس کا تم سے وعدہ کیا جاتا ہے» (الذاریات 51:22)۔ جب بچہ رحم میں ہوتا ہے تو فرشتہ اس کا رزق، عمر، عمل اور نیک بخت یا بدبخت ہونا لکھ دیتا ہے (بخاری 3208)۔ اس لیے حلال طریقے سے کوشش کریں، گھبراہٹ کے بغیر — اور یاد رکھیں: «اگر تم شکر کرو گے تو میں ضرور زیادہ دوں گا» (ابراہیم 14:7)۔ اونٹ باندھو اور اللہ پر بھروسہ کرو (ترمذی 2517)۔</p>`},
- src:"Qur'an 51:22, 14:7 · Bukhari 3208 · Tirmidhi 2517", from:"@reachmohammed"},
+ src:"Qur'an 51:22, 14:7 · Bukhari 3208 · Tirmidhi 2517"},
 
 {id:"k_ease", e:"🌤️",
  t:{en:"Sad for no reason? Allah answered that — twice", ur:"بلاوجہ اداس؟ اللہ نے اس کا جواب دیا — دو بار"},
  b:{en:`<div class="ar-block">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ﴿٥﴾ إِنَّ مَعَ الْعُسْرِ يُسْرًا ﴿٦﴾</div><p>«So surely with hardship comes ease. Surely with hardship comes ease» (94:5–6). Not «after» — <i>with</i>. The cloud doesn’t stay forever. Pair it with the dua for sadness (Ahmad 3712) in the «Anxiety, grief & stress» tab.</p>`,
     ur:`<div class="ar-block">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ﴿٥﴾ إِنَّ مَعَ الْعُسْرِ يُسْرًا ﴿٦﴾</div><p>«پس بے شک تنگی کے ساتھ آسانی ہے۔ بے شک تنگی کے ساتھ آسانی ہے» (الانشراح 94:5–6)۔ «بعد» نہیں — <i>ساتھ</i>۔ بادل ہمیشہ نہیں رہتا۔ اس کے ساتھ غم کی دعا (مسند احمد 3712) پڑھیں — «پریشانی، غم اور دباؤ» ٹیب میں۔</p>`},
- src:"Qur'an 94:5–6", from:"@dailyduaremindershq"},
+ src:"Qur'an 94:5–6"},
 
 {id:"k_allah40", e:"🌙",
  t:{en:"Things about Allah you should never forget", ur:"اللہ کے بارے میں وہ باتیں جو کبھی نہ بھولیں"},
  b:{en:`<ul><li>Tawbah stays open until your last breath (Tirmidhi 3537).</li><li>He never sleeps — «neither drowsiness nor sleep overtakes Him» (2:255).</li><li>Relief is inside the hardship, not after it (94:5–6).</li><li>Your rizq is written; stop panicking (51:22).</li><li>Shaytan has no authority over those who rely on Him (16:99).</li><li>Your guilt is a sign He hasn’t let you go — regret itself is repentance (Ibn Majah 4252).</li><li>Your pain burns sins: no fatigue, illness, worry or even a thorn’s prick except that Allah wipes sins with it (Bukhari 5641).</li><li>He is Al-Wadūd — the Most Loving (85:14).</li><li>He was there before anyone loved you, and He has never given up on you: «Do not despair of the mercy of Allah» (39:53).</li></ul>`,
     ur:`<ul><li>توبہ کا دروازہ آخری سانس تک کھلا ہے (ترمذی 3537)۔</li><li>وہ کبھی نہیں سوتا — «نہ اسے اونگھ آتی ہے نہ نیند» (2:255)۔</li><li>راحت تنگی کے اندر ہے، اس کے بعد نہیں (94:5–6)۔</li><li>آپ کا رزق لکھا ہے؛ گھبرانا چھوڑیں (51:22)۔</li><li>شیطان کا ان پر کوئی زور نہیں جو اللہ پر بھروسہ کرتے ہیں (النحل 16:99)۔</li><li>آپ کا احساسِ گناہ نشانی ہے کہ اس نے آپ کو چھوڑا نہیں — ندامت ہی توبہ ہے (ابن ماجہ 4252)۔</li><li>تکلیف گناہ جلاتی ہے: کوئی تھکن، بیماری، فکر حتیٰ کہ کانٹا چبھنا بھی ایسا نہیں جس سے اللہ گناہ نہ مٹائے (بخاری 5641)۔</li><li>وہ الودود ہے — سب سے زیادہ محبت کرنے والا (البروج 85:14)۔</li><li>وہ آپ سے کسی کے پیار کرنے سے پہلے موجود تھا، اور اس نے کبھی آپ کو نہیں چھوڑا: «اللہ کی رحمت سے مایوس نہ ہو» (الزمر 39:53)۔</li></ul>`},
- src:"Qur'an 2:255, 94:5–6, 51:22, 16:99, 85:14, 39:53 · Tirmidhi 3537 · Ibn Majah 4252 · Bukhari 5641", from:"@seedsof.ilm (40 things about Allah — selected, each verified)"},
+ src:"Qur'an 2:255, 94:5–6, 51:22, 16:99, 85:14, 39:53 · Tirmidhi 3537 · Ibn Majah 4252 · Bukhari 5641"},
 
 {id:"k_habits", e:"🌱",
  t:{en:"Life habits from the Prophet ﷺ", ur:"نبی ﷺ کی زندگی کی عادات"},
  b:{en:`<ul><li>Start everything with «Bismillāh» (Muslim 2017 for eating; Abu Dawud 5095 leaving home).</li><li>Speak good or stay silent (Bukhari 6018).</li><li>Never belittle a good deed — even meeting your brother with a smile (Muslim 2626).</li><li>The best of you are the best to their families (Tirmidhi 3895).</li><li>Lower your gaze — it protects the heart (24:30).</li><li>Beware of envy (avoid it — 113:5; Abu Dawud 4903 on envy eating good deeds is weak).</li><li>The most beloved deeds to Allah are the most consistent, even if small (Bukhari 6464).</li><li>Tie your camel, then trust Allah (Tirmidhi 2517).</li><li>Check your intention — deeds are by intentions (Bukhari 1).</li><li>Seek knowledge — it is an obligation on every Muslim (Ibn Majah 224).</li><li>Feed people — one of the best deeds (Bukhari 12).</li><li>Don’t laugh too much — it deadens the heart (Ibn Majah 4193).</li><li>The merciful are shown mercy by the Most Merciful (Tirmidhi 1924).</li><li>Look at those below you in worldly things, not above (Muslim 2963).</li><li>Your body has a right over you — rest (Bukhari 1975).</li><li>None of you truly believes until he loves for his brother what he loves for himself (Bukhari 13).</li></ul>`,
     ur:`<ul><li>ہر کام «بسم اللہ» سے شروع کریں (کھانا: مسلم 2017؛ گھر سے نکلنا: ابوداؤد 5095)۔</li><li>اچھی بات کہو یا خاموش رہو (بخاری 6018)۔</li><li>کسی نیکی کو حقیر نہ سمجھو — چاہے بھائی سے مسکرا کر ملنا ہو (مسلم 2626)۔</li><li>تم میں بہترین وہ ہے جو اپنے گھر والوں کے لیے بہترین ہو (ترمذی 3895)۔</li><li>نظریں نیچی رکھو — یہ دل کی حفاظت ہے (النور 24:30)۔</li><li>حسد سے بچو (الفلق 113:5؛ ابوداؤد 4903 والی «حسد نیکیاں کھا جاتا ہے» روایت ضعیف ہے)۔</li><li>اللہ کو سب سے پسندیدہ عمل وہ ہے جو مستقل ہو، چاہے تھوڑا ہو (بخاری 6464)۔</li><li>اونٹ باندھو، پھر اللہ پر بھروسہ کرو (ترمذی 2517)۔</li><li>نیت درست کرو — اعمال کا دار و مدار نیتوں پر ہے (بخاری 1)۔</li><li>علم حاصل کرو — یہ ہر مسلمان پر فرض ہے (ابن ماجہ 224)۔</li><li>لوگوں کو کھانا کھلاؤ — بہترین اعمال میں سے (بخاری 12)۔</li><li>زیادہ نہ ہنسو — یہ دل کو مردہ کر دیتا ہے (ابن ماجہ 4193)۔</li><li>رحم کرنے والوں پر رحمٰن رحم کرتا ہے (ترمذی 1924)۔</li><li>دنیا میں اپنے سے کم والوں کو دیکھو، اوپر والوں کو نہیں (مسلم 2963)۔</li><li>تمہارے جسم کا بھی تم پر حق ہے — آرام کرو (بخاری 1975)۔</li><li>تم میں سے کوئی کامل مومن نہیں جب تک اپنے بھائی کے لیے وہی پسند نہ کرے جو اپنے لیے کرتا ہے (بخاری 13)۔</li></ul>`},
- src:"Bukhari 1, 12, 13, 1975, 6018, 6464 · Muslim 2017, 2626, 2963 · Tirmidhi 1924, 2517, 3895 · Ibn Majah 224, 4193", from:"@seedsof.ilm (30 habits — selected, each verified)"},
+ src:"Bukhari 1, 12, 13, 1975, 6018, 6464 · Muslim 2017, 2626, 2963 · Tirmidhi 1924, 2517, 3895 · Ibn Majah 224, 4193"},
 
 {id:"k_myths", e:"🔍",
- t:{en:"Myth check: claims in the reels that aren’t established", ur:"حقیقت جانچ: ریلز کے وہ دعوے جو ثابت نہیں"},
- b:{en:`<ul><li><b>«A dua for your birth month»</b> — no basis; every dua there is for everyone.</li><li><b>«Do this for 7 nights and watch your rizq»</b> — no source for the 7-night promise.</li><li><b>«70,000 angels pray for you and you die a martyr»</b> (last verses of al-Hashr in the morning, Tirmidhi 2922) — graded weak. The two reels said «read caption», and the caption wasn’t included.</li><li><b>«The angels were confused how to record it»</b> (Ibn Majah 3801) — weak.</li><li><b>«Whoever holds to istighfar gets a way out of every hardship»</b> (Abu Dawud 1518) — weak; but Qur'an 71:10–12 and 65:2–3 give similar promises.</li><li><b>«Ḥasbiyallāh 7 times morning & evening»</b> (Abu Dawud 5081) — a saying of Abu al-Dardaʾ; al-Albani graded attributing it to the Prophet ﷺ as fabricated.</li><li><b>Salawat that «guarantees» seeing the Prophet ﷺ in dreams and Jannah</b> — the narration (Abu Dawud 982) is weak and doesn’t contain those promises.</li><li><b>«…innaka lā tukhliful-mīʿād» at the end of the Adhan dua</b> — not in Bukhari; judged an irregular addition.</li><li><b>«Last verses of al-Baqarah (285–287)»</b> — Al-Baqarah has 286 verses; it’s 285–286.</li><li><b>«Allāhumma iḥfaẓnī min ʿadhābik»</b> — the authentic wording is «qinī ʿadhābak».</li><li><b>«Read Al-Fatiha an odd number of times»</b> — no specific narration; recite as often as you like.</li></ul>`,
-    ur:`<ul><li><b>«آپ کے پیدائش کے مہینے کی دعا»</b> — کوئی بنیاد نہیں؛ ہر دعا سب کے لیے ہے۔</li><li><b>«سات راتیں یہ کرو اور رزق دیکھو»</b> — سات راتوں کے وعدے کا کوئی ماخذ نہیں۔</li><li><b>«ستر ہزار فرشتے دعا کریں گے اور شہید کی موت»</b> (صبح سورۂ حشر کی آخری آیات، ترمذی 2922) — ضعیف۔ دونوں ریلز میں «کیپشن پڑھیں» تھا اور کیپشن شامل نہیں تھا۔</li><li><b>«فرشتے حیران تھے کہ اجر کیسے لکھیں»</b> (ابن ماجہ 3801) — ضعیف۔</li><li><b>«جو استغفار لازم پکڑے اسے ہر تنگی سے نکلنے کا راستہ»</b> (ابوداؤد 1518) — ضعیف؛ لیکن قرآن 71:10–12 اور 65:2–3 میں ایسے ہی وعدے ہیں۔</li><li><b>«حسبی اللہ صبح شام سات بار»</b> (ابوداؤد 5081) — ابو الدرداءؓ کا قول؛ البانیؒ نے اسے نبی ﷺ کی طرف منسوب کرنا موضوع کہا۔</li><li><b>وہ درود جو خواب میں زیارت اور جنت کی «ضمانت» دے</b> — روایت (ابوداؤد 982) ضعیف ہے اور اس میں یہ وعدے نہیں۔</li><li><b>اذان کی دعا کے آخر میں «إنك لا تخلف الميعاد»</b> — بخاری میں نہیں؛ شاذ اضافہ قرار دیا گیا۔</li><li><b>«سورۂ بقرہ کی آخری آیات (285–287)»</b> — بقرہ میں 286 آیات ہیں؛ یہ 285–286 ہیں۔</li><li><b>«اللّٰہم احفظنی من عذابک»</b> — مستند الفاظ «قِنِي عذابك» ہیں۔</li><li><b>«فاتحہ طاق عدد میں پڑھیں»</b> — کوئی خاص روایت نہیں؛ جتنی بار چاہیں پڑھیں۔</li></ul>`},
- src:"Checked against sunnah.com, dorar.net and al-Albani’s gradings", from:"All reels"}
+ t:{en:"Myth check: popular claims that aren’t established", ur:"حقیقت جانچ: مشہور دعوے جو ثابت نہیں"},
+ b:{en:`<ul><li><b>«A dua for your birth month»</b> — no basis; every dua there is for everyone.</li><li><b>«Do this for 7 nights and watch your rizq»</b> — no source for the 7-night promise.</li><li><b>«70,000 angels pray for you and you die a martyr»</b> (last verses of al-Hashr in the morning, Tirmidhi 2922) — graded weak.</li><li><b>«The angels were confused how to record it»</b> (Ibn Majah 3801) — weak.</li><li><b>«Whoever holds to istighfar gets a way out of every hardship»</b> (Abu Dawud 1518) — weak; but Qur'an 71:10–12 and 65:2–3 give similar promises.</li><li><b>«Ḥasbiyallāh 7 times morning & evening»</b> (Abu Dawud 5081) — a saying of Abu al-Dardaʾ; al-Albani graded attributing it to the Prophet ﷺ as fabricated.</li><li><b>Salawat that «guarantees» seeing the Prophet ﷺ in dreams and Jannah</b> — the narration (Abu Dawud 982) is weak and doesn’t contain those promises.</li><li><b>«…innaka lā tukhliful-mīʿād» at the end of the Adhan dua</b> — not in Bukhari; judged an irregular addition.</li><li><b>«Last verses of al-Baqarah (285–287)»</b> — Al-Baqarah has 286 verses; it’s 285–286.</li><li><b>«Allāhumma iḥfaẓnī min ʿadhābik»</b> — the authentic wording is «qinī ʿadhābak».</li><li><b>«Read Al-Fatiha an odd number of times»</b> — no specific narration; recite as often as you like.</li></ul>`,
+    ur:`<ul><li><b>«آپ کے پیدائش کے مہینے کی دعا»</b> — کوئی بنیاد نہیں؛ ہر دعا سب کے لیے ہے۔</li><li><b>«سات راتیں یہ کرو اور رزق دیکھو»</b> — سات راتوں کے وعدے کا کوئی ماخذ نہیں۔</li><li><b>«ستر ہزار فرشتے دعا کریں گے اور شہید کی موت»</b> (صبح سورۂ حشر کی آخری آیات، ترمذی 2922) — ضعیف۔</li><li><b>«فرشتے حیران تھے کہ اجر کیسے لکھیں»</b> (ابن ماجہ 3801) — ضعیف۔</li><li><b>«جو استغفار لازم پکڑے اسے ہر تنگی سے نکلنے کا راستہ»</b> (ابوداؤد 1518) — ضعیف؛ لیکن قرآن 71:10–12 اور 65:2–3 میں ایسے ہی وعدے ہیں۔</li><li><b>«حسبی اللہ صبح شام سات بار»</b> (ابوداؤد 5081) — ابو الدرداءؓ کا قول؛ البانیؒ نے اسے نبی ﷺ کی طرف منسوب کرنا موضوع کہا۔</li><li><b>وہ درود جو خواب میں زیارت اور جنت کی «ضمانت» دے</b> — روایت (ابوداؤد 982) ضعیف ہے اور اس میں یہ وعدے نہیں۔</li><li><b>اذان کی دعا کے آخر میں «إنك لا تخلف الميعاد»</b> — بخاری میں نہیں؛ شاذ اضافہ قرار دیا گیا۔</li><li><b>«سورۂ بقرہ کی آخری آیات (285–287)»</b> — بقرہ میں 286 آیات ہیں؛ یہ 285–286 ہیں۔</li><li><b>«اللّٰہم احفظنی من عذابک»</b> — مستند الفاظ «قِنِي عذابك» ہیں۔</li><li><b>«فاتحہ طاق عدد میں پڑھیں»</b> — کوئی خاص روایت نہیں؛ جتنی بار چاہیں پڑھیں۔</li></ul>`},
+ src:"Checked against sunnah.com, dorar.net and al-Albani’s gradings"}
 ];
 
-// ===== DAILY CHECKLIST (sorted by act). slots = how many times per day (5 = each prayer) =====
 const DAILY = [
  {id:"d_sayyid_m", item:"sayyid",         act:"morning", slots:1, lbl:{en:"Sayyid al-Istighfar — morning", ur:"سید الاستغفار — صبح"}},
  {id:"d_quls_m",   item:"three_quls",     act:"morning", slots:1, lbl:{en:"3 Quls ×3 — morning", ur:"تینوں قل ×3 — صبح"}},
@@ -1023,7 +1020,6 @@ const DAILY = [
  {id:"d_istighfar",item:"istighfar_hayy", act:"any",     slots:1, lbl:{en:"Astaghfirullāh alladhī… al-Ḥayy al-Qayyūm", ur:"استغفر اللہ الذی… الحی القیوم"}}
 ];
 
-// ===== Batch 2 (Nov 15): @awbaa.ar, @danielle_best_, @ilm_ayah ×2, @reachmohammed, @uzmannmalik =====
 ITEMS.push(
 {id:"makrub", kind:"dua", g:"hasan",
  t:{en:"Make the dua of the distressed — «Raḥmataka arjū»", ur:"پریشان حال کی دعا — «رحمتک أرجو»"},
@@ -1032,8 +1028,8 @@ ITEMS.push(
  use:{en:"When you feel overwhelmed, anxious or stuck, and want Allah to take charge of your affairs.", ur:"جب دل گھبرائے، پریشانی ہو یا کام اٹک جائیں اور آپ چاہیں کہ اللہ آپ کے معاملات سنبھال لے۔"},
  rw:{en:"The Prophet ﷺ named these words «the supplications of the distressed» (daʿawāt al-makrūb) — Abu Dawud 5090, graded hasan by al-Albani.", ur:"نبی ﷺ نے ان الفاظ کو «پریشان حال کی دعائیں» (دعوات المکروب) فرمایا — ابوداؤد 5090، البانی: حسن۔"},
  how:{en:"Say it whenever worry hits — any time of day or night. The last part of the night is a special time for duas in general.", ur:"جب بھی پریشانی آئے پڑھیں — دن ہو یا رات۔ رات کا آخری حصہ عمومی طور پر دعا کی قبولیت کا خاص وقت ہے۔"},
- note:{en:"The reel says no one makes this dua at the end of the night without it being answered. That promise is not in the hadith — the hadith only calls it the dua of the distressed. What is authentic is that Allah calls out in the last third of every night: «Who will call on Me so I may answer him?» (Bukhari 1145).", ur:"ریل میں کہا گیا کہ جو بھی رات کے آخری حصے میں یہ دعا کرے اس کی دعا ضرور قبول ہوتی ہے۔ یہ وعدہ حدیث میں نہیں — حدیث صرف اسے پریشان حال کی دعا کہتی ہے۔ مستند یہ ہے کہ ہر رات کے آخری تہائی حصے میں اللہ فرماتا ہے: «کون ہے جو مجھے پکارے کہ میں اس کی دعا قبول کروں؟» (بخاری 1145)۔"},
- src:"Sunan Abi Dawud 5090 · Sahih al-Bukhari 1145", acts:["wake","any"], needs:["worry","ease"], from:"@uzmannmalik"},
+ note:{en:"It is often said that no one makes this dua at the end of the night without it being answered. That promise is not in the hadith — the hadith only calls it the dua of the distressed. What is authentic is that Allah calls out in the last third of every night: «Who will call on Me so I may answer him?» (Bukhari 1145).", ur:"اکثر کہا جاتا ہے کہ جو بھی رات کے آخری حصے میں یہ دعا کرے اس کی دعا ضرور قبول ہوتی ہے۔ یہ وعدہ حدیث میں نہیں — حدیث صرف اسے پریشان حال کی دعا کہتی ہے۔ مستند یہ ہے کہ ہر رات کے آخری تہائی حصے میں اللہ فرماتا ہے: «کون ہے جو مجھے پکارے کہ میں اس کی دعا قبول کروں؟» (بخاری 1145)۔"},
+ src:"Sunan Abi Dawud 5090 · Sahih al-Bukhari 1145", acts:["wake","any"], needs:["worry","ease"]},
 
 {id:"four_refuge", kind:"dua", g:"sahih",
  t:{en:"Before salam in every salah, seek refuge from 4 things — including the Dajjal", ur:"ہر نماز میں سلام سے پہلے 4 چیزوں سے پناہ مانگیں — دجال سمیت"},
@@ -1042,8 +1038,8 @@ ITEMS.push(
  use:{en:"Protection from the four greatest dangers — in this life, at death, in the grave and in the Hereafter.", ur:"چار سب سے بڑے خطروں سے حفاظت — دنیا میں، موت کے وقت، قبر میں اور آخرت میں۔"},
  rw:{en:"The Prophet ﷺ said: when one of you finishes the tashahhud, let him seek refuge in Allah from these four (Muslim 588). It is one of the three protections from the Dajjal.", ur:"نبی ﷺ نے فرمایا: جب تم میں سے کوئی تشہد سے فارغ ہو تو ان چار چیزوں سے اللہ کی پناہ مانگے (مسلم 588)۔ یہ دجال سے بچاؤ کے تین طریقوں میں سے ایک ہے۔"},
  how:{en:"In the last sitting of every salah: after the tashahhud and the salawat on the Prophet ﷺ, say this, then say salam.", ur:"ہر نماز کے آخری قعدے میں: تشہد اور درود کے بعد یہ پڑھیں، پھر سلام پھیریں۔"},
- note:{en:"The reel shortens it to «Allāhumma innī aʿūdhu bika min fitnatil-masīḥid-dajjāl». The full wording above is what the Prophet ﷺ taught.", ur:"ریل میں صرف «اللّٰہم إنی أعوذ بک من فتنۃ المسیح الدجال» ہے۔ اوپر والے مکمل الفاظ وہ ہیں جو نبی ﷺ نے سکھائے۔"},
- src:"Sahih Muslim 588", acts:["salah"], needs:["protect","jannah"], from:"@ilm_ayah"},
+ note:{en:"It is often shortened to «Allāhumma innī aʿūdhu bika min fitnatil-masīḥid-dajjāl». The full wording above is what the Prophet ﷺ taught.", ur:"اسے اکثر صرف «اللّٰہم إنی أعوذ بک من فتنۃ المسیح الدجال» کہا جاتا ہے۔ اوپر والے مکمل الفاظ وہ ہیں جو نبی ﷺ نے سکھائے۔"},
+ src:"Sahih Muslim 588", acts:["salah"], needs:["protect","jannah"]},
 
 {id:"kahf10", kind:"action", g:"sahih",
  t:{en:"Memorise the first ten verses of Surah Al-Kahf (18:1–10)", ur:"سورۂ کہف کی پہلی دس آیتیں (18:1–10) یاد کریں"},
@@ -1052,7 +1048,7 @@ ITEMS.push(
  rw:{en:"«Whoever memorises ten verses from the beginning of Surah al-Kahf will be protected from the Dajjal» (Muslim 809). «Whoever of you meets him, let him recite over him the opening verses of Surah al-Kahf» (Muslim 2937).", ur:"«جس نے سورۂ کہف کی ابتدائی دس آیتیں یاد کیں وہ دجال سے محفوظ رہے گا» (مسلم 809)۔ «تم میں سے جو اسے پائے وہ اس پر سورۂ کہف کی ابتدائی آیتیں پڑھے» (مسلم 2937)۔"},
  how:{en:"Learn one or two verses a day until you have all ten, then keep revising them.", ur:"روزانہ ایک دو آیتیں یاد کریں یہاں تک کہ دسوں ہو جائیں، پھر دہراتے رہیں۔"},
  note:{en:"One narration in Muslim 809 says «the last ten verses». Learning both the first and last ten covers both narrations.", ur:"مسلم 809 کی ایک روایت میں «آخری دس آیتیں» ہیں۔ پہلی اور آخری دونوں دس آیتیں یاد کرنے سے دونوں روایتوں پر عمل ہو جاتا ہے۔"},
- src:"Sahih Muslim 809 · Sahih Muslim 2937 · Qur'an 18:1–10", acts:["any"], needs:["protect","guide"], from:"@ilm_ayah"},
+ src:"Sahih Muslim 809 · Sahih Muslim 2937 · Qur'an 18:1–10", acts:["any"], needs:["protect","guide"]},
 
 {id:"after_eat", kind:"dua", g:"hasan",
  t:{en:"After eating, praise Allah who fed you — your past sins are forgiven", ur:"کھانے کے بعد اللہ کی حمد کریں — پچھلے گناہ معاف"},
@@ -1062,7 +1058,7 @@ ITEMS.push(
  rw:{en:"«Whoever eats food and then says this, his past sins are forgiven» (Tirmidhi 3458 — at-Tirmidhi: hasan; al-Albani: hasan).", ur:"«جو کھانا کھائے پھر یہ کہے، اس کے پچھلے گناہ معاف کر دیے جاتے ہیں» (ترمذی 3458 — ترمذی: حسن؛ البانی: حسن)۔"},
  how:{en:"Once you finish a meal.", ur:"کھانا ختم کرنے کے بعد۔"},
  note:{en:"Abu Dawud 4023 adds «and his future sins»; al-Albani graded it hasan without that addition. Scholars explain that good deeds like this wipe out minor sins.", ur:"ابوداؤد 4023 میں «اور آئندہ کے گناہ» کا اضافہ ہے؛ البانی نے اس اضافے کے بغیر حسن کہا۔ علماء کے مطابق ایسے نیک اعمال صغیرہ گناہ مٹاتے ہیں۔"},
- src:"Jami' at-Tirmidhi 3458 · Sunan Ibn Majah 3285 · Sunan Abi Dawud 4023", acts:["eat"], needs:["forgive","grat","reward"], from:"@ilm_ayah"},
+ src:"Jami' at-Tirmidhi 3458 · Sunan Ibn Majah 3285 · Sunan Abi Dawud 4023", acts:["eat"], needs:["forgive","grat","reward"]},
 
 {id:"handshake", kind:"action", g:"sahih",
  t:{en:"Shake hands when you meet a fellow Muslim", ur:"مسلمان بھائی سے ملیں تو مصافحہ کریں"},
@@ -1071,7 +1067,7 @@ ITEMS.push(
  rw:{en:"«No two Muslims meet and shake hands except that they are forgiven before they part» (Abu Dawud 5212, Tirmidhi 2727 — al-Albani: sahih).", ur:"«جب بھی دو مسلمان ملتے ہیں اور مصافحہ کرتے ہیں تو جدا ہونے سے پہلے ان کی مغفرت کر دی جاتی ہے» (ابوداؤد 5212، ترمذی 2727 — البانی: صحیح)۔"},
  how:{en:"Say salam and shake hands with a smile — men with men, women with women.", ur:"سلام کریں اور مسکرا کر مصافحہ کریں — مرد مردوں سے، خواتین خواتین سے۔"},
  note:null,
- src:"Sunan Abi Dawud 5212 · Jami' at-Tirmidhi 2727 · Sunan Ibn Majah 3703", acts:["people"], needs:["forgive","reward"], from:"@ilm_ayah"},
+ src:"Sunan Abi Dawud 5212 · Jami' at-Tirmidhi 2727 · Sunan Ibn Majah 3703", acts:["people"], needs:["forgive","reward"]},
 
 {id:"ameen", kind:"action", g:"sahih",
  t:{en:"Say «Āmīn» with the imam after Al-Fātiḥah", ur:"سورۂ فاتحہ کے بعد امام کے ساتھ «آمین» کہیں"},
@@ -1080,7 +1076,7 @@ ITEMS.push(
  rw:{en:"«When the imam says Āmīn, say Āmīn — whoever's Āmīn coincides with the Āmīn of the angels, his past sins are forgiven» (Bukhari 780).", ur:"«جب امام آمین کہے تو تم بھی آمین کہو — جس کی آمین فرشتوں کی آمین کے موافق ہو گئی اس کے پچھلے گناہ معاف کر دیے جاتے ہیں» (بخاری 780)۔"},
  how:{en:"In congregation, say Āmīn together with the imam right after «wa laḍ-ḍāllīn».", ur:"جماعت میں «ولا الضالین» کے فوراً بعد امام کے ساتھ آمین کہیں۔"},
  note:null,
- src:"Sahih al-Bukhari 780", acts:["salah"], needs:["forgive","reward"], from:"@ilm_ayah"},
+ src:"Sahih al-Bukhari 780", acts:["salah"], needs:["forgive","reward"]},
 
 {id:"shaytan_wasi", kind:"dua", g:"athar",
  t:{en:"Ask Allah to make Shaytan despair of you (words of Muhammad ibn Wāsiʿ)", ur:"اللہ سے دعا کہ شیطان کو آپ سے مایوس کر دے (محمد بن واسعؒ کے الفاظ)"},
@@ -1089,8 +1085,8 @@ ITEMS.push(
  use:{en:"Asking for protection from Shaytan's whispers.", ur:"شیطان کے وسوسوں سے حفاظت کی دعا۔"},
  rw:{en:"No reward is narrated for it — it is not a hadith.", ur:"اس کا کوئی اجر منقول نہیں — یہ حدیث نہیں۔"},
  how:{en:"You may say it any time. For your daily protection, rely on the Prophet's ﷺ adhkar first: Ayat al-Kursi and the three Quls.", ur:"کسی بھی وقت پڑھ سکتے ہیں۔ روزانہ حفاظت کے لیے پہلے نبی ﷺ کے اذکار پر بھروسا کریں: آیت الکرسی اور تینوں قل۔"},
- note:{en:"These are the words of Muhammad ibn Wāsiʿ (a Tābiʿī, d. 123 AH), recorded by al-Ghazali in Iḥyāʾ ʿUlūm al-Dīn. The story of Shaytan begging him to hide it has no chain of narration. Ibn Baz and IslamQA said the words are fine to say, but don't believe in a special reward for them or make them a fixed daily wird. The reel's version adds «wa jannatik» (and Your Paradise) near the end. The line «he and his tribe see us from where we cannot see them» echoes Qur'an 7:27.", ur:"یہ تابعی محمد بن واسعؒ (وفات 123ھ) کے الفاظ ہیں جنہیں غزالی نے احیاء علوم الدین میں نقل کیا۔ شیطان کے انہیں چھپانے کی التجا والا قصہ کسی سند سے ثابت نہیں۔ ابن باز اور اسلام کیو اے کے مطابق یہ الفاظ پڑھنا درست ہے، مگر ان کے کسی خاص اجر کا عقیدہ نہ رکھیں اور انہیں روزانہ کا مقرر وظیفہ نہ بنائیں۔ ریل والے الفاظ میں آخر کے قریب «وجنتک» (اور تیری جنت) کا اضافہ ہے۔ «وہ اور اس کا گروہ ہمیں وہاں سے دیکھتے ہیں جہاں سے ہم انہیں نہیں دیکھتے» قرآن 7:27 سے ماخوذ ہے۔"},
- src:"Iḥyāʾ ʿUlūm al-Dīn 3/37 · Fatawa Ibn Baz 26/129 · Qur'an 7:27", acts:["any"], needs:["protect"], from:"@awbaa.ar"}
+ note:{en:"These are the words of Muhammad ibn Wāsiʿ (a Tābiʿī, d. 123 AH), recorded by al-Ghazali in Iḥyāʾ ʿUlūm al-Dīn. The story of Shaytan begging him to hide it has no chain of narration. Ibn Baz and IslamQA said the words are fine to say, but don't believe in a special reward for them or make them a fixed daily wird. A popular version adds «wa jannatik» (and Your Paradise) near the end. The line «he and his tribe see us from where we cannot see them» echoes Qur'an 7:27.", ur:"یہ تابعی محمد بن واسعؒ (وفات 123ھ) کے الفاظ ہیں جنہیں غزالی نے احیاء علوم الدین میں نقل کیا۔ شیطان کے انہیں چھپانے کی التجا والا قصہ کسی سند سے ثابت نہیں۔ ابن باز اور اسلام کیو اے کے مطابق یہ الفاظ پڑھنا درست ہے، مگر ان کے کسی خاص اجر کا عقیدہ نہ رکھیں اور انہیں روزانہ کا مقرر وظیفہ نہ بنائیں۔ ایک مشہور روایت کے الفاظ میں آخر کے قریب «وجنتک» (اور تیری جنت) کا اضافہ ہے۔ «وہ اور اس کا گروہ ہمیں وہاں سے دیکھتے ہیں جہاں سے ہم انہیں نہیں دیکھتے» قرآن 7:27 سے ماخوذ ہے۔"},
+ src:"Iḥyāʾ ʿUlūm al-Dīn 3/37 · Fatawa Ibn Baz 26/129 · Qur'an 7:27", acts:["any"], needs:["protect"]}
 );
 
 KNOW.push(
@@ -1098,19 +1094,19 @@ KNOW.push(
  t:{en:"Things that quietly erase your sins", ur:"وہ چیزیں جو خاموشی سے گناہ مٹا دیتی ہیں"},
  b:{en:`<ul><li><b>Pain, illness, tiredness, worry and sadness</b> — even a thorn that pricks you; Allah wipes away sins with it (Bukhari 5641–5642).</li><li><b>Fever</b> — «Don't curse it, for it removes sins the way a furnace removes impurities from iron» (Muslim 2575).</li><li><b>Wudu</b> — the sins of the face, hands and feet leave with the water (Muslim 244).</li><li><b>Walking to the masjid</b> for a fard prayer — one step erases a sin, the other raises you a rank (Muslim 666).</li><li><b>Āmīn with the imam</b> that matches the angels' Āmīn — past sins forgiven (Bukhari 780).</li><li><b>Shaking hands</b> — forgiven before you part (Abu Dawud 5212).</li><li><b>The dua after eating</b> (Tirmidhi 3458).</li><li><b>A good deed after a bad one</b> — «Good deeds remove bad deeds» (Qur'an 11:114); «Follow a bad deed with a good one and it will wipe it out» (Tirmidhi 1987).</li></ul><p>These wipe out minor sins. The five prayers, Jumuʿah to Jumuʿah and Ramadan to Ramadan expiate what is between them as long as major sins are avoided (Muslim 233). Major sins need sincere tawbah: stop, regret, resolve never to return, and make amends.</p>`,
     ur:`<ul><li><b>درد، بیماری، تھکن، فکر اور غم</b> — یہاں تک کہ چبھنے والا کانٹا بھی؛ اللہ اس سے گناہ مٹا دیتا ہے (بخاری 5641–5642)۔</li><li><b>بخار</b> — «اسے برا نہ کہو، یہ گناہوں کو ایسے دور کرتا ہے جیسے بھٹی لوہے کا میل دور کرتی ہے» (مسلم 2575)۔</li><li><b>وضو</b> — چہرے، ہاتھوں اور پاؤں کے گناہ پانی کے ساتھ نکل جاتے ہیں (مسلم 244)۔</li><li><b>فرض نماز کے لیے مسجد جانا</b> — ایک قدم گناہ مٹاتا ہے، دوسرا درجہ بلند کرتا ہے (مسلم 666)۔</li><li><b>امام کے ساتھ آمین</b> جو فرشتوں کی آمین سے مل جائے — پچھلے گناہ معاف (بخاری 780)۔</li><li><b>مصافحہ</b> — جدا ہونے سے پہلے مغفرت (ابوداؤد 5212)۔</li><li><b>کھانے کے بعد کی دعا</b> (ترمذی 3458)۔</li><li><b>برائی کے بعد نیکی</b> — «بے شک نیکیاں برائیوں کو مٹا دیتی ہیں» (ہود 11:114)؛ «برائی کے بعد نیکی کرو، وہ اسے مٹا دے گی» (ترمذی 1987)۔</li></ul><p>یہ صغیرہ گناہ مٹاتے ہیں۔ پانچ نمازیں، جمعہ سے جمعہ اور رمضان سے رمضان درمیان کے گناہوں کا کفارہ ہیں جب تک کبیرہ گناہوں سے بچا جائے (مسلم 233)۔ کبیرہ گناہوں کے لیے سچی توبہ چاہیے: گناہ چھوڑیں، نادم ہوں، دوبارہ نہ کرنے کا پختہ ارادہ کریں، اور حق تلفی ہو تو ازالہ کریں۔</p>`},
- src:"Sahih al-Bukhari 5641, 5642, 780 · Sahih Muslim 2575, 244, 666, 233 · Sunan Abi Dawud 5212 · Jami' at-Tirmidhi 3458, 1987 · Qur'an 11:114", from:"@ilm_ayah"},
+ src:"Sahih al-Bukhari 5641, 5642, 780 · Sahih Muslim 2575, 244, 666, 233 · Sunan Abi Dawud 5212 · Jami' at-Tirmidhi 3458, 1987 · Qur'an 11:114"},
 
 {id:"k_dajjal", e:"👁️",
  t:{en:"The Dajjal: 7 signs and 3 protections", ur:"دجال: 7 نشانیاں اور 3 حفاظتیں"},
  b:{en:`<p>Every prophet warned his people about him (Bukhari 7131), and there is nothing between Adam's creation and the Hour greater than the Dajjal (Muslim 2946).</p><p><b>Signs</b></p><ol><li>Blind in his right eye, which looks like a floating grape (Bukhari 3439).</li><li>«Kāfir» is written between his eyes — every believer will read it, whether they can read or not (Muslim 2934).</li><li>He stays on earth 40 days: a day like a year, a day like a month, a day like a week, and the rest like normal days (Muslim 2937).</li><li>He commands the sky and it rains, and the earth and it grows (Muslim 2937).</li><li>He brings «water» and «fire» — but his fire is cool water and his water is fire (Bukhari 7130).</li><li>He kills a young man and brings him back to life to fool people (Bukhari 1882).</li><li>He enters every land except Makkah and Madinah, which angels guard (Bukhari 1881).</li></ol><p><b>Protections</b></p><ol><li>Memorise the first ten verses of Surah Al-Kahf (Muslim 809) — see its card.</li><li>Seek refuge from him before salam in every prayer (Muslim 588) — see its card.</li><li>Keep away from him: a man will go to him sure of his faith, and end up following him because of the doubts he stirs (Abu Dawud 4319).</li></ol><p>ʿĪsā ﷺ will descend and kill him at the gate of Lud (Muslim 2937).</p>`,
     ur:`<p>ہر نبی نے اپنی قوم کو اس سے ڈرایا (بخاری 7131)، اور آدمؑ کی پیدائش سے قیامت تک دجال سے بڑا کوئی معاملہ نہیں (مسلم 2946)۔</p><p><b>نشانیاں</b></p><ol><li>داہنی آنکھ سے کانا، جو ابھرے ہوئے انگور کی طرح ہے (بخاری 3439)۔</li><li>اس کی آنکھوں کے درمیان «کافر» لکھا ہوگا — ہر مومن اسے پڑھ لے گا، چاہے پڑھنا جانتا ہو یا نہیں (مسلم 2934)۔</li><li>زمین پر 40 دن رہے گا: ایک دن سال کے برابر، ایک دن مہینے کے برابر، ایک دن ہفتے کے برابر، اور باقی عام دنوں جیسے (مسلم 2937)۔</li><li>آسمان کو حکم دے گا تو بارش ہوگی، زمین کو حکم دے گا تو اگائے گی (مسلم 2937)۔</li><li>«پانی» اور «آگ» ساتھ لائے گا — مگر اس کی آگ ٹھنڈا پانی ہے اور اس کا پانی آگ (بخاری 7130)۔</li><li>ایک نوجوان کو قتل کر کے زندہ کرے گا تاکہ لوگوں کو دھوکا دے (بخاری 1882)۔</li><li>مکہ اور مدینہ کے سوا ہر شہر میں داخل ہوگا؛ ان کی فرشتے حفاظت کریں گے (بخاری 1881)۔</li></ol><p><b>حفاظتیں</b></p><ol><li>سورۂ کہف کی پہلی دس آیتیں یاد کریں (مسلم 809) — اس کا کارڈ دیکھیں۔</li><li>ہر نماز میں سلام سے پہلے اس سے پناہ مانگیں (مسلم 588) — اس کا کارڈ دیکھیں۔</li><li>اس سے دور رہیں: آدمی اپنے ایمان پر مطمئن ہو کر اس کے پاس جائے گا، اور اس کے پیدا کردہ شبہات کی وجہ سے اس کا پیروکار بن جائے گا (ابوداؤد 4319)۔</li></ol><p>عیسیٰؑ نازل ہوں گے اور اسے باب لُد پر قتل کریں گے (مسلم 2937)۔</p>`},
- src:"Sahih al-Bukhari 7131, 3439, 7130, 1882, 1881 · Sahih Muslim 2946, 2934, 2937, 809, 588 · Sunan Abi Dawud 4319", from:"@ilm_ayah"},
+ src:"Sahih al-Bukhari 7131, 3439, 7130, 1882, 1881 · Sahih Muslim 2946, 2934, 2937, 809, 588 · Sunan Abi Dawud 4319"},
 
 {id:"k_quran_dua", e:"🕊️",
  t:{en:"How the Qur'an teaches us to make dua", ur:"قرآن دعا کرنا کیسے سکھاتا ہے"},
- b:{en:`<ul><li><b>He is near and He answers</b> — «When My servants ask you about Me, I am near; I respond to the call of the caller when he calls Me» (2:186).</li><li><b>Humbly and quietly</b> — «Call upon your Lord humbly and in secret» (7:55).</li><li><b>From within, morning and evening</b> — «Remember your Lord within yourself, humbly and with awe, without raising your voice, morning and evening, and do not be among the heedless» (7:205).</li><li><b>With a present heart</b> — «It is not the eyes that go blind, but the hearts in the chests» (22:46); «Successful are the believers who are humble in their prayer» (23:1–2).</li><li><b>Hearts find rest</b> in the remembrance of Allah (13:28).</li></ul><p>So slow down, quieten yourself and bring your heart before you ask.</p><p><b>One correction:</b> the reel suggests you don't need to ask for anything specific. The Qur'an says «Call upon Me; I will respond to you» (40:60), and the prophets asked for specific things — Musa for provision (28:24, see its card), Zakariyya for a child (21:89). The Prophet ﷺ said «Dua is worship» (Abu Dawud 1479). Ask for guidance <i>and</i> ask for your needs. The part about brain waves is the speaker's own view, not from the Qur'an.</p>`,
-    ur:`<ul><li><b>وہ قریب ہے اور جواب دیتا ہے</b> — «جب میرے بندے تم سے میرے بارے میں پوچھیں تو میں قریب ہوں؛ پکارنے والے کی پکار کا جواب دیتا ہوں جب وہ مجھے پکارے» (البقرہ 2:186)۔</li><li><b>عاجزی سے اور چپکے سے</b> — «اپنے رب کو گڑگڑا کر اور چپکے چپکے پکارو» (الاعراف 7:55)۔</li><li><b>دل میں، صبح و شام</b> — «اپنے رب کو اپنے دل میں یاد کرو، عاجزی اور خوف کے ساتھ، بلند آواز کے بغیر، صبح و شام، اور غافلوں میں سے نہ ہو» (الاعراف 7:205)۔</li><li><b>حاضر دل کے ساتھ</b> — «آنکھیں اندھی نہیں ہوتیں بلکہ وہ دل اندھے ہوتے ہیں جو سینوں میں ہیں» (الحج 22:46)؛ «کامیاب ہو گئے وہ مومن جو اپنی نماز میں خشوع کرتے ہیں» (المؤمنون 23:1–2)۔</li><li><b>دلوں کو سکون</b> اللہ کے ذکر سے ملتا ہے (الرعد 13:28)۔</li></ul><p>تو مانگنے سے پہلے رکیں، خود کو پرسکون کریں اور دل کو حاضر کریں۔</p><p><b>ایک درستی:</b> ریل میں کہا گیا کہ کچھ خاص مانگنے کی ضرورت نہیں۔ قرآن کہتا ہے «مجھے پکارو، میں تمہاری دعا قبول کروں گا» (غافر 40:60)، اور انبیاء نے خاص چیزیں مانگیں — موسیٰؑ نے رزق (القصص 28:24، اس کا کارڈ دیکھیں)، زکریاؑ نے اولاد (الانبیاء 21:89)۔ نبی ﷺ نے فرمایا «دعا ہی عبادت ہے» (ابوداؤد 1479)۔ ہدایت بھی مانگیں <i>اور</i> اپنی ضرورتیں بھی۔ دماغی لہروں والی بات مقرر کی اپنی رائے ہے، قرآن سے نہیں۔</p>`},
- src:"Qur'an 2:186, 7:55, 7:205, 22:46, 23:1–2, 13:28, 40:60, 28:24, 21:89 · Sunan Abi Dawud 1479", from:"@reachmohammed"}
+ b:{en:`<ul><li><b>He is near and He answers</b> — «When My servants ask you about Me, I am near; I respond to the call of the caller when he calls Me» (2:186).</li><li><b>Humbly and quietly</b> — «Call upon your Lord humbly and in secret» (7:55).</li><li><b>From within, morning and evening</b> — «Remember your Lord within yourself, humbly and with awe, without raising your voice, morning and evening, and do not be among the heedless» (7:205).</li><li><b>With a present heart</b> — «It is not the eyes that go blind, but the hearts in the chests» (22:46); «Successful are the believers who are humble in their prayer» (23:1–2).</li><li><b>Hearts find rest</b> in the remembrance of Allah (13:28).</li></ul><p>So slow down, quieten yourself and bring your heart before you ask.</p><p><b>One correction:</b> some say you don't need to ask for anything specific. The Qur'an says «Call upon Me; I will respond to you» (40:60), and the prophets asked for specific things — Musa for provision (28:24, see its card), Zakariyya for a child (21:89). The Prophet ﷺ said «Dua is worship» (Abu Dawud 1479). Ask for guidance <i>and</i> ask for your needs. Ideas about «brain waves» are not from the Qur'an.</p>`,
+    ur:`<ul><li><b>وہ قریب ہے اور جواب دیتا ہے</b> — «جب میرے بندے تم سے میرے بارے میں پوچھیں تو میں قریب ہوں؛ پکارنے والے کی پکار کا جواب دیتا ہوں جب وہ مجھے پکارے» (البقرہ 2:186)۔</li><li><b>عاجزی سے اور چپکے سے</b> — «اپنے رب کو گڑگڑا کر اور چپکے چپکے پکارو» (الاعراف 7:55)۔</li><li><b>دل میں، صبح و شام</b> — «اپنے رب کو اپنے دل میں یاد کرو، عاجزی اور خوف کے ساتھ، بلند آواز کے بغیر، صبح و شام، اور غافلوں میں سے نہ ہو» (الاعراف 7:205)۔</li><li><b>حاضر دل کے ساتھ</b> — «آنکھیں اندھی نہیں ہوتیں بلکہ وہ دل اندھے ہوتے ہیں جو سینوں میں ہیں» (الحج 22:46)؛ «کامیاب ہو گئے وہ مومن جو اپنی نماز میں خشوع کرتے ہیں» (المؤمنون 23:1–2)۔</li><li><b>دلوں کو سکون</b> اللہ کے ذکر سے ملتا ہے (الرعد 13:28)۔</li></ul><p>تو مانگنے سے پہلے رکیں، خود کو پرسکون کریں اور دل کو حاضر کریں۔</p><p><b>ایک درستی:</b> بعض لوگ کہتے ہیں کہ کچھ خاص مانگنے کی ضرورت نہیں۔ قرآن کہتا ہے «مجھے پکارو، میں تمہاری دعا قبول کروں گا» (غافر 40:60)، اور انبیاء نے خاص چیزیں مانگیں — موسیٰؑ نے رزق (القصص 28:24، اس کا کارڈ دیکھیں)، زکریاؑ نے اولاد (الانبیاء 21:89)۔ نبی ﷺ نے فرمایا «دعا ہی عبادت ہے» (ابوداؤد 1479)۔ ہدایت بھی مانگیں <i>اور</i> اپنی ضرورتیں بھی۔ «دماغی لہروں» والی باتیں قرآن سے نہیں۔</p>`},
+ src:"Qur'an 2:186, 7:55, 7:205, 22:46, 23:1–2, 13:28, 40:60, 28:24, 21:89 · Sunan Abi Dawud 1479"}
 );
 
 DAILY.push(
@@ -1118,7 +1114,6 @@ DAILY.push(
  {id:"d_eat",   item:"after_eat",   act:"eat",   slots:1, since:"2026-11-15", lbl:{en:"Alḥamdulillāh alladhī aṭʿamanī… after a meal", ur:"کھانے کے بعد الحمد للہ الذی أطعمنی…"}}
 );
 
-// ===== Foods: Jannah + Sunnah healing (Nov 16). Weak/made-up claims sit last in a marked box. =====
 KNOW.push(
 {id:"k_jannah_food", e:"🍇",
  t:{en:"Foods of Jannah — what the Qur'an and Sunnah say", ur:"جنت کے کھانے — قرآن و سنت کیا کہتے ہیں"},
@@ -1197,7 +1192,7 @@ const DAILY_ITEMS=new Set(DAILY.map(d=>d.item));
 
 /* ---------- strings ---------- */
 const S={
- en:{app:"Noor", tag:"Duas & dhikr from your reels — verified", today:"Today", act:"By Act", need:"By Need", ruq:"Ruqyah", know:"Knowledge",
+ en:{app:"Noor", tag:"Duas & dhikr — checked against Qur’an & Sunnah", today:"Today", act:"By Act", need:"By Need", ruq:"Ruqyah", know:"Knowledge",
   done:"done", of:"of", streak:"day streak", perfect:"perfect days", surprise:"Surprise me", searchPh:"Search duas, rewards, references…",
   dailyOnly:"Daily habits only", all:"All", forW:"What it’s for", reward:"Reward", how:"How & when", note:"Heads-up", source:"Reference",
   from:"From", count:"Count", copy:"Copy Arabic", copied:"Arabic copied", markDone:"Mark done", isDone:"Done today", back:"All needs",
@@ -1211,7 +1206,7 @@ const S={
   dailyB:"Daily habit", chk:"Arabic checked", genW:"General wording", legend:"Grade colours", foot:"Every card shows its reference, grading and tap-to-open source links. Qur'an text is checked word-for-word against quran.com (imla'i script); hadith Arabic against sunnah.com / hadithunlocked.com. «✓ Arabic checked» means the Arabic matched the source page. Gradings follow al-Albani unless another scholar is named. Ticks are saved on this phone only.",
   prayers:["F","D","A","M","I"], prayerNames:["Fajr","Dhuhr","Asr","Maghrib","Isha"], noRes:"Nothing found", knowSub:"Stories, warnings and lessons — separate from the duas.",
   needSub:"Tap what you need right now.", help:"Install & how it works", noSave:"This browser can’t save your ticks (maybe a private or incognito tab). Open Noor normally, or from its home-screen icon.", actSub:"What to say during each moment of your day.", resetDay:"Clear today’s ticks", resetSure:"Tap again to clear today", cleared:"Today cleared", updated:"✨ Noor was updated — you’ll see it next time you open it", inst:"Install", instA:"Add Noor to your home screen — it works offline.", instI:"Add Noor to your home screen: tap ••• → Share (older iPhones: the Share ⬆ button) → “Add to Home Screen”. It works offline.", instD:"Add Noor to your home screen: Chrome ⋮ → “Add to Home screen”. It works offline."},
- ur:{app:"نور", tag:"آپ کی ریلز کی دعائیں اور اذکار — تصدیق شدہ", today:"آج", act:"عمل کے مطابق", need:"ضرورت کے مطابق", ruq:"رقیہ", know:"علم",
+ ur:{app:"نور", tag:"دعائیں اور اذکار — قرآن و سنت سے تصدیق شدہ", today:"آج", act:"عمل کے مطابق", need:"ضرورت کے مطابق", ruq:"رقیہ", know:"علم",
   done:"مکمل", of:"میں سے", streak:"دن کا تسلسل", perfect:"مکمل دن", surprise:"کوئی دعا دکھائیں", searchPh:"دعا، اجر، حوالہ تلاش کریں…",
   dailyOnly:"صرف روزانہ کی عادات", all:"سب", forW:"کس لیے", reward:"اجر", how:"کب اور کیسے", note:"توجہ", source:"حوالہ",
   from:"ماخذ", count:"گنتی", copy:"عربی کاپی", copied:"عربی کاپی ہو گئی", markDone:"مکمل کریں", isDone:"آج مکمل", back:"تمام ضرورتیں",
@@ -1293,7 +1288,7 @@ function card(x){
   if(x.m&&tx(x.m)) h+=`<div class="mean">${esc(tx(x.m))}</div>`;
   h+=fld("🎯",l.forW,x.use)+fld("🏆",l.reward,x.rw)+fld("🕰️",l.how,x.how);
   if(x.note) h+=`<div class="note">⚠️ ${esc(tx(x.note))}</div>`;
-  h+=`<div class="src">📚 <div style="min-width:0;flex:1"><b>${l.source}:</b> ${esc(x.src)}${srcLinks(x.src,x.id)}${x.from?`<div class="from">${l.from}: ${esc(x.from)}</div>`:""}</div></div>`;
+  h+=`<div class="src">📚 <div style="min-width:0;flex:1"><b>${l.source}:</b> ${esc(x.src)}${srcLinks(x.src,x.id)}${""}</div></div>`;
   const tags=[...(x.acts||[]).map(a=>ACT[a]&&`${ACT[a].e} ${tx(ACT[a])}`),...(x.needs||[]).map(n=>NEED[n]&&`${NEED[n].e} ${tx(NEED[n])}`)].filter(Boolean);
   h+=`<div class="tags">${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>`;
   h+=`<div class="actions">`;
@@ -1358,7 +1353,7 @@ function viewRuq(){
 }
 function viewKnow(){
   const l=L();let h=`<div class="sect-title"><span class="e">📖</span><div><h2>${l.know}</h2><p>${l.knowSub}</p></div></div>`;
-  KNOW.forEach(k=>{h+=`<div class="kcard" id="k-${k.id}"><button class="khead" data-k="${k.id}"><span class="e">${k.e}</span><b>${esc(tx(k.t))}</b><span class="chev">▾</span></button><div class="kbody">${tx(k.b)}<div class="src">📚 <div style="min-width:0;flex:1"><b>${l.source}:</b> ${esc(k.src)}${srcLinks(k.src,k.id)}${k.from?`<div class="from">${l.from}: ${esc(k.from)}</div>`:""}</div></div></div></div>`});
+  KNOW.forEach(k=>{h+=`<div class="kcard" id="k-${k.id}"><button class="khead" data-k="${k.id}"><span class="e">${k.e}</span><b>${esc(tx(k.t))}</b><span class="chev">▾</span></button><div class="kbody">${tx(k.b)}<div class="src">📚 <div style="min-width:0;flex:1"><b>${l.source}:</b> ${esc(k.src)}${srcLinks(k.src,k.id)}${""}</div></div></div></div>`});
   h+=`<div class="sub">${l.legend}</div><div class="legend">${Object.keys(l.grades).map(g=>`<span class="badge g-${g}">${l.grades[g]}</span>`).join("")}</div>`;
   return h;
 }
